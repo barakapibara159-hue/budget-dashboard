@@ -1,0 +1,1398 @@
+{
+  "updatedAt": "2026-03-24T08:22:56.890Z",
+  "currentMonth": "2026-03",
+  "overview": {
+    "totalBudget": 145488.15,
+    "totalSpent": 29242.410000000007,
+    "remaining": 116245.73999999999,
+    "usageRate": "20.1"
+  },
+  "byDepartment": {
+    "内容创意一部": {
+      "budget": 7120,
+      "spent": 3245.560000000001,
+      "count": 25
+    },
+    "内容创意二部": {
+      "budget": 40819,
+      "spent": 3868.7000000000003,
+      "count": 15
+    },
+    "内容创意三部": {
+      "budget": 29959.15,
+      "spent": 8550.449999999999,
+      "count": 34
+    },
+    "内容创意四部": {
+      "budget": 6000,
+      "spent": 4710.09,
+      "count": 24
+    },
+    "内容创意五部": {
+      "budget": 17120,
+      "spent": 3084.1000000000004,
+      "count": 14
+    },
+    "商务签约部": {
+      "budget": 9000,
+      "spent": 0,
+      "count": 0
+    },
+    "新媒体产品部": {
+      "budget": 800,
+      "spent": 121,
+      "count": 2
+    },
+    "业务创新部": {
+      "budget": 3900,
+      "spent": 558.8,
+      "count": 4
+    },
+    "运营支持部（巴伊苏拉）": {
+      "budget": 29100,
+      "spent": 4233.71,
+      "count": 16
+    },
+    "运营支持部（王晨）": {
+      "budget": 1670,
+      "spent": 590,
+      "count": 2
+    },
+    "新媒体事业部": {
+      "budget": 0,
+      "spent": 280,
+      "count": 1
+    }
+  },
+  "byCategory": {
+    "网络类": 10622.689999999999,
+    "其他": 2613.49,
+    "会员类": 13741.229999999998,
+    "账号类": 2265
+  },
+  "byCategoryDept": {
+    "内容创意一部": {
+      "网络类": 2000,
+      "其他": 212.36,
+      "会员类": 1031.2,
+      "账号类": 2
+    },
+    "内容创意二部": {
+      "其他": 134,
+      "网络类": 150,
+      "会员类": 2934.7000000000003,
+      "账号类": 650
+    },
+    "内容创意三部": {
+      "会员类": 4922.42,
+      "其他": 628.03,
+      "网络类": 3000
+    },
+    "内容创意四部": {
+      "网络类": 2222.6900000000005,
+      "其他": 98,
+      "会员类": 1849.4,
+      "账号类": 540
+    },
+    "内容创意五部": {
+      "网络类": 800,
+      "会员类": 464,
+      "账号类": 1000,
+      "其他": 820.1
+    },
+    "业务创新部": {
+      "会员类": 258.8,
+      "其他": 300
+    },
+    "新媒体产品部": {
+      "会员类": 121
+    },
+    "运营支持部（王晨）": {
+      "网络类": 590
+    },
+    "运营支持部（巴伊苏拉）": {
+      "网络类": 1860,
+      "会员类": 2159.71,
+      "账号类": 73,
+      "其他": 141
+    },
+    "新媒体事业部": {
+      "其他": 280
+    }
+  },
+  "byStatus": {
+    "已提交OA": {
+      "count": 0,
+      "amount": 0
+    },
+    "等待发票": {
+      "count": 0,
+      "amount": 0
+    },
+    "排队待报销": {
+      "count": 0,
+      "amount": 0
+    },
+    "待走替票": {
+      "count": 0,
+      "amount": 0
+    },
+    "未知": {
+      "count": 137,
+      "amount": 29242.410000000007
+    }
+  },
+  "weekly": [
+    {
+      "week": "2026-02-23",
+      "amount": 7549.1
+    },
+    {
+      "week": "2026-03-02",
+      "amount": 8013.8099999999995
+    },
+    {
+      "week": "2026-03-09",
+      "amount": 5360.029999999999
+    },
+    {
+      "week": "2026-03-16",
+      "amount": 8254.470000000001
+    }
+  ],
+  "records": [
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "网络类",
+      "description": "网络续约（季度）",
+      "amount": 1250,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "网络类",
+      "description": "网络续约（月）",
+      "amount": 420,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-04",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "其他",
+      "description": "猫砂",
+      "amount": 57.5,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-26",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "网络类",
+      "description": "英国网络",
+      "amount": 150,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "topview会员",
+      "amount": 209.4,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "capcut会员",
+      "amount": 15.8,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-02",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "其他",
+      "description": "样品道具",
+      "amount": 85.32,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-02",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "其他",
+      "description": "快递费（手机维修）",
+      "amount": 18,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-06",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "其他",
+      "description": "谷歌邮箱",
+      "amount": 5.8,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-27",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "其他",
+      "description": "美区账号实名资料",
+      "amount": 60,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "网络类",
+      "description": "网络续约（月）",
+      "amount": 150,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-04",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "其他",
+      "description": "猫砂",
+      "amount": 64,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 710,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 347.9,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "topview会员",
+      "amount": 550,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "topview会员",
+      "amount": 209.4,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "capcut会员",
+      "amount": 15.8,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 79,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "百度网盘svip年度会员",
+      "amount": 156,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-06",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "chatgpt会员",
+      "amount": 140,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-06",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "chatgpt会员",
+      "amount": 140,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 17.99,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 916,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 69.99,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "其他",
+      "description": "橱窗实名认证",
+      "amount": 50,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "Tapnow会员",
+      "amount": 353.62,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "Nano banana Pro会员",
+      "amount": 48,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-05",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "其他",
+      "description": "手机维修",
+      "amount": 150,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-05",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "elevenlabs会员",
+      "amount": 60,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-04",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "cursor会员",
+      "amount": 120,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-04",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "英国手机号套餐",
+      "amount": 98,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "网络续约（月）",
+      "amount": 1500,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-04",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "其他",
+      "description": "猫砂",
+      "amount": 64,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 200,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 199,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "topview会员",
+      "amount": 209.4,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "快连vpn续费",
+      "amount": 46.39,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "chatgpt会员",
+      "amount": 135,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "英国网络",
+      "amount": 150,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "英国网络续约",
+      "amount": 300,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-04",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "英国网络",
+      "amount": 180,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "剪映会员",
+      "amount": 59,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "账号类",
+      "description": "英区满年白号",
+      "amount": 2,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "网络类",
+      "description": "网络续约（月）",
+      "amount": 800,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-27",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "紫鸟浏览器会员",
+      "amount": 20,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "指纹浏览器会员",
+      "amount": 99,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "fastmoss会员",
+      "amount": 20.5,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "账号类",
+      "description": "橱窗号",
+      "amount": 500,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "业务创新部",
+      "category": "会员类",
+      "description": "gemini会员",
+      "amount": 45,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "新媒体产品部",
+      "category": "会员类",
+      "description": "腾讯云服务器会员",
+      "amount": 42,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "新媒体产品部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 79,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "运营支持部（王晨）",
+      "category": "网络类",
+      "description": "网络续约（季度）",
+      "amount": 290,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "运营支持部（王晨）",
+      "category": "网络类",
+      "description": "网络续约（月）",
+      "amount": 300,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "网络类",
+      "description": "网络续约（月）",
+      "amount": 960,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-26",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "网络类",
+      "description": "美国网络",
+      "amount": 480,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-26",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "网络类",
+      "description": "美国网络",
+      "amount": 240,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-02",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "hub浏览器季度会员",
+      "amount": 500,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-28",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "会员费用",
+      "amount": 84.1,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-27",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "gemini会员",
+      "amount": 100,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-06",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "会员费用",
+      "amount": 100,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "账号类",
+      "description": "英区满年白号",
+      "amount": 18,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-27",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "veo3年会员",
+      "amount": 599,
+      "status": "未知"
+    },
+    {
+      "date": "2026-02-26",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "其他",
+      "description": "快递费（维修手机）",
+      "amount": 25,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-06",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "网络类",
+      "description": "美国网络",
+      "amount": 180,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "heygen会员",
+      "amount": 150,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-09",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "其他",
+      "description": "样品道具",
+      "amount": 18.5,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 186,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "fastmoss会员",
+      "amount": 6.5,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "咚咚剪辑会员",
+      "amount": 2,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 142,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "账号类",
+      "description": "满年白号",
+      "amount": 2,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 69,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "capcut会员",
+      "amount": 18.8,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-11",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "其他",
+      "description": "谷歌邮箱",
+      "amount": 5.5,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 355,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "fastmoss会员",
+      "amount": 13.5,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-11",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "账号类",
+      "description": "美区橱窗号5000粉",
+      "amount": 650,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 200,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "剪映会员",
+      "amount": 59,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "其他",
+      "description": "谷歌邮箱",
+      "amount": 10,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "其他",
+      "description": "道具费用",
+      "amount": 177.03,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "美图秀秀会员",
+      "amount": 24,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "其他",
+      "description": "outlook邮箱",
+      "amount": 0.8,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 200,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 466,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 466,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 186,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "chatgpt会员",
+      "amount": 140,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "其他",
+      "description": "英国手机卡",
+      "amount": 120,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 466,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "账号类",
+      "description": "英区tiktok白号",
+      "amount": 18,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "英国快连vpn",
+      "amount": 46.3,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "剪映会员",
+      "amount": 59,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "其他",
+      "description": "手机维修运费",
+      "amount": 34,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-03",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "手机维修运费",
+      "amount": 20,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "kalodata会员",
+      "amount": 59.9,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "fastmoss会员",
+      "amount": 9.9,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 134.9,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "业务创新部",
+      "category": "其他",
+      "description": "google maps抓取包",
+      "amount": 300,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-08",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 299,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-09",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "账号类",
+      "description": "youtube账号",
+      "amount": 55,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "topview会员",
+      "amount": 209.4,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "capcut会员",
+      "amount": 15.8,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-09",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "其他",
+      "description": "样品费用",
+      "amount": 14,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-16",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "其他",
+      "description": "猫砂退货运费",
+      "amount": 7.74,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "fastmoss会员",
+      "amount": 6.5,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-18",
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "网络类",
+      "description": "美国网络",
+      "amount": 180,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 347.9,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 142,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 355,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 142,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "其他",
+      "description": "样品费用",
+      "amount": 129.4,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "网络类",
+      "description": "网络续约（10个英国节点）",
+      "amount": 3000,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "veo3会员",
+      "amount": 65,
+      "status": "未知"
+    },
+    {
+      "date": "待定",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "veo3会员",
+      "amount": 65,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "tapnow月度会员",
+      "amount": 353.02,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "其他",
+      "description": "outlook邮箱",
+      "amount": 0.8,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "Nano banana Pro月度会员",
+      "amount": 48,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "百度网盘年度会员",
+      "amount": 198,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 142,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 142,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "账号类",
+      "description": "英国橱窗号",
+      "amount": 500,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "账号类",
+      "description": "英区白号",
+      "amount": 20,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "chatgpt会员",
+      "amount": 140,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "剪映会员",
+      "amount": 29,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 69,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "kalodata会员",
+      "amount": 29.9,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-16",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "电脑续租费用",
+      "amount": 800.1,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "卖家精灵会员",
+      "amount": 39.9,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "账号类",
+      "description": "实名0粉橱窗号",
+      "amount": 500,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 50,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "业务创新部",
+      "category": "会员类",
+      "description": "kimi会员",
+      "amount": 199,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-16",
+      "budgetMonth": 3,
+      "department": "业务创新部",
+      "category": "会员类",
+      "description": "api调用接口",
+      "amount": 14.8,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-14",
+      "budgetMonth": 3,
+      "department": "新媒体事业部",
+      "category": "其他",
+      "description": "海外手机卡",
+      "amount": 280,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-10",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "其他",
+      "description": "手机维修+运费",
+      "amount": 86,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-18",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "lovart会员",
+      "amount": 477.61,
+      "status": "未知"
+    },
+    {
+      "date": "2026-03-17",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "其他",
+      "description": "手机运费",
+      "amount": 30,
+      "status": "未知"
+    }
+  ]
+}
