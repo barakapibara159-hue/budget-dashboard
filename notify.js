@@ -12,13 +12,6 @@ function loadConfig() {
 
 function fmt(n) { return Math.round(n).toLocaleString('zh-CN'); }
 
-// 生成进度条（文字版）
-function progressBar(rate, len) {
-  len = len || 10;
-  const filled = Math.min(Math.round(rate / 100 * len), len);
-  return '█'.repeat(filled) + '░'.repeat(len - filled);
-}
-
 // 发送飞书机器人消息（Webhook）
 async function sendFeishuNotification(stats) {
   const config = loadConfig();
@@ -31,25 +24,41 @@ async function sendFeishuNotification(stats) {
   const usageRate = parseFloat(o.usageRate);
   const statusEmoji = usageRate > 100 ? '🔴' : usageRate > 80 ? '🟡' : '🟢';
 
-  // ===== 1. 各部门花费排名 + 3. 使用率 =====
+  // 找最新预算月份
+  const latestMonth = stats.records.reduce((max, r) => (r.budgetMonth || 0) > max ? r.budgetMonth : max, 0);
+
+  // ===== 1. 最新预算月份花费总览 =====
+  const overviewLines = [
+    `${statusEmoji} **总预算：** ¥${fmt(o.totalBudget)}`,
+    `💰 **${latestMonth}月已花费：** ¥${fmt(o.totalSpent)}（使用率 ${o.usageRate}%）`,
+    `📝 **费用笔数：** ${stats.records.length}笔`,
+  ];
+
+  // ===== 2. 报销状态 =====
+  const reimbursedInfo = stats.byStatus['已报销完'] || { count: 0, amount: 0 };
+  const pendingStatuses = Object.entries(stats.byStatus)
+    .filter(([name, info]) => name !== '已报销完' && info.count > 0);
+  const pendingTotal = pendingStatuses.reduce((s, [, info]) => s + info.count, 0);
+  const pendingAmount = pendingStatuses.reduce((s, [, info]) => s + info.amount, 0);
+
+  const statusLines = [
+    `✅ **${latestMonth}月已报销完：** ${reimbursedInfo.count}笔　¥${fmt(reimbursedInfo.amount)}`,
+    `⏳ **待报销累计：** ${pendingTotal}笔　¥${fmt(pendingAmount)}`,
+  ];
+  if (pendingStatuses.length > 0) {
+    pendingStatuses.forEach(([name, info]) => {
+      statusLines.push(`　　· ${name}：${info.count}笔　¥${fmt(info.amount)}`);
+    });
+  }
+
+  // ===== 3. 各部门花销排名 =====
   const deptRanking = Object.entries(stats.byDepartment)
-    .filter(([, info]) => info.spent > 0 || info.budget > 0)
+    .filter(([, info]) => info.spent > 0)
     .sort((a, b) => b[1].spent - a[1].spent)
     .map(([name, info], idx) => {
-      const rate = info.budget > 0 ? ((info.spent / info.budget) * 100).toFixed(1) : '-';
-      const emoji = rate > 100 ? '🔴' : rate > 80 ? '🟡' : '🟢';
-      const bar = info.budget > 0 ? progressBar(parseFloat(rate), 8) : '--------';
-      return `${emoji} **${name}**\n　　¥${fmt(info.spent)} / ¥${fmt(info.budget)}　${bar} ${rate}%`;
-    });
-
-  // ===== 2. 超预算部门（醒目版）=====
-  const overBudgetDepts = Object.entries(stats.byDepartment)
-    .filter(([, info]) => info.budget > 0 && info.spent > info.budget)
-    .sort((a, b) => (b[1].spent - b[1].budget) - (a[1].spent - a[1].budget))
-    .map(([name, info]) => {
-      const overAmount = Math.round(info.spent - info.budget);
-      const rate = ((info.spent / info.budget) * 100).toFixed(1);
-      return `🚨 **${name}** 超支 ¥${fmt(overAmount)}（使用率 ${rate}%）`;
+      const pct = o.totalSpent > 0 ? ((info.spent / o.totalSpent) * 100).toFixed(1) : '0';
+      const medal = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : `${idx + 1}.`;
+      return `${medal} ${name}：¥${fmt(info.spent)}（${pct}%）`;
     });
 
   // ===== 4. 分类花费占比 =====
@@ -61,65 +70,29 @@ async function sendFeishuNotification(stats) {
       return `　${name}：¥${fmt(amount)}（${pct}%）`;
     });
 
-  // ===== 5. 本周新增花费 =====
-  let weekCompare = '';
-  if (stats.weekly && stats.weekly.length >= 2) {
-    const thisWeek = stats.weekly[stats.weekly.length - 1];
-    const lastWeek = stats.weekly[stats.weekly.length - 2];
-    const diff = thisWeek.amount - lastWeek.amount;
-    const diffPct = lastWeek.amount > 0 ? ((diff / lastWeek.amount) * 100).toFixed(1) : '-';
-    const arrow = diff > 0 ? '📈 ↑' : diff < 0 ? '📉 ↓' : '➡️';
-    weekCompare = `**本周花费：** ¥${fmt(thisWeek.amount)}（${thisWeek.week}）\n**上周花费：** ¥${fmt(lastWeek.amount)}（${lastWeek.week}）\n**环比：** ${arrow} ${diff > 0 ? '+' : ''}¥${fmt(diff)}（${diffPct}%）`;
-  } else if (stats.weekly && stats.weekly.length === 1) {
-    weekCompare = `**本周花费：** ¥${fmt(stats.weekly[0].amount)}（${stats.weekly[0].week}）`;
-  } else {
-    weekCompare = '暂无周数据';
-  }
-
-  // ===== 6. 报销状态 =====
-  const statusLines = Object.entries(stats.byStatus)
-    .filter(([, info]) => info.count > 0)
-    .map(([name, info]) => `　${name}：${info.count}笔　¥${fmt(info.amount)}`);
-  const hasStatus = statusLines.length > 0;
-
   // ===== 构建卡片 =====
   const elements = [];
 
-  // 总览
+  // 花费总览
   elements.push({
     tag: 'div',
-    text: {
-      tag: 'lark_md',
-      content: [
-        `${statusEmoji} **总预算：** ¥${fmt(o.totalBudget)}`,
-        `💰 **已花费：** ¥${fmt(o.totalSpent)}（${o.usageRate}%）`,
-        `💵 **剩余：** ¥${fmt(o.remaining)}`,
-        `📝 **费用笔数：** ${stats.records.length}笔`,
-      ].join('\n'),
-    },
+    text: { tag: 'lark_md', content: overviewLines.join('\n') },
   });
 
   elements.push({ tag: 'hr' });
 
-  // 超预算提醒（醒目）
-  if (overBudgetDepts.length > 0) {
-    elements.push({
-      tag: 'div',
-      text: {
-        tag: 'lark_md',
-        content: `⚠️ **【超预算警告】${overBudgetDepts.length}个部门超支**\n${overBudgetDepts.join('\n')}`,
-      },
-    });
-    elements.push({ tag: 'hr' });
-  }
-
-  // 各部门花费排名 + 使用率
+  // 报销状态
   elements.push({
     tag: 'div',
-    text: {
-      tag: 'lark_md',
-      content: `🏢 **各部门预算使用率**（按花费排序）\n\n${deptRanking.join('\n')}`,
-    },
+    text: { tag: 'lark_md', content: `📋 **报销进度**\n${statusLines.join('\n')}` },
+  });
+
+  elements.push({ tag: 'hr' });
+
+  // 各部门花销排名
+  elements.push({
+    tag: 'div',
+    text: { tag: 'lark_md', content: `🏢 **各部门花销排名**\n${deptRanking.join('\n')}` },
   });
 
   elements.push({ tag: 'hr' });
@@ -127,38 +100,12 @@ async function sendFeishuNotification(stats) {
   // 分类花费占比
   elements.push({
     tag: 'div',
-    text: {
-      tag: 'lark_md',
-      content: `🍩 **分类花费占比**\n${categoryLines.join('\n')}`,
-    },
+    text: { tag: 'lark_md', content: `🍩 **分类花费占比**\n${categoryLines.join('\n')}` },
   });
 
   elements.push({ tag: 'hr' });
 
-  // 本周 vs 上周
-  elements.push({
-    tag: 'div',
-    text: {
-      tag: 'lark_md',
-      content: `📊 **周花费趋势**\n${weekCompare}`,
-    },
-  });
-
-  // 报销状态
-  if (hasStatus) {
-    elements.push({ tag: 'hr' });
-    elements.push({
-      tag: 'div',
-      text: {
-        tag: 'lark_md',
-        content: `📋 **报销进度**\n${statusLines.join('\n')}`,
-      },
-    });
-  }
-
-  elements.push({ tag: 'hr' });
-
-  // 查看看板按钮
+  // 看板链接
   if (config.dashboard_url) {
     elements.push({
       tag: 'action',
@@ -184,7 +131,7 @@ async function sendFeishuNotification(stats) {
     msg_type: 'interactive',
     card: {
       header: {
-        title: { tag: 'plain_text', content: `${statusEmoji} 预算看板日报 · ${stats.currentMonth}` },
+        title: { tag: 'plain_text', content: `${statusEmoji} ${latestMonth}月预算看板日报` },
         template: usageRate > 100 ? 'red' : usageRate > 80 ? 'orange' : 'green',
       },
       elements,
