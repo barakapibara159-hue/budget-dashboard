@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公司预算看板</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f0f2f5;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --text2: #6b7280;
+    --primary: #4f46e5;
+    --green: #10b981;
+    --red: #ef4444;
+    --orange: #f59e0b;
+    --blue: #3b82f6;
+    --border: #e5e7eb;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+  }
+  .header {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white; padding: 24px 32px;
+  }
+  .header h1 { font-size: 24px; font-weight: 600; }
+  .header .sub { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+
+  /* 总览卡片 */
+  .overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+  .stat-card {
+    background: var(--card); border-radius: 12px; padding: 20px; box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+  }
+  .stat-card .label { font-size: 13px; color: var(--text2); margin-bottom: 4px; }
+  .stat-card .value { font-size: 28px; font-weight: 700; }
+  .stat-card .sub { font-size: 12px; color: var(--text2); margin-top: 4px; }
+  .stat-card.green { border-left-color: var(--green); }
+  .stat-card.red { border-left-color: var(--red); }
+  .stat-card.orange { border-left-color: var(--orange); }
+
+  /* 通用面板 */
+  .panel {
+    background: var(--card); border-radius: 12px; padding: 24px; box-shadow: var(--shadow); margin-bottom: 24px;
+  }
+  .panel h2 { font-size: 16px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .panel h2 .icon { font-size: 20px; }
+
+  /* 两栏布局 */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+
+  /* 部门进度条 */
+  .dept-item { margin-bottom: 14px; }
+  .dept-item .dept-header { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; }
+  .dept-item .dept-name { font-weight: 500; }
+  .dept-item .dept-nums { color: var(--text2); }
+  .progress-bar { height: 24px; background: #f3f4f6; border-radius: 12px; overflow: hidden; position: relative; }
+  .progress-fill {
+    height: 100%; border-radius: 12px; transition: width 0.6s ease;
+    display: flex; align-items: center; padding: 0 10px; font-size: 12px; color: white; font-weight: 600;
+    min-width: 40px;
+  }
+  .progress-fill.ok { background: linear-gradient(90deg, #10b981, #34d399); }
+  .progress-fill.warn { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .progress-fill.over { background: linear-gradient(90deg, #ef4444, #f87171); }
+
+  /* 总预算进度 */
+  .total-progress { margin-bottom: 24px; }
+  .total-bar { height: 36px; background: #f3f4f6; border-radius: 18px; overflow: hidden; position: relative; }
+  .total-fill {
+    height: 100%; border-radius: 18px; display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 700; color: white; transition: width 0.8s ease;
+  }
+
+  /* 报销状态 */
+  .status-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .status-card {
+    background: #f9fafb; border-radius: 8px; padding: 16px; text-align: center;
+    border: 1px solid var(--border);
+  }
+  .status-card .s-label { font-size: 13px; color: var(--text2); margin-bottom: 4px; }
+  .status-card .s-count { font-size: 24px; font-weight: 700; color: var(--primary); }
+  .status-card .s-amount { font-size: 13px; color: var(--text2); margin-top: 2px; }
+
+  /* 明细表 */
+  .filters { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .filters select {
+    padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px;
+    font-size: 13px; background: white; cursor: pointer;
+  }
+  .filters input {
+    padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px;
+    font-size: 13px; flex: 1; min-width: 160px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    text-align: left; padding: 10px 12px; background: #f9fafb; border-bottom: 2px solid var(--border);
+    font-weight: 600; color: var(--text2); position: sticky; top: 0;
+  }
+  tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  tbody tr:hover { background: #f9fafb; }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 500;
+  }
+  .badge-oa { background: #dbeafe; color: #1d4ed8; }
+  .badge-invoice { background: #fef3c7; color: #92400e; }
+  .badge-queue { background: #ede9fe; color: #6d28d9; }
+  .badge-replace { background: #fce7f3; color: #9d174d; }
+  .table-wrap { max-height: 500px; overflow-y: auto; }
+  .no-data { text-align: center; padding: 40px; color: var(--text2); }
+
+  /* 图表高度 */
+  .chart-container { position: relative; height: 320px; }
+  .chart-container-pie { position: relative; height: 300px; }
+
+  /* 部门饼图选择器 */
+  .dept-pie-selector { margin-bottom: 12px; }
+  .dept-pie-selector select { padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; }
+
+  /* 响应式 */
+  @media (max-width: 1024px) {
+    .overview { grid-template-columns: repeat(2, 1fr); }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .overview { grid-template-columns: 1fr; }
+    .container { padding: 12px; }
+    .status-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>公司预算看板</h1>
+  <div class="sub" id="updateTime">数据加载中...</div>
+</div>
+
+<div class="container">
+  <!-- 总览卡片 -->
+  <div class="overview" id="overviewCards"></div>
+
+  <!-- 总预算使用率 -->
+  <div class="panel total-progress">
+    <h2><span class="icon">📊</span> 总预算使用率</h2>
+    <div class="total-bar"><div class="total-fill" id="totalBar"></div></div>
+  </div>
+
+  <!-- 部门预算 + 按周趋势 -->
+  <div class="grid-2">
+    <div class="panel">
+      <h2><span class="icon">🏢</span> 各部门预算使用率</h2>
+      <div id="deptBars"></div>
+    </div>
+    <div class="panel">
+      <h2><span class="icon">📈</span> 按周花费趋势</h2>
+      <div class="chart-container"><canvas id="weeklyChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- 分类占比 + 报销状态 -->
+  <div class="grid-3">
+    <div class="panel">
+      <h2><span class="icon">🍩</span> 总体分类占比</h2>
+      <div class="chart-container-pie"><canvas id="categoryPie"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2><span class="icon">🏷️</span> 部门分类占比</h2>
+      <div class="dept-pie-selector">
+        <select id="deptPieSelect"></select>
+      </div>
+      <div class="chart-container-pie"><canvas id="deptCategoryPie"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2><span class="icon">📋</span> 报销状态汇总</h2>
+      <div class="status-grid" id="statusGrid"></div>
+    </div>
+  </div>
+
+  <!-- 花费明细表 -->
+  <div class="panel">
+    <h2><span class="icon">📝</span> 花费明细</h2>
+    <div class="filters">
+      <select id="filterDept"><option value="">全部部门</option></select>
+      <select id="filterCat"><option value="">全部分类</option></select>
+      <select id="filterStatus"><option value="">全部状态</option></select>
+      <input id="filterSearch" type="text" placeholder="搜索费用说明...">
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>日期</th><th>部门</th><th>分类</th><th>费用说明</th><th>金额(元)</th><th>报销状态</th></tr>
+        </thead>
+        <tbody id="detailBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const PIE_COLORS = ['#4f46e5','#10b981','#f59e0b','#ef4444','#3b82f6','#8b5cf6','#ec4899','#14b8a6','#f97316','#6366f1'];
+const STATUS_BADGE = { '已提交OA':'badge-oa', '等待发票':'badge-invoice', '排队待报销':'badge-queue', '待走替票':'badge-replace' };
+let DATA = null;
+let deptPieChart = null;
+
+function fmt(n) { return n.toLocaleString('zh-CN', { minimumFractionDigits: 0, maximumFractionDigits: 0 }); }
+function fmtMoney(n) { return '¥' + fmt(n); }
+
+async function loadData() {
+  try {
+    const res = await fetch('data.json?t=' + Date.now());
+    DATA = await res.json();
+  } catch {
+    document.querySelector('.container').innerHTML = '<div class="no-data">数据加载失败，请先运行 <code>npm start</code> 生成 data.json</div>';
+    return;
+  }
+  render();
+}
+
+function render() {
+  const d = DATA;
+  // 更新时间
+  const t = new Date(d.updatedAt);
+  document.getElementById('updateTime').textContent =
+    `数据更新于 ${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')} ${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')} · 当前月份 ${d.currentMonth}`;
+
+  // 总览卡片
+  const o = d.overview;
+  const usageRate = parseFloat(o.usageRate);
+  document.getElementById('overviewCards').innerHTML = `
+    <div class="stat-card"><div class="label">总预算</div><div class="value">${fmtMoney(o.totalBudget)}</div><div class="sub">${d.currentMonth} 月度预算</div></div>
+    <div class="stat-card orange"><div class="label">已花费</div><div class="value">${fmtMoney(o.totalSpent)}</div><div class="sub">${d.records.length} 笔费用</div></div>
+    <div class="stat-card green"><div class="label">剩余预算</div><div class="value">${fmtMoney(o.remaining)}</div><div class="sub">${o.remaining >= 0 ? '预算内' : '已超支！'}</div></div>
+    <div class="stat-card ${usageRate > 100 ? 'red' : usageRate > 80 ? 'orange' : ''}"><div class="label">使用率</div><div class="value">${o.usageRate}%</div><div class="sub">${usageRate > 100 ? '⚠️ 已超预算' : usageRate > 80 ? '⚠️ 接近预算上限' : '✅ 预算健康'}</div></div>
+  `;
+
+  // 总预算进度条
+  const totalBar = document.getElementById('totalBar');
+  const barClass = usageRate > 100 ? 'over' : usageRate > 80 ? 'warn' : 'ok';
+  totalBar.className = 'total-fill ' + barClass;
+  totalBar.style.width = Math.min(usageRate, 100) + '%';
+  totalBar.textContent = `${fmtMoney(o.totalSpent)} / ${fmtMoney(o.totalBudget)} (${o.usageRate}%)`;
+  if (usageRate < 15) totalBar.style.minWidth = '200px';
+
+  // 部门进度条
+  const deptContainer = document.getElementById('deptBars');
+  let deptHTML = '';
+  const depts = Object.entries(d.byDepartment).sort((a,b) => {
+    const rateA = a[1].budget > 0 ? a[1].spent / a[1].budget : 0;
+    const rateB = b[1].budget > 0 ? b[1].spent / b[1].budget : 0;
+    return rateB - rateA;
+  });
+  for (const [name, info] of depts) {
+    const rate = info.budget > 0 ? ((info.spent / info.budget) * 100).toFixed(1) : 0;
+    const cls = rate > 100 ? 'over' : rate > 80 ? 'warn' : 'ok';
+    deptHTML += `<div class="dept-item">
+      <div class="dept-header"><span class="dept-name">${name}</span><span class="dept-nums">${fmtMoney(info.spent)} / ${fmtMoney(info.budget)} · ${info.count}笔</span></div>
+      <div class="progress-bar"><div class="progress-fill ${cls}" style="width:${Math.min(parseFloat(rate),100)}%">${rate}%</div></div>
+    </div>`;
+  }
+  deptContainer.innerHTML = deptHTML;
+
+  // 按周趋势图
+  const weeklyCtx = document.getElementById('weeklyChart').getContext('2d');
+  new Chart(weeklyCtx, {
+    type: 'bar',
+    data: {
+      labels: d.weekly.map(w => w.week),
+      datasets: [{
+        label: '周花费(元)',
+        data: d.weekly.map(w => w.amount),
+        backgroundColor: 'rgba(79,70,229,0.7)',
+        borderRadius: 6,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true, ticks: { callback: v => '¥' + fmt(v) } } }
+    }
+  });
+
+  // 总体分类饼图
+  const catLabels = Object.keys(d.byCategory);
+  const catValues = Object.values(d.byCategory);
+  const catCtx = document.getElementById('categoryPie').getContext('2d');
+  new Chart(catCtx, {
+    type: 'doughnut',
+    data: {
+      labels: catLabels,
+      datasets: [{ data: catValues, backgroundColor: PIE_COLORS.slice(0, catLabels.length) }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 12 } } },
+        tooltip: { callbacks: { label: ctx => `${ctx.label}: ¥${fmt(ctx.parsed)} (${((ctx.parsed/catValues.reduce((a,b)=>a+b,0))*100).toFixed(1)}%)` } }
+      }
+    }
+  });
+
+  // 部门分类饼图选择器
+  const deptSelect = document.getElementById('deptPieSelect');
+  for (const name of Object.keys(d.byCategoryDept)) {
+    const opt = document.createElement('option');
+    opt.value = name; opt.textContent = name;
+    deptSelect.appendChild(opt);
+  }
+  deptSelect.addEventListener('change', () => renderDeptPie(deptSelect.value));
+  if (deptSelect.options.length > 0) renderDeptPie(deptSelect.options[0].value);
+
+  // 报销状态
+  const statusGrid = document.getElementById('statusGrid');
+  let statusHTML = '';
+  for (const [name, info] of Object.entries(d.byStatus)) {
+    statusHTML += `<div class="status-card"><div class="s-label">${name}</div><div class="s-count">${info.count}笔</div><div class="s-amount">${fmtMoney(info.amount)}</div></div>`;
+  }
+  statusGrid.innerHTML = statusHTML;
+
+  // 筛选器填充
+  const filterDept = document.getElementById('filterDept');
+  const filterCat = document.getElementById('filterCat');
+  const filterStatus = document.getElementById('filterStatus');
+  for (const name of Object.keys(d.byDepartment)) {
+    const opt = document.createElement('option'); opt.value = name; opt.textContent = name; filterDept.appendChild(opt);
+  }
+  for (const name of Object.keys(d.byCategory)) {
+    const opt = document.createElement('option'); opt.value = name; opt.textContent = name; filterCat.appendChild(opt);
+  }
+  for (const name of Object.keys(d.byStatus)) {
+    const opt = document.createElement('option'); opt.value = name; opt.textContent = name; filterStatus.appendChild(opt);
+  }
+
+  // 渲染明细表
+  renderTable();
+  filterDept.addEventListener('change', renderTable);
+  filterCat.addEventListener('change', renderTable);
+  filterStatus.addEventListener('change', renderTable);
+  document.getElementById('filterSearch').addEventListener('input', renderTable);
+}
+
+function renderDeptPie(deptName) {
+  const data = DATA.byCategoryDept[deptName];
+  if (!data) return;
+  const labels = Object.keys(data);
+  const values = Object.values(data);
+  const ctx = document.getElementById('deptCategoryPie').getContext('2d');
+  if (deptPieChart) deptPieChart.destroy();
+  deptPieChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels,
+      datasets: [{ data: values, backgroundColor: PIE_COLORS.slice(0, labels.length) }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 12 } } },
+        tooltip: { callbacks: { label: ctx => `${ctx.label}: ¥${fmt(ctx.parsed)}` } }
+      }
+    }
+  });
+}
+
+function renderTable() {
+  const dept = document.getElementById('filterDept').value;
+  const cat = document.getElementById('filterCat').value;
+  const status = document.getElementById('filterStatus').value;
+  const search = document.getElementById('filterSearch').value.toLowerCase();
+
+  let rows = DATA.records.filter(r => {
+    if (dept && r.department !== dept) return false;
+    if (cat && r.category !== cat) return false;
+    if (status && r.status !== status) return false;
+    if (search && !r.description.toLowerCase().includes(search)) return false;
+    return true;
+  });
+
+  // 按日期倒序
+  rows.sort((a, b) => b.date.localeCompare(a.date));
+
+  const body = document.getElementById('detailBody');
+  if (rows.length === 0) {
+    body.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:20px;color:#999;">暂无数据</td></tr>';
+    return;
+  }
+
+  body.innerHTML = rows.map(r => `<tr>
+    <td>${r.date}</td>
+    <td>${r.department}</td>
+    <td>${r.category}</td>
+    <td>${r.description}</td>
+    <td style="font-weight:600">¥${fmt(r.amount)}</td>
+    <td><span class="badge ${STATUS_BADGE[r.status] || ''}">${r.status}</span></td>
+  </tr>`).join('');
+}
+
+loadData();
+</script>
+</body>
+</html>

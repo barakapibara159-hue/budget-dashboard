@@ -1,0 +1,15 @@
+{
+  "name": "budget-dashboard",
+  "version": "1.0.0",
+  "description": "公司预算看板自动化系统 - 飞书数据 → 静态看板 → GitHub Pages",
+  "main": "run.js",
+  "scripts": {
+    "fetch": "node fetch_data.js",
+    "notify": "node notify.js",
+    "start": "node run.js",
+    "preview": "npx serve . -p 3000"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
