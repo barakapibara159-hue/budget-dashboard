@@ -228,7 +228,7 @@
   <div class="panel">
     <h2>花费明细</h2>
     <div class="filters">
-      <select id="filterMonth"><option value="">全部月份</option></select>
+      <select id="filterMonth"><option value="">全部预算月份</option></select>
       <select id="filterDept"><option value="">全部部门</option></select>
       <select id="filterCat"><option value="">全部分类</option></select>
       <select id="filterStatus"><option value="">全部状态</option></select>
@@ -418,13 +418,13 @@ function render() {
     const opt = document.createElement('option'); opt.value = name; opt.textContent = name; filterStatus.appendChild(opt);
   }
 
-  // 月份筛选器
-  const months = new Set();
+  // 预算月份筛选器
+  const budgetMonths = new Set();
   d.records.forEach(r => {
-    if (r.date && r.date.length >= 7) months.add(r.date.substring(0, 7));
+    if (r.budgetMonth) budgetMonths.add(r.budgetMonth);
   });
-  Array.from(months).sort().reverse().forEach(m => {
-    const opt = document.createElement('option'); opt.value = m; opt.textContent = m; filterMonth.appendChild(opt);
+  Array.from(budgetMonths).sort((a, b) => b - a).forEach(m => {
+    const opt = document.createElement('option'); opt.value = m; opt.textContent = m + '月'; filterMonth.appendChild(opt);
   });
 
   renderTable();
@@ -443,7 +443,7 @@ function renderTable() {
   const search = document.getElementById('filterSearch').value.toLowerCase();
 
   let rows = DATA.records.filter(r => {
-    if (month && (!r.date || !r.date.startsWith(month))) return false;
+    if (month && r.budgetMonth !== parseInt(month)) return false;
     if (dept && r.department !== dept) return false;
     if (cat && r.category !== cat) return false;
     if (status && r.status !== status) return false;
