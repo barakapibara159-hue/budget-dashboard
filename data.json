@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-03-24T08:22:56.890Z",
+  "updatedAt": "2026-03-24T09:27:48.032Z",
   "currentMonth": "2026-03",
   "overview": {
     "totalBudget": 145488.15,
@@ -121,11 +121,15 @@
     }
   },
   "byStatus": {
-    "已提交OA": {
+    "已报销完": {
       "count": 0,
       "amount": 0
     },
-    "等待发票": {
+    "已提交OA未走完流程": {
+      "count": 0,
+      "amount": 0
+    },
+    "等待发票提交OA": {
       "count": 0,
       "amount": 0
     },
@@ -1393,6 +1397,505 @@
       "description": "手机运费",
       "amount": 30,
       "status": "未知"
+    }
+  ],
+  "budgetDetails": [
+    {
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "网络续约费用",
+      "description": "",
+      "amount": 1820
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "会员费",
+      "description": "",
+      "amount": 2000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "拍摄费",
+      "description": "",
+      "amount": 500
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "账号&实名&邮箱购买",
+      "description": "",
+      "amount": 800
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意一部",
+      "category": "新增网络费用",
+      "description": "",
+      "amount": 2000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "电商fastmoss会员费",
+      "description": "",
+      "amount": 30
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "可灵1000积分",
+      "description": "",
+      "amount": 234
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "视界云",
+      "description": "",
+      "amount": 10000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "tago会员",
+      "description": "",
+      "amount": 3150
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "小火箭网络费用",
+      "description": "",
+      "amount": 150
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "样品采购",
+      "description": "",
+      "amount": 1000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "topview会员",
+      "description": "",
+      "amount": 735
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "capcut会员",
+      "description": "",
+      "amount": 20
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意二部",
+      "category": "3月兼职费用",
+      "description": "",
+      "amount": 25500
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "可灵",
+      "description": "",
+      "amount": 10512
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "Veo3",
+      "description": "",
+      "amount": 1500
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "即梦",
+      "description": "",
+      "amount": 1500
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "capcut/剪映",
+      "description": "",
+      "amount": 327
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "chat-GPT",
+      "description": "",
+      "amount": 450
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "Tapnow",
+      "description": "",
+      "amount": 757.15
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "AI配音平台Voices",
+      "description": "",
+      "amount": 150
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "cursor",
+      "description": "",
+      "amount": 120
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "百度网盘",
+      "description": "",
+      "amount": 68
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "Nano banana pro",
+      "description": "",
+      "amount": 600
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "英国手机卡*10",
+      "description": "",
+      "amount": 1200
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "hotmail邮箱*45",
+      "description": "",
+      "amount": 225
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "手机维修费",
+      "description": "",
+      "amount": 500
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "外出拍摄费用",
+      "description": "",
+      "amount": 3000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "样品采购费用",
+      "description": "",
+      "amount": 2000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "节点网络费用",
+      "description": "",
+      "amount": 3000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意三部",
+      "category": "3月兼职费用",
+      "description": "",
+      "amount": 4050
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "可灵",
+      "description": "",
+      "amount": 500
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "即梦",
+      "description": "",
+      "amount": 400
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "即梦",
+      "description": "",
+      "amount": 1000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "VEO3",
+      "description": "",
+      "amount": 260
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "gpt会员",
+      "description": "",
+      "amount": 700
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "let's vpn",
+      "description": "",
+      "amount": 200
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "拍摄道具费用",
+      "description": "",
+      "amount": 550
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "节点费用",
+      "description": "",
+      "amount": 1650
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "capcut/剪映",
+      "description": "",
+      "amount": 240
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意四部",
+      "category": "刷粉/邮箱/新账号",
+      "description": "",
+      "amount": 500
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "节点费用",
+      "description": "",
+      "amount": 900
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "3月兼职费用",
+      "description": "",
+      "amount": 6000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "手机采购",
+      "description": "",
+      "amount": 800
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "橱窗号",
+      "description": "",
+      "amount": 800
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "AI视频制作工具",
+      "description": "",
+      "amount": 1000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "capcut",
+      "description": "",
+      "amount": 140
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "fastmoss/kalodata专业版",
+      "description": "",
+      "amount": 80
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "达人发样/自采购样品/拍摄道具",
+      "description": "",
+      "amount": 3500
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "titokshop投流",
+      "description": "",
+      "amount": 2000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "外勤拍摄支出",
+      "description": "",
+      "amount": 1000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "短视频剪辑电脑",
+      "description": "",
+      "amount": 800
+    },
+    {
+      "budgetMonth": 3,
+      "department": "内容创意五部",
+      "category": "tiktok账号实名认证",
+      "description": "",
+      "amount": 100
+    },
+    {
+      "budgetMonth": 3,
+      "department": "新媒体产品部",
+      "category": "模型会员及产品部署云端费用",
+      "description": "",
+      "amount": 800
+    },
+    {
+      "budgetMonth": 3,
+      "department": "商务签约部",
+      "category": "3月兼职费用",
+      "description": "",
+      "amount": 7000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "商务签约部",
+      "category": "会员费用",
+      "description": "",
+      "amount": 1000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "商务签约部",
+      "category": "网络费用",
+      "description": "",
+      "amount": 1000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "业务创新部",
+      "category": "静态ip",
+      "description": "",
+      "amount": 100
+    },
+    {
+      "budgetMonth": 3,
+      "department": "业务创新部",
+      "category": "抓取工具",
+      "description": "",
+      "amount": 550
+    },
+    {
+      "budgetMonth": 3,
+      "department": "业务创新部",
+      "category": "海外社媒工具",
+      "description": "",
+      "amount": 750
+    },
+    {
+      "budgetMonth": 3,
+      "department": "业务创新部",
+      "category": "国内社媒代发渠道",
+      "description": "",
+      "amount": 2000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "业务创新部",
+      "category": "AI工具",
+      "description": "",
+      "amount": 500
+    },
+    {
+      "budgetMonth": 3,
+      "department": "运营支持部（王晨）",
+      "category": "季度网络续约",
+      "description": "",
+      "amount": 290
+    },
+    {
+      "budgetMonth": 3,
+      "department": "运营支持部（王晨）",
+      "category": "月付网络续约",
+      "description": "",
+      "amount": 300
+    },
+    {
+      "budgetMonth": 3,
+      "department": "运营支持部（王晨）",
+      "category": "手机话费",
+      "description": "",
+      "amount": 580
+    },
+    {
+      "budgetMonth": 3,
+      "department": "运营支持部（王晨）",
+      "category": "会员费用",
+      "description": "",
+      "amount": 500
+    },
+    {
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "3月兼职费用",
+      "description": "",
+      "amount": 20600
+    },
+    {
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "手机维修费用",
+      "description": "",
+      "amount": 3000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员费用",
+      "description": "",
+      "amount": 2000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "出海匠账号席位",
+      "description": "",
+      "amount": 2000
+    },
+    {
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "网络费用",
+      "description": "",
+      "amount": 1500
     }
   ]
 }

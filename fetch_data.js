@@ -80,40 +80,52 @@ function parseBudgetRows(rows, targetMonth) {
   const budgetDetails = [];
   let matchedRows = 0;
 
+  const [targetYear, targetMon] = targetMonth ? targetMonth.split('-').map(Number) : [0, 0];
+
   for (let i = 1; i < rows.length; i++) {
     const row = rows[i];
     if (!row || !row[deptCol]) continue;
-
-    // 月份筛选
-    if (monthCol !== -1 && targetMonth) {
-      let rowMonth = String(row[monthCol] || '').trim();
-      const [targetYear, targetMon] = targetMonth.split('-').map(Number);
-
-      // 飞书日期可能是 Excel 序列号（如 46082）
-      if (/^\d{4,5}$/.test(rowMonth)) {
-        const d = new Date((parseInt(rowMonth) - 25569) * 86400000);
-        rowMonth = `${d.getUTCFullYear()}年${d.getUTCMonth() + 1}月`;
-      }
-
-      // 匹配各种格式：2026年3月、2026-03、3月
-      const hasYear = rowMonth.includes(String(targetYear));
-      const hasMonth = rowMonth.includes(`${targetMon}月`) || rowMonth.includes(`-${String(targetMon).padStart(2, '0')}`);
-      if (rowMonth && !(hasYear && hasMonth)) continue;
-    }
 
     const dept = String(row[deptCol]).trim();
     const amount = parseFloat(String(row[amountCol] || 0).replace(/[,，]/g, ''));
     if (!dept || isNaN(amount)) continue;
 
-    matchedRows++;
-    budget[dept] = (budget[dept] || 0) + amount;
+    // 解析月份数字
+    let budgetMonth = null;
+    let isTargetMonth = false;
+    if (monthCol !== -1 && row[monthCol]) {
+      let mStr = String(row[monthCol]).trim();
+      if (/^\d{4,5}$/.test(mStr)) {
+        const md = new Date((parseInt(mStr) - 25569) * 86400000);
+        budgetMonth = md.getUTCMonth() + 1;
+        mStr = `${md.getUTCFullYear()}年${budgetMonth}月`;
+      } else {
+        const mm = mStr.match(/(\d+)/);
+        if (mm) budgetMonth = parseInt(mm[1]);
+      }
+      if (targetMonth) {
+        const hasYear = mStr.includes(String(targetYear));
+        const hasMonth = mStr.includes(`${targetMon}月`) || mStr.includes(`-${String(targetMon).padStart(2, '0')}`);
+        isTargetMonth = hasYear && hasMonth;
+      }
+    } else {
+      isTargetMonth = true;
+    }
 
+    // 所有行都加入明细
     budgetDetails.push({
+      budgetMonth,
       department: dept,
       category: categoryCol !== -1 ? String(row[categoryCol] || '').trim() : '',
       description: descCol !== -1 ? String(row[descCol] || '').trim() : '',
       amount,
     });
+
+    // 只有目标月份的行参与汇总
+    if (isTargetMonth) {
+      matchedRows++;
+      budget[dept] = (budget[dept] || 0) + amount;
+    }
   }
 
   console.log(`   匹配到 ${matchedRows} 条预算记录`);
@@ -123,7 +135,7 @@ function parseBudgetRows(rows, targetMonth) {
     }
   }
 
-  return Object.keys(budget).length > 0 ? budget : null;
+  return Object.keys(budget).length > 0 ? { budget, budgetDetails } : null;
 }
 
 // 读取飞书表格数据
@@ -305,6 +317,7 @@ function aggregate(records, config) {
     byStatus,
     weekly,
     records: data,
+    budgetDetails: config._budgetDetails || [],
   };
 }
 
@@ -350,13 +363,14 @@ async function main() {
       if (budgetRows && budgetRows.length > 0) {
         const now = new Date();
         const currentMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
-        const budgetFromSheet = parseBudgetRows(budgetRows, currentMonth);
-        if (budgetFromSheet) {
-          console.log(`   ✅ 读取到 ${Object.keys(budgetFromSheet).length} 个部门预算`);
+        const budgetResult = parseBudgetRows(budgetRows, currentMonth);
+        if (budgetResult) {
+          console.log(`   ✅ 读取到 ${Object.keys(budgetResult.budget).length} 个部门预算`);
           // 用飞书表格的预算覆盖 config 里的默认值
-          config.budget = { ...config.budget, ...budgetFromSheet };
+          config.budget = { ...config.budget, ...budgetResult.budget };
+          config._budgetDetails = budgetResult.budgetDetails;
           // 同时更新部门列表（如果预算表里有新部门）
-          for (const dept of Object.keys(budgetFromSheet)) {
+          for (const dept of Object.keys(budgetResult.budget)) {
             if (!config.departments.includes(dept)) {
               config.departments.push(dept);
             }

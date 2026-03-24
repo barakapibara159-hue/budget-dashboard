@@ -256,6 +256,24 @@
       </table>
     </div>
   </div>
+
+  <!-- 预算明细表 -->
+  <div class="panel">
+    <h2>预算明细</h2>
+    <div class="filters">
+      <select id="budgetFilterMonth"><option value="">全部预算月份</option></select>
+      <select id="budgetFilterDept"><option value="">全部部门</option></select>
+      <input id="budgetFilterSearch" type="text" placeholder="搜索分类细项...">
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>预算月份</th><th>部门</th><th>费用分类</th><th>分类细项</th><th>预估金额</th></tr>
+        </thead>
+        <tbody id="budgetDetailBody"></tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -474,6 +492,26 @@ function render() {
   filterCat.addEventListener('change', renderTable);
   filterStatus.addEventListener('change', renderTable);
   document.getElementById('filterSearch').addEventListener('input', renderTable);
+
+  // 预算明细筛选器
+  const budgetFilterMonth = document.getElementById('budgetFilterMonth');
+  const budgetFilterDept = document.getElementById('budgetFilterDept');
+  const bdMonths = new Set();
+  const bdDepts = new Set();
+  (d.budgetDetails || []).forEach(r => {
+    if (r.budgetMonth) bdMonths.add(r.budgetMonth);
+    if (r.department) bdDepts.add(r.department);
+  });
+  Array.from(bdMonths).sort((a, b) => b - a).forEach(m => {
+    const opt = document.createElement('option'); opt.value = m; opt.textContent = m + '月'; budgetFilterMonth.appendChild(opt);
+  });
+  Array.from(bdDepts).sort().forEach(name => {
+    const opt = document.createElement('option'); opt.value = name; opt.textContent = name; budgetFilterDept.appendChild(opt);
+  });
+  renderBudgetTable();
+  budgetFilterMonth.addEventListener('change', renderBudgetTable);
+  budgetFilterDept.addEventListener('change', renderBudgetTable);
+  document.getElementById('budgetFilterSearch').addEventListener('input', renderBudgetTable);
 }
 
 function renderTable() {
@@ -507,6 +545,35 @@ function renderTable() {
     <td>${r.description}</td>
     <td style="font-weight:600;font-variant-numeric:tabular-nums">${fmtMoney(r.amount)}</td>
     <td><span class="badge ${STATUS_BADGE[r.status] || 'badge-unknown'}">${r.status}</span></td>
+  </tr>`).join('');
+}
+
+function renderBudgetTable() {
+  const month = document.getElementById('budgetFilterMonth').value;
+  const dept = document.getElementById('budgetFilterDept').value;
+  const search = document.getElementById('budgetFilterSearch').value.toLowerCase();
+
+  let rows = (DATA.budgetDetails || []).filter(r => {
+    if (month && r.budgetMonth !== parseInt(month)) return false;
+    if (dept && r.department !== dept) return false;
+    if (search && !r.category.toLowerCase().includes(search) && !r.description.toLowerCase().includes(search)) return false;
+    return true;
+  });
+
+  rows.sort((a, b) => (b.budgetMonth || 0) - (a.budgetMonth || 0) || a.department.localeCompare(b.department));
+
+  const body = document.getElementById('budgetDetailBody');
+  if (rows.length === 0) {
+    body.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;color:var(--text2);">暂无数据</td></tr>';
+    return;
+  }
+
+  body.innerHTML = rows.map(r => `<tr>
+    <td style="color:var(--text2)">${r.budgetMonth ? r.budgetMonth + '月' : '-'}</td>
+    <td>${r.department}</td>
+    <td>${r.category}</td>
+    <td>${r.description || '-'}</td>
+    <td style="font-weight:600;font-variant-numeric:tabular-nums">${fmtMoney(r.amount)}</td>
   </tr>`).join('');
 }
 
