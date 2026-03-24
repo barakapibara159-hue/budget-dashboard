@@ -151,11 +151,19 @@
   .badge {
     display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;
   }
+  .badge-done { background: rgba(48,209,88,0.15); color: var(--green); }
   .badge-oa { background: rgba(10,132,255,0.15); color: var(--accent); }
   .badge-invoice { background: rgba(255,159,10,0.15); color: var(--orange); }
   .badge-queue { background: rgba(191,90,242,0.15); color: var(--purple); }
   .badge-replace { background: rgba(255,69,58,0.15); color: var(--red); }
   .badge-unknown { background: rgba(255,255,255,0.06); color: var(--text2); }
+
+  /* 迷你饼图卡片 */
+  .stat-card-pie { display: flex; align-items: center; gap: 16px; }
+  .stat-card-pie canvas { flex-shrink: 0; }
+  .mini-pie-legend { font-size: 11px; color: var(--text2); line-height: 1.8; }
+  .mini-pie-legend-item { display: flex; align-items: center; gap: 6px; }
+  .mini-pie-legend-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
   .table-wrap { max-height: 500px; overflow-y: auto; }
   .table-wrap::-webkit-scrollbar { width: 6px; }
   .table-wrap::-webkit-scrollbar-track { background: transparent; }
@@ -185,7 +193,12 @@
 
 <div class="container">
   <!-- 总览卡片 -->
-  <div class="overview" id="overviewCards"></div>
+  <div class="overview">
+    <div class="stat-card" id="cardBudget"></div>
+    <div class="stat-card" id="cardSpent"></div>
+    <div class="stat-card" id="cardReimbursed"></div>
+    <div class="stat-card" id="cardStatusPie"></div>
+  </div>
 
   <!-- 总预算使用率 -->
   <div class="panel total-progress">
@@ -248,7 +261,7 @@
 <script>
 const PIE_COLORS = ['#0a84ff','#30d158','#ff9f0a','#ff453a','#bf5af2','#64d2ff','#ff375f','#ffd60a','#ac8e68','#6366f1'];
 const STATUS_COLORS = ['#0a84ff','#ff9f0a','#bf5af2','#ff453a','#30d158'];
-const STATUS_BADGE = { '已提交OA':'badge-oa', '等待发票':'badge-invoice', '排队待报销':'badge-queue', '待走替票':'badge-replace' };
+const STATUS_BADGE = { '已报销完':'badge-done', '已提交OA未走完流程':'badge-oa', '等待发票提交OA':'badge-invoice', '排队待报销':'badge-queue', '待走替票':'badge-replace' };
 let DATA = null;
 let statusPieChart = null;
 
@@ -275,14 +288,39 @@ function render() {
   // 总览卡片
   const o = d.overview;
   const usageRate = parseFloat(o.usageRate);
-  const rateColor = usageRate > 100 ? 'red' : usageRate > 80 ? 'orange' : '';
-  const remainColor = o.remaining >= 0 ? 'green' : 'red';
-  document.getElementById('overviewCards').innerHTML = `
-    <div class="stat-card"><div class="label">总预算</div><div class="value">${fmtMoney(o.totalBudget)}</div><div class="sub">${d.currentMonth} 月度</div></div>
-    <div class="stat-card"><div class="label">已花费</div><div class="value">${fmtMoney(o.totalSpent)}</div><div class="sub">${d.records.length} 笔费用</div></div>
-    <div class="stat-card"><div class="label">剩余预算</div><div class="value ${remainColor}">${fmtMoney(o.remaining)}</div><div class="sub">${o.remaining >= 0 ? '预算内' : '已超支'}</div></div>
-    <div class="stat-card"><div class="label">使用率</div><div class="value ${rateColor}">${o.usageRate}%</div><div class="sub">${usageRate > 100 ? '已超预算' : usageRate > 80 ? '接近上限' : '预算健康'}</div></div>
-  `;
+
+  // 卡片1: 总预算
+  document.getElementById('cardBudget').innerHTML = `<div class="label">总预算</div><div class="value">${fmtMoney(o.totalBudget)}</div><div class="sub">${d.currentMonth} 月度</div>`;
+
+  // 卡片2: 已花费
+  document.getElementById('cardSpent').innerHTML = `<div class="label">已花费</div><div class="value">${fmtMoney(o.totalSpent)}</div><div class="sub">${d.records.length} 笔费用</div>`;
+
+  // 卡片3: 已报销完金额
+  const reimbursedInfo = d.byStatus['已报销完'] || { count: 0, amount: 0 };
+  document.getElementById('cardReimbursed').innerHTML = `<div class="label">已报销完</div><div class="value green">${fmtMoney(reimbursedInfo.amount)}</div><div class="sub">${reimbursedInfo.count} 笔已完成</div>`;
+
+  // 卡片4: 报销状态迷你饼图（排除已报销完）
+  const pendingStatuses = Object.entries(d.byStatus).filter(([name, info]) => name !== '已报销完' && info.count > 0);
+  const miniPieCard = document.getElementById('cardStatusPie');
+  if (pendingStatuses.length > 0) {
+    const pendingTotal = pendingStatuses.reduce((s, [, info]) => s + info.count, 0);
+    let legendHTML = '';
+    pendingStatuses.forEach(([name, info], idx) => {
+      legendHTML += `<div class="mini-pie-legend-item"><div class="mini-pie-legend-dot" style="background:${STATUS_COLORS[idx % STATUS_COLORS.length]}"></div>${name} ${info.count}笔</div>`;
+    });
+    miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="stat-card-pie"><canvas id="miniStatusPie" width="80" height="80"></canvas><div class="mini-pie-legend">${legendHTML}</div></div><div class="sub">${pendingTotal} 笔待处理</div>`;
+    const miniCtx = document.getElementById('miniStatusPie').getContext('2d');
+    new Chart(miniCtx, {
+      type: 'doughnut',
+      data: {
+        labels: pendingStatuses.map(([name]) => name),
+        datasets: [{ data: pendingStatuses.map(([, info]) => info.count), backgroundColor: STATUS_COLORS.slice(0, pendingStatuses.length), borderWidth: 0 }]
+      },
+      options: { responsive: false, cutout: '55%', plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed}笔` } } } }
+    });
+  } else {
+    miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="value" style="font-size:16px;color:var(--text2)">暂无待报销</div><div class="sub">所有费用已处理</div>`;
+  }
 
   // 总预算进度条
   const totalBar = document.getElementById('totalBar');
