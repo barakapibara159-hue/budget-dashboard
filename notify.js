@@ -29,8 +29,7 @@ async function sendFeishuNotification(stats) {
 
   // ===== 1. 最新预算月份花费总览 =====
   const overviewLines = [
-    `${statusEmoji} **总预算：** ¥${fmt(o.totalBudget)}`,
-    `💰 **${latestMonth}月已花费：** ¥${fmt(o.totalSpent)}（使用率 ${o.usageRate}%）`,
+    `💰 **${latestMonth}月已花费：** ¥${fmt(o.totalSpent)}`,
     `📝 **费用笔数：** ${stats.records.length}笔`,
   ];
 
