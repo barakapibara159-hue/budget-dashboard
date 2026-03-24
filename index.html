@@ -295,9 +295,12 @@ function render() {
   // 卡片2: 已花费
   document.getElementById('cardSpent').innerHTML = `<div class="label">已花费</div><div class="value">${fmtMoney(o.totalSpent)}</div><div class="sub">${d.records.length} 笔费用</div>`;
 
-  // 卡片3: 已报销完金额
-  const reimbursedInfo = d.byStatus['已报销完'] || { count: 0, amount: 0 };
-  document.getElementById('cardReimbursed').innerHTML = `<div class="label">已报销完</div><div class="value green">${fmtMoney(reimbursedInfo.amount)}</div><div class="sub">${reimbursedInfo.count} 笔已完成</div>`;
+  // 卡片3: 最新预算月已报销完金额
+  const latestMonth = d.records.reduce((max, r) => r.budgetMonth > max ? r.budgetMonth : max, 0);
+  const latestMonthRecords = d.records.filter(r => r.budgetMonth === latestMonth && r.status === '已报销完');
+  const reimbursedAmount = latestMonthRecords.reduce((s, r) => s + r.amount, 0);
+  const reimbursedCount = latestMonthRecords.length;
+  document.getElementById('cardReimbursed').innerHTML = `<div class="label">${latestMonth}月已报销完</div><div class="value green">${fmtMoney(reimbursedAmount)}</div><div class="sub">${reimbursedCount} 笔已完成</div>`;
 
   // 卡片4: 报销状态迷你饼图（排除已报销完）
   const pendingStatuses = Object.entries(d.byStatus).filter(([name, info]) => name !== '已报销完' && info.count > 0);
@@ -308,7 +311,7 @@ function render() {
     pendingStatuses.forEach(([name, info], idx) => {
       legendHTML += `<div class="mini-pie-legend-item"><div class="mini-pie-legend-dot" style="background:${STATUS_COLORS[idx % STATUS_COLORS.length]}"></div>${name} ${info.count}笔</div>`;
     });
-    miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="stat-card-pie"><canvas id="miniStatusPie" width="80" height="80"></canvas><div class="mini-pie-legend">${legendHTML}</div></div><div class="sub">${pendingTotal} 笔待处理</div>`;
+    miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="stat-card-pie"><canvas id="miniStatusPie" width="80" height="80"></canvas><div class="mini-pie-legend">${legendHTML}</div></div><div class="sub">全部月份累计 ${pendingTotal} 笔</div>`;
     const miniCtx = document.getElementById('miniStatusPie').getContext('2d');
     new Chart(miniCtx, {
       type: 'doughnut',
