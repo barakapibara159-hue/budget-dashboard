@@ -176,6 +176,17 @@
     transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  /* ===== INSIGHT CARDS ===== */
+  .insight-card {
+    background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); padding: 14px 16px;
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+  .insight-label { font-size: 11px; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .insight-value { font-size: 20px; font-weight: 800; margin-top: 4px; letter-spacing: -0.5px; font-variant-numeric: tabular-nums; }
+  .insight-sub { font-size: 11px; color: var(--text3); margin-top: 2px; font-weight: 500; }
+  .insight-up { color: var(--red); }
+  .insight-down { color: var(--green); }
+
   /* ===== CHARTS ===== */
   .chart-container { position: relative; height: 320px; }
   .chart-container-pie { position: relative; height: 300px; }
@@ -308,6 +319,7 @@
     <div class="panel">
       <h2><span class="icon" style="background:var(--blue-dim)">📈</span>按周花费趋势</h2>
       <div class="chart-container"><canvas id="weeklyChart"></canvas></div>
+      <div id="weeklyInsights" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;"></div>
     </div>
   </div>
 
@@ -510,6 +522,59 @@ function render() {
       }
     }
   });
+
+  // Weekly Insights
+  const insightsEl = document.getElementById('weeklyInsights');
+  if (d.weekly && d.weekly.length > 0) {
+    const weeks = d.weekly;
+    const lastWeek = weeks[weeks.length - 1];
+    const prevWeek = weeks.length > 1 ? weeks[weeks.length - 2] : null;
+
+    // Week-over-week change
+    let wowText = '-';
+    let wowClass = '';
+    if (prevWeek && prevWeek.amount > 0) {
+      const wowPct = ((lastWeek.amount - prevWeek.amount) / prevWeek.amount * 100).toFixed(1);
+      wowText = (wowPct > 0 ? '+' : '') + wowPct + '%';
+      wowClass = wowPct > 0 ? 'insight-up' : 'insight-down';
+    }
+
+    // Daily average
+    const totalAmount = d.records.reduce((s, r) => s + r.amount, 0);
+    const dates = d.records.map(r => r.date).filter(Boolean);
+    const uniqueDays = new Set(dates).size || 1;
+    const dailyAvg = totalAmount / uniqueDays;
+
+    // Max single expense
+    const maxRecord = d.records.reduce((max, r) => r.amount > max.amount ? r : max, { amount: 0 });
+
+    // Peak week
+    const peakWeek = weeks.reduce((max, w) => w.amount > max.amount ? w : max, { amount: 0 });
+    const peakLabel = peakWeek.week ? peakWeek.week.split('-').slice(1).join('/') : '-';
+
+    insightsEl.innerHTML = `
+      <div class="insight-card">
+        <div class="insight-label">本周 vs 上周</div>
+        <div class="insight-value ${wowClass}">${wowText}</div>
+        <div class="insight-sub">本周 ${fmtMoney(lastWeek.amount)}</div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-label">日均花费</div>
+        <div class="insight-value">${fmtMoney(dailyAvg)}</div>
+        <div class="insight-sub">共 ${uniqueDays} 天有支出</div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-label">最大单笔</div>
+        <div class="insight-value">${fmtMoney(maxRecord.amount)}</div>
+        <div class="insight-sub">${maxRecord.description || '-'}</div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-label">花费高峰周</div>
+        <div class="insight-value">${peakLabel}</div>
+        <div class="insight-sub">${fmtMoney(peakWeek.amount)}</div>
+      </div>
+    `;
+  }
 
   // Category Pie
   const catLabels = Object.keys(d.byCategory);
