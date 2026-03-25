@@ -7,6 +7,7 @@ function loadConfig() {
   return {
     webhook_url: process.env.FEISHU_WEBHOOK_URL || config.notify.webhook_url,
     dashboard_url: process.env.DASHBOARD_URL || config.dashboard_url,
+    at_open_id: process.env.FEISHU_AT_OPEN_ID || (config.notify && config.notify.at_open_id) || '',
   };
 }
 
@@ -114,6 +115,14 @@ async function sendFeishuNotification(stats) {
         url: config.dashboard_url,
         type: 'primary',
       }],
+    });
+  }
+
+  // @某人
+  if (config.at_open_id) {
+    elements.push({
+      tag: 'div',
+      text: { tag: 'lark_md', content: `<at id=${config.at_open_id}></at> 请查收` },
     });
   }
 

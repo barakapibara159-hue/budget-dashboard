@@ -6,7 +6,8 @@
     "sheet_id": ""
   },
   "notify": {
-    "webhook_url": ""
+    "webhook_url": "",
+    "at_open_id": ""
   },
   "dashboard_url": "",
   "departments": [

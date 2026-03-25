@@ -2,8 +2,8 @@ name: 更新预算看板
 
 on:
   schedule:
-    # 每天早上9点（北京时间）= UTC 1:00
-    - cron: '0 1 * * *'
+    # 奇数日早上9:30（北京时间）= UTC 1:30
+    - cron: '30 1 1-31/2 * *'
   workflow_dispatch: # 支持手动触发
 
 permissions:
@@ -32,6 +32,7 @@ jobs:
           FEISHU_SHEET_ID: ${{ secrets.FEISHU_SHEET_ID }}
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
           DASHBOARD_URL: ${{ secrets.DASHBOARD_URL }}
+          FEISHU_AT_OPEN_ID: ${{ secrets.FEISHU_AT_OPEN_ID }}
         run: node run.js
 
       - name: Commit and push data.json
