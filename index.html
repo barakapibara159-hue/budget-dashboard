@@ -6,193 +6,287 @@
 <title>公司预算看板</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
   :root {
-    --bg: #000000;
-    --bg2: #1c1c1e;
-    --card: #1c1c1e;
-    --card-hover: #2c2c2e;
-    --text: #f5f5f7;
-    --text2: #86868b;
-    --text3: #a1a1a6;
-    --accent: #0a84ff;
-    --green: #30d158;
-    --red: #ff453a;
-    --orange: #ff9f0a;
-    --yellow: #ffd60a;
-    --purple: #bf5af2;
-    --teal: #64d2ff;
-    --border: rgba(255,255,255,0.08);
-    --shadow: 0 2px 20px rgba(0,0,0,0.4);
-    --radius: 16px;
+    --bg: #0d0d0d;
+    --bg2: #161618;
+    --card: #1a1a1f;
+    --card-hover: #222228;
+    --card-border: rgba(255,255,255,0.06);
+    --text: #f0f0f5;
+    --text2: #7a7a85;
+    --text3: #55555f;
+    --accent: #a78bfa;
+    --accent2: #c4f042;
+    --green: #4ade80;
+    --green-dim: rgba(74,222,128,0.12);
+    --red: #f87171;
+    --red-dim: rgba(248,113,113,0.12);
+    --orange: #fb923c;
+    --orange-dim: rgba(251,146,60,0.12);
+    --purple: #a78bfa;
+    --purple-dim: rgba(167,139,250,0.12);
+    --blue: #60a5fa;
+    --blue-dim: rgba(96,165,250,0.12);
+    --teal: #2dd4bf;
+    --yellow: #facc15;
+    --pink: #f472b6;
+    --radius: 20px;
+    --radius-sm: 12px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.3);
   }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Hiragino Sans GB", sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", sans-serif;
     background: var(--bg); color: var(--text); line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
   }
 
-  /* Header */
+  /* ===== HEADER ===== */
   .header {
-    padding: 48px 40px 32px;
-    background: var(--bg);
+    padding: 40px 48px 28px;
+    display: flex; align-items: flex-end; justify-content: space-between;
   }
-  .header h1 {
-    font-size: 34px; font-weight: 700; letter-spacing: -0.5px;
-    background: linear-gradient(135deg, #f5f5f7, #86868b);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  .header-left h1 {
+    font-size: 28px; font-weight: 800; letter-spacing: -0.5px;
+    color: var(--text);
   }
-  .header .sub { font-size: 13px; color: var(--text2); margin-top: 6px; }
+  .header-left .sub {
+    font-size: 13px; color: var(--text2); margin-top: 4px; font-weight: 400;
+  }
+  .header-right {
+    display: flex; gap: 8px; align-items: center;
+  }
+  .header-pill {
+    padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600;
+    background: var(--card); border: 1px solid var(--card-border); color: var(--text2);
+    cursor: default; transition: all 0.2s;
+  }
+  .header-pill.active {
+    background: var(--accent2); color: #0d0d0d; border-color: var(--accent2);
+  }
 
-  .container { max-width: 1400px; margin: 0 auto; padding: 0 40px 60px; }
+  .container { max-width: 1440px; margin: 0 auto; padding: 0 48px 80px; }
 
-  /* 总览卡片 */
-  .overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+  /* ===== OVERVIEW CARDS ===== */
+  .overview {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;
+  }
   .stat-card {
-    background: var(--card); border-radius: var(--radius); padding: 24px;
-    border: 1px solid var(--border); transition: background 0.2s;
+    background: var(--card); border-radius: var(--radius); padding: 24px 28px;
+    border: 1px solid var(--card-border);
+    transition: all 0.25s ease;
+    position: relative; overflow: hidden;
   }
-  .stat-card:hover { background: var(--card-hover); }
-  .stat-card .label { font-size: 13px; color: var(--text2); margin-bottom: 8px; font-weight: 500; }
-  .stat-card .value { font-size: 32px; font-weight: 700; letter-spacing: -1px; }
-  .stat-card .sub { font-size: 12px; color: var(--text2); margin-top: 8px; }
+  .stat-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .stat-card:hover::before { opacity: 1; }
+  .stat-card .label {
+    font-size: 12px; color: var(--text2); margin-bottom: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.8px;
+  }
+  .stat-card .value {
+    font-size: 32px; font-weight: 800; letter-spacing: -1.5px;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-card .sub { font-size: 12px; color: var(--text3); margin-top: 8px; font-weight: 500; }
   .stat-card .value.green { color: var(--green); }
   .stat-card .value.red { color: var(--red); }
-  .stat-card .value.orange { color: var(--orange); }
 
-  /* 面板 */
+  /* ===== PANELS ===== */
   .panel {
-    background: var(--card); border-radius: var(--radius); padding: 28px;
-    border: 1px solid var(--border); margin-bottom: 24px;
+    background: var(--card); border-radius: var(--radius); padding: 28px 32px;
+    border: 1px solid var(--card-border); margin-bottom: 20px;
+    transition: box-shadow 0.25s;
   }
+  .panel:hover { box-shadow: 0 2px 16px rgba(0,0,0,0.2); }
   .panel h2 {
-    font-size: 20px; font-weight: 600; margin-bottom: 20px;
-    letter-spacing: -0.3px; color: var(--text);
+    font-size: 16px; font-weight: 700; margin-bottom: 24px;
+    letter-spacing: -0.2px; color: var(--text);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .panel h2 .icon {
+    width: 28px; height: 28px; border-radius: 8px; display: flex;
+    align-items: center; justify-content: center; font-size: 14px;
   }
 
-  /* 布局 */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
-  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+  /* ===== GRID ===== */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 20px; }
 
-  /* 部门花销排名 */
+  /* ===== TOTAL PROGRESS ===== */
+  .total-progress { margin-bottom: 20px; }
+  .total-bar-wrap {
+    height: 10px; background: rgba(255,255,255,0.04); border-radius: 5px; overflow: hidden;
+    position: relative;
+  }
+  .total-bar-fill {
+    height: 100%; border-radius: 5px; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  .total-bar-fill::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+    animation: shimmer 2s infinite;
+  }
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  .total-bar-fill.ok { background: linear-gradient(90deg, #4ade80, #2dd4bf); }
+  .total-bar-fill.warn { background: linear-gradient(90deg, #fb923c, #facc15); }
+  .total-bar-fill.over { background: linear-gradient(90deg, #f87171, #fb923c); }
+  .total-bar-text {
+    display: flex; justify-content: space-between; margin-top: 12px;
+    font-size: 13px; color: var(--text2); font-weight: 500;
+  }
+
+  /* ===== DEPARTMENT RANKING ===== */
   .dept-rank-item {
     display: flex; align-items: center; padding: 14px 0;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: background 0.15s;
   }
   .dept-rank-item:last-child { border-bottom: none; }
+  .dept-rank-item:hover { background: rgba(255,255,255,0.02); margin: 0 -12px; padding-left: 12px; padding-right: 12px; border-radius: 10px; }
   .dept-rank-num {
     width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center;
-    font-size: 13px; font-weight: 700; margin-right: 14px; flex-shrink: 0;
-    background: rgba(255,255,255,0.06); color: var(--text2);
+    font-size: 12px; font-weight: 800; margin-right: 14px; flex-shrink: 0;
+    background: rgba(255,255,255,0.04); color: var(--text3);
   }
-  .dept-rank-num.top1 { background: var(--orange); color: #000; }
-  .dept-rank-num.top2 { background: rgba(255,159,10,0.3); color: var(--orange); }
-  .dept-rank-num.top3 { background: rgba(255,159,10,0.15); color: var(--orange); }
+  .dept-rank-num.top1 { background: var(--accent2); color: #0d0d0d; }
+  .dept-rank-num.top2 { background: rgba(196,240,66,0.25); color: var(--accent2); }
+  .dept-rank-num.top3 { background: rgba(196,240,66,0.12); color: var(--accent2); }
   .dept-rank-info { flex: 1; min-width: 0; }
-  .dept-rank-name { font-size: 14px; font-weight: 500; }
-  .dept-rank-detail { font-size: 12px; color: var(--text2); margin-top: 2px; }
-  .dept-rank-amount { font-size: 18px; font-weight: 700; text-align: right; margin-left: 16px; }
-  .dept-rank-bar-wrap { width: 100%; height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; margin-top: 6px; }
-  .dept-rank-bar { height: 100%; border-radius: 2px; background: var(--accent); transition: width 0.6s ease; }
-
-  /* 总预算进度 */
-  .total-progress { margin-bottom: 24px; }
-  .total-bar-wrap { height: 8px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
-  .total-bar-fill {
-    height: 100%; border-radius: 4px; transition: width 0.8s ease;
+  .dept-rank-name { font-size: 14px; font-weight: 600; }
+  .dept-rank-detail { font-size: 11px; color: var(--text3); margin-top: 3px; font-weight: 500; }
+  .dept-rank-amount { font-size: 18px; font-weight: 800; text-align: right; margin-left: 16px; font-variant-numeric: tabular-nums; letter-spacing: -0.5px; }
+  .dept-rank-bar-wrap { width: 100%; height: 3px; background: rgba(255,255,255,0.04); border-radius: 2px; margin-top: 8px; }
+  .dept-rank-bar {
+    height: 100%; border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--purple));
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .total-bar-fill.ok { background: linear-gradient(90deg, var(--green), var(--teal)); }
-  .total-bar-fill.warn { background: linear-gradient(90deg, var(--orange), var(--yellow)); }
-  .total-bar-fill.over { background: linear-gradient(90deg, var(--red), var(--orange)); }
-  .total-bar-text { display: flex; justify-content: space-between; margin-top: 10px; font-size: 13px; color: var(--text2); }
 
-  /* 分类占比 */
+  /* ===== CHARTS ===== */
   .chart-container { position: relative; height: 320px; }
   .chart-container-pie { position: relative; height: 300px; }
-  .category-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
-  .category-legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text3); }
-  .category-legend-dot { width: 10px; height: 10px; border-radius: 3px; }
 
-  /* 报销状态分析 */
-  .status-chart-wrap { display: flex; align-items: center; gap: 32px; }
+  /* ===== STATUS ANALYSIS ===== */
+  .status-chart-wrap { display: flex; align-items: center; gap: 40px; }
   .status-chart-pie { width: 200px; height: 200px; flex-shrink: 0; position: relative; }
   .status-detail-list { flex: 1; }
   .status-detail-item {
-    display: flex; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
   }
   .status-detail-item:last-child { border-bottom: none; }
-  .status-dot { width: 10px; height: 10px; border-radius: 3px; margin-right: 12px; flex-shrink: 0; }
-  .status-name { font-size: 14px; flex: 1; }
-  .status-count { font-size: 14px; font-weight: 600; color: var(--text); margin-right: 16px; }
-  .status-amount { font-size: 13px; color: var(--text2); }
+  .status-dot { width: 8px; height: 8px; border-radius: 4px; margin-right: 12px; flex-shrink: 0; }
+  .status-name { font-size: 13px; flex: 1; font-weight: 500; }
+  .status-count { font-size: 13px; font-weight: 600; color: var(--text); margin-right: 16px; }
+  .status-amount { font-size: 12px; color: var(--text3); font-weight: 500; font-variant-numeric: tabular-nums; }
 
-  /* 筛选器 */
-  .filters { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
-  .filters select, .filters input {
-    padding: 8px 14px; background: rgba(255,255,255,0.06); border: 1px solid var(--border);
-    border-radius: 10px; font-size: 13px; color: var(--text);
-    font-family: inherit; outline: none; transition: border-color 0.2s;
-    -webkit-appearance: none; appearance: none;
-  }
-  .filters select { padding-right: 32px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2386868b' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
-  .filters select:focus, .filters input:focus { border-color: var(--accent); }
-  .filters input { flex: 1; min-width: 160px; }
-  .filters input::placeholder { color: var(--text2); }
-
-  /* 表格 */
-  table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  thead th {
-    text-align: left; padding: 12px 14px; font-weight: 600; color: var(--text2);
-    border-bottom: 1px solid var(--border); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;
-  }
-  tbody td { padding: 12px 14px; border-bottom: 1px solid var(--border); }
-  tbody tr { transition: background 0.15s; }
-  tbody tr:hover { background: rgba(255,255,255,0.03); }
-  .badge {
-    display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;
-  }
-  .badge-done { background: rgba(48,209,88,0.15); color: var(--green); }
-  .badge-oa { background: rgba(10,132,255,0.15); color: var(--accent); }
-  .badge-invoice { background: rgba(255,159,10,0.15); color: var(--orange); }
-  .badge-queue { background: rgba(191,90,242,0.15); color: var(--purple); }
-  .badge-replace { background: rgba(255,69,58,0.15); color: var(--red); }
-  .badge-unknown { background: rgba(255,255,255,0.06); color: var(--text2); }
-
-  /* 迷你饼图卡片 */
+  /* ===== MINI PIE CARD ===== */
   .stat-card-pie { display: flex; align-items: center; gap: 16px; }
   .stat-card-pie canvas { flex-shrink: 0; }
-  .mini-pie-legend { font-size: 11px; color: var(--text2); line-height: 1.8; }
-  .mini-pie-legend-item { display: flex; align-items: center; gap: 6px; }
-  .mini-pie-legend-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
-  .table-wrap { max-height: 500px; overflow-y: auto; }
-  .table-wrap::-webkit-scrollbar { width: 6px; }
-  .table-wrap::-webkit-scrollbar-track { background: transparent; }
-  .table-wrap::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
-  .no-data { text-align: center; padding: 40px; color: var(--text2); }
+  .mini-pie-legend { font-size: 10px; color: var(--text2); line-height: 2; }
+  .mini-pie-legend-item { display: flex; align-items: center; gap: 6px; font-weight: 500; }
+  .mini-pie-legend-dot { width: 6px; height: 6px; border-radius: 2px; flex-shrink: 0; }
 
-  /* 响应式 */
+  /* ===== FILTERS ===== */
+  .filters { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+  .filters select, .filters input {
+    padding: 8px 16px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-sm); font-size: 13px; color: var(--text);
+    font-family: inherit; outline: none; transition: all 0.2s; font-weight: 500;
+    -webkit-appearance: none; appearance: none;
+  }
+  .filters select {
+    padding-right: 34px; cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%237a7a85' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 14px center;
+  }
+  .filters select:hover, .filters input:hover {
+    border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.06);
+  }
+  .filters select:focus, .filters input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(167,139,250,0.15); }
+  .filters input { flex: 1; min-width: 160px; }
+  .filters input::placeholder { color: var(--text3); }
+
+  /* ===== TABLE ===== */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    text-align: left; padding: 10px 16px; font-weight: 600; color: var(--text3);
+    border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.8px;
+  }
+  tbody td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.03); font-weight: 500; }
+  tbody tr { transition: all 0.15s; }
+  tbody tr:hover { background: rgba(255,255,255,0.03); }
+
+  .badge {
+    display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 6px;
+    font-size: 11px; font-weight: 600; gap: 4px;
+  }
+  .badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; }
+  .badge-done { background: var(--green-dim); color: var(--green); }
+  .badge-done::before { background: var(--green); }
+  .badge-oa { background: var(--blue-dim); color: var(--blue); }
+  .badge-oa::before { background: var(--blue); }
+  .badge-invoice { background: var(--orange-dim); color: var(--orange); }
+  .badge-invoice::before { background: var(--orange); }
+  .badge-queue { background: var(--purple-dim); color: var(--purple); }
+  .badge-queue::before { background: var(--purple); }
+  .badge-replace { background: var(--red-dim); color: var(--red); }
+  .badge-replace::before { background: var(--red); }
+  .badge-unknown { background: rgba(255,255,255,0.04); color: var(--text3); }
+  .badge-unknown::before { background: var(--text3); }
+
+  .table-wrap { max-height: 520px; overflow-y: auto; }
+  .table-wrap::-webkit-scrollbar { width: 4px; }
+  .table-wrap::-webkit-scrollbar-track { background: transparent; }
+  .table-wrap::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 2px; }
+  .table-wrap::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.15); }
+  .no-data { text-align: center; padding: 48px; color: var(--text3); font-weight: 500; }
+
+  /* ===== RESPONSIVE ===== */
   @media (max-width: 1024px) {
     .overview { grid-template-columns: repeat(2, 1fr); }
     .grid-2, .grid-3 { grid-template-columns: 1fr; }
     .container { padding: 0 20px 40px; }
-    .header { padding: 32px 20px 24px; }
+    .header { padding: 28px 20px 20px; flex-direction: column; align-items: flex-start; gap: 12px; }
     .status-chart-wrap { flex-direction: column; }
   }
   @media (max-width: 640px) {
     .overview { grid-template-columns: 1fr; }
-    .header h1 { font-size: 28px; }
+    .header-left h1 { font-size: 24px; }
   }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>预算看板</h1>
-  <div class="sub" id="updateTime">数据加载中...</div>
+  <div class="header-left">
+    <h1>Budget Dashboard</h1>
+    <div class="sub" id="updateTime">Loading...</div>
+  </div>
+  <div class="header-right">
+    <div class="header-pill active">Overview</div>
+    <div class="header-pill">Analytics</div>
+    <div class="header-pill">Reports</div>
+  </div>
 </div>
 
 <div class="container">
-  <!-- 总览卡片 -->
+  <!-- Overview Cards -->
   <div class="overview">
     <div class="stat-card" id="cardBudget"></div>
     <div class="stat-card" id="cardSpent"></div>
@@ -200,9 +294,9 @@
     <div class="stat-card" id="cardStatusPie"></div>
   </div>
 
-  <!-- 总预算使用率 -->
+  <!-- Total Budget Progress -->
   <div class="panel total-progress">
-    <h2>总预算使用率</h2>
+    <h2><span class="icon" style="background:var(--green-dim)">📊</span>总预算使用率</h2>
     <div class="total-bar-wrap"><div class="total-bar-fill" id="totalBar"></div></div>
     <div class="total-bar-text">
       <span id="totalBarSpent"></span>
@@ -210,26 +304,26 @@
     </div>
   </div>
 
-  <!-- 部门花销排名 + 按周趋势 -->
+  <!-- Department Ranking + Weekly Trend -->
   <div class="grid-2">
     <div class="panel">
-      <h2>各部门花销排名</h2>
+      <h2><span class="icon" style="background:var(--purple-dim)">🏆</span>各部门花销排名</h2>
       <div id="deptRanking"></div>
     </div>
     <div class="panel">
-      <h2>按周花费趋势</h2>
+      <h2><span class="icon" style="background:var(--blue-dim)">📈</span>按周花费趋势</h2>
       <div class="chart-container"><canvas id="weeklyChart"></canvas></div>
     </div>
   </div>
 
-  <!-- 总费用分类占比 + 报销状态分析 -->
+  <!-- Category + Status -->
   <div class="grid-2">
     <div class="panel">
-      <h2>费用分类占比</h2>
+      <h2><span class="icon" style="background:var(--orange-dim)">🍩</span>费用分类占比</h2>
       <div class="chart-container-pie"><canvas id="categoryPie"></canvas></div>
     </div>
     <div class="panel">
-      <h2>报销状态分析</h2>
+      <h2><span class="icon" style="background:var(--green-dim)">📋</span>报销状态分析</h2>
       <div class="status-chart-wrap">
         <div class="status-chart-pie"><canvas id="statusPie"></canvas></div>
         <div class="status-detail-list" id="statusDetails"></div>
@@ -237,9 +331,9 @@
     </div>
   </div>
 
-  <!-- 花费明细表 -->
+  <!-- Expense Detail -->
   <div class="panel">
-    <h2>花费明细</h2>
+    <h2><span class="icon" style="background:var(--purple-dim)">📝</span>花费明细</h2>
     <div class="filters">
       <select id="filterMonth"><option value="">全部预算月份</option></select>
       <select id="filterDept"><option value="">全部部门</option></select>
@@ -257,9 +351,9 @@
     </div>
   </div>
 
-  <!-- 预算明细表 -->
+  <!-- Budget Detail -->
   <div class="panel">
-    <h2>预算明细</h2>
+    <h2><span class="icon" style="background:var(--blue-dim)">💰</span>预算明细</h2>
     <div class="filters">
       <select id="budgetFilterMonth"><option value="">全部预算月份</option></select>
       <select id="budgetFilterDept"><option value="">全部部门</option></select>
@@ -277,11 +371,15 @@
 </div>
 
 <script>
-const PIE_COLORS = ['#0a84ff','#30d158','#ff9f0a','#ff453a','#bf5af2','#64d2ff','#ff375f','#ffd60a','#ac8e68','#6366f1'];
-const STATUS_COLORS = ['#0a84ff','#ff9f0a','#bf5af2','#ff453a','#30d158'];
+const PIE_COLORS = ['#a78bfa','#4ade80','#fb923c','#f87171','#60a5fa','#2dd4bf','#f472b6','#facc15','#818cf8','#34d399'];
+const STATUS_COLORS = ['#60a5fa','#fb923c','#a78bfa','#f87171','#4ade80','#facc15','#2dd4bf'];
 const STATUS_BADGE = { '已报销完':'badge-done', '已提交OA未走完流程':'badge-oa', '等待发票提交OA':'badge-invoice', '排队待报销':'badge-queue', '待走替票':'badge-replace' };
 let DATA = null;
 let statusPieChart = null;
+
+// Chart.js global defaults
+Chart.defaults.font.family = "'Inter', -apple-system, sans-serif";
+Chart.defaults.color = '#7a7a85';
 
 function fmt(n) { return Math.round(n).toLocaleString('zh-CN'); }
 function fmtMoney(n) { return '¥' + fmt(n); }
@@ -301,40 +399,37 @@ function render() {
   const d = DATA;
   const t = new Date(d.updatedAt);
   document.getElementById('updateTime').textContent =
-    `更新于 ${t.getFullYear()}.${String(t.getMonth()+1).padStart(2,'0')}.${String(t.getDate()).padStart(2,'0')} ${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}`;
+    `Updated ${t.getFullYear()}.${String(t.getMonth()+1).padStart(2,'0')}.${String(t.getDate()).padStart(2,'0')} ${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}`;
 
-  // 总览卡片
   const o = d.overview;
   const usageRate = parseFloat(o.usageRate);
 
-  // 卡片1: 总预算
-  document.getElementById('cardBudget').innerHTML = `<div class="label">总预算</div><div class="value">${fmtMoney(o.totalBudget)}</div><div class="sub">${d.currentMonth} 月度</div>`;
+  // Card 1: Total Budget
+  document.getElementById('cardBudget').innerHTML = `<div class="label">总预算</div><div class="value">${fmtMoney(o.totalBudget)}</div><div class="sub">${d.currentMonth} 月度预算</div>`;
 
-  // 卡片2: 已花费
-  // 卡片2: 最新预算月已花费
+  // Card 2: Latest Month Spent
   const spentLatestMonth = d.records.reduce((max, r) => (r.budgetMonth || 0) > max ? r.budgetMonth : max, 0);
   const spentMonthRecords = d.records.filter(r => r.budgetMonth === spentLatestMonth);
   const spentMonthAmount = spentMonthRecords.reduce((s, r) => s + r.amount, 0);
   document.getElementById('cardSpent').innerHTML = `<div class="label">${spentLatestMonth}月已花费</div><div class="value">${fmtMoney(spentMonthAmount)}</div><div class="sub">${spentMonthRecords.length} 笔费用</div>`;
 
-  // 卡片3: 最新预算月已报销完金额
+  // Card 3: Latest Month Reimbursed
   const latestMonth = d.records.reduce((max, r) => r.budgetMonth > max ? r.budgetMonth : max, 0);
   const latestMonthRecords = d.records.filter(r => r.budgetMonth === latestMonth && r.status === '已报销完');
   const reimbursedAmount = latestMonthRecords.reduce((s, r) => s + r.amount, 0);
   const reimbursedCount = latestMonthRecords.length;
   document.getElementById('cardReimbursed').innerHTML = `<div class="label">${latestMonth}月已报销完</div><div class="value green">${fmtMoney(reimbursedAmount)}</div><div class="sub">${reimbursedCount} 笔已完成</div>`;
 
-  // 卡片4: 报销状态迷你饼图（排除已报销完）
+  // Card 4: Pending Status Mini Pie (by amount)
   const pendingStatuses = Object.entries(d.byStatus).filter(([name, info]) => name !== '已报销完' && info.count > 0);
   const miniPieCard = document.getElementById('cardStatusPie');
   if (pendingStatuses.length > 0) {
-    const pendingTotal = pendingStatuses.reduce((s, [, info]) => s + info.count, 0);
     let legendHTML = '';
     pendingStatuses.forEach(([name, info], idx) => {
       legendHTML += `<div class="mini-pie-legend-item"><div class="mini-pie-legend-dot" style="background:${STATUS_COLORS[idx % STATUS_COLORS.length]}"></div>${name} ${fmtMoney(info.amount)}</div>`;
     });
     const pendingAmount = pendingStatuses.reduce((s, [, info]) => s + info.amount, 0);
-    miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="stat-card-pie"><canvas id="miniStatusPie" width="80" height="80"></canvas><div class="mini-pie-legend">${legendHTML}</div></div><div class="sub">全部月份累计 ${fmtMoney(pendingAmount)}</div>`;
+    miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="stat-card-pie"><canvas id="miniStatusPie" width="72" height="72"></canvas><div class="mini-pie-legend">${legendHTML}</div></div><div class="sub">全部月份累计 ${fmtMoney(pendingAmount)}</div>`;
     const miniCtx = document.getElementById('miniStatusPie').getContext('2d');
     new Chart(miniCtx, {
       type: 'doughnut',
@@ -342,13 +437,13 @@ function render() {
         labels: pendingStatuses.map(([name]) => name),
         datasets: [{ data: pendingStatuses.map(([, info]) => info.amount), backgroundColor: STATUS_COLORS.slice(0, pendingStatuses.length), borderWidth: 0 }]
       },
-      options: { responsive: false, cutout: '55%', plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${fmtMoney(ctx.parsed)}` } } } }
+      options: { responsive: false, cutout: '60%', plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${fmtMoney(ctx.parsed)}` } } } }
     });
   } else {
-    miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="value" style="font-size:16px;color:var(--text2)">暂无待报销</div><div class="sub">所有费用已处理</div>`;
+    miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="value" style="font-size:16px;color:var(--text3)">暂无待报销</div><div class="sub">所有费用已处理</div>`;
   }
 
-  // 总预算进度条
+  // Total Progress Bar
   const totalBar = document.getElementById('totalBar');
   const barClass = usageRate > 100 ? 'over' : usageRate > 80 ? 'warn' : 'ok';
   totalBar.className = 'total-bar-fill ' + barClass;
@@ -356,7 +451,7 @@ function render() {
   document.getElementById('totalBarSpent').textContent = `已花费 ${fmtMoney(o.totalSpent)} (${o.usageRate}%)`;
   document.getElementById('totalBarBudget').textContent = `总预算 ${fmtMoney(o.totalBudget)}`;
 
-  // 部门花销排名（按花销金额降序）
+  // Department Ranking
   const deptContainer = document.getElementById('deptRanking');
   const depts = Object.entries(d.byDepartment)
     .filter(([, info]) => info.spent > 0 || info.budget > 0)
@@ -379,7 +474,7 @@ function render() {
   });
   deptContainer.innerHTML = deptHTML;
 
-  // 按周趋势图
+  // Weekly Trend Chart
   const weeklyCtx = document.getElementById('weeklyChart').getContext('2d');
   new Chart(weeklyCtx, {
     type: 'bar',
@@ -388,9 +483,17 @@ function render() {
       datasets: [{
         label: '周花费',
         data: d.weekly.map(w => w.amount),
-        backgroundColor: 'rgba(10,132,255,0.6)',
-        hoverBackgroundColor: 'rgba(10,132,255,0.9)',
-        borderRadius: 6,
+        backgroundColor: (ctx) => {
+          const chart = ctx.chart;
+          const {ctx: c, chartArea} = chart;
+          if (!chartArea) return 'rgba(167,139,250,0.5)';
+          const gradient = c.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+          gradient.addColorStop(0, 'rgba(167,139,250,0.2)');
+          gradient.addColorStop(1, 'rgba(167,139,250,0.7)');
+          return gradient;
+        },
+        hoverBackgroundColor: 'rgba(167,139,250,0.9)',
+        borderRadius: 8,
         borderSkipped: false,
       }]
     },
@@ -398,13 +501,22 @@ function render() {
       responsive: true, maintainAspectRatio: false,
       plugins: { legend: { display: false } },
       scales: {
-        y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#86868b', callback: v => '¥' + fmt(v) } },
-        x: { grid: { display: false }, ticks: { color: '#86868b' } }
+        y: {
+          beginAtZero: true,
+          grid: { color: 'rgba(255,255,255,0.03)', drawBorder: false },
+          ticks: { color: '#55555f', font: { size: 11 }, callback: v => '¥' + fmt(v) },
+          border: { display: false }
+        },
+        x: {
+          grid: { display: false },
+          ticks: { color: '#55555f', font: { size: 11 } },
+          border: { display: false }
+        }
       }
     }
   });
 
-  // 总费用分类饼图
+  // Category Pie
   const catLabels = Object.keys(d.byCategory);
   const catValues = Object.values(d.byCategory);
   const catTotal = catValues.reduce((a, b) => a + b, 0);
@@ -413,23 +525,22 @@ function render() {
     type: 'doughnut',
     data: {
       labels: catLabels,
-      datasets: [{ data: catValues, backgroundColor: PIE_COLORS.slice(0, catLabels.length), borderWidth: 0, hoverOffset: 6 }]
+      datasets: [{ data: catValues, backgroundColor: PIE_COLORS.slice(0, catLabels.length), borderWidth: 2, borderColor: '#1a1a1f', hoverOffset: 8 }]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
-      cutout: '65%',
+      cutout: '68%',
       plugins: {
-        legend: { position: 'bottom', labels: { color: '#86868b', font: { size: 12 }, padding: 16, usePointStyle: true, pointStyleWidth: 10 } },
+        legend: { position: 'bottom', labels: { color: '#7a7a85', font: { size: 12, weight: '500' }, padding: 20, usePointStyle: true, pointStyleWidth: 8 } },
         tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${fmtMoney(ctx.parsed)} (${(ctx.parsed/catTotal*100).toFixed(1)}%)` } }
       }
     }
   });
 
-  // 报销状态分析（饼图 + 明细）
+  // Status Analysis
   const statusEntries = Object.entries(d.byStatus).filter(([, info]) => info.count > 0);
   const statusLabels = statusEntries.map(([name]) => name);
   const statusValues = statusEntries.map(([, info]) => info.count);
-  const statusAmounts = statusEntries.map(([, info]) => info.amount);
   const statusTotal = statusValues.reduce((a, b) => a + b, 0);
 
   if (statusEntries.length > 0) {
@@ -439,11 +550,11 @@ function render() {
       type: 'doughnut',
       data: {
         labels: statusLabels,
-        datasets: [{ data: statusValues, backgroundColor: STATUS_COLORS.slice(0, statusLabels.length), borderWidth: 0 }]
+        datasets: [{ data: statusValues, backgroundColor: STATUS_COLORS.slice(0, statusLabels.length), borderWidth: 2, borderColor: '#1a1a1f' }]
       },
       options: {
         responsive: true, maintainAspectRatio: false,
-        cutout: '60%',
+        cutout: '65%',
         plugins: {
           legend: { display: false },
           tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed}笔` } }
@@ -463,10 +574,10 @@ function render() {
     });
     document.getElementById('statusDetails').innerHTML = statusHTML;
   } else {
-    document.getElementById('statusDetails').innerHTML = '<div style="color:var(--text2);padding:20px;">暂无报销数据</div>';
+    document.getElementById('statusDetails').innerHTML = '<div style="color:var(--text3);padding:20px;">暂无报销数据</div>';
   }
 
-  // 筛选器填充
+  // Populate Filters
   const filterDept = document.getElementById('filterDept');
   const filterCat = document.getElementById('filterCat');
   const filterStatus = document.getElementById('filterStatus');
@@ -482,11 +593,8 @@ function render() {
     const opt = document.createElement('option'); opt.value = name; opt.textContent = name; filterStatus.appendChild(opt);
   }
 
-  // 预算月份筛选器
   const budgetMonths = new Set();
-  d.records.forEach(r => {
-    if (r.budgetMonth) budgetMonths.add(r.budgetMonth);
-  });
+  d.records.forEach(r => { if (r.budgetMonth) budgetMonths.add(r.budgetMonth); });
   Array.from(budgetMonths).sort((a, b) => b - a).forEach(m => {
     const opt = document.createElement('option'); opt.value = m; opt.textContent = m + '月'; filterMonth.appendChild(opt);
   });
@@ -498,7 +606,7 @@ function render() {
   filterStatus.addEventListener('change', renderTable);
   document.getElementById('filterSearch').addEventListener('input', renderTable);
 
-  // 预算明细筛选器
+  // Budget Detail Filters
   const budgetFilterMonth = document.getElementById('budgetFilterMonth');
   const budgetFilterDept = document.getElementById('budgetFilterDept');
   const bdMonths = new Set();
@@ -539,16 +647,16 @@ function renderTable() {
 
   const body = document.getElementById('detailBody');
   if (rows.length === 0) {
-    body.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:32px;color:var(--text2);">暂无数据</td></tr>';
+    body.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--text3);">暂无数据</td></tr>';
     return;
   }
 
   body.innerHTML = rows.map(r => `<tr>
-    <td style="color:var(--text2)">${r.date}</td>
+    <td style="color:var(--text3)">${r.date}</td>
     <td>${r.department}</td>
     <td>${r.category}</td>
     <td>${r.description}</td>
-    <td style="font-weight:600;font-variant-numeric:tabular-nums">${fmtMoney(r.amount)}</td>
+    <td style="font-weight:700;font-variant-numeric:tabular-nums">${fmtMoney(r.amount)}</td>
     <td><span class="badge ${STATUS_BADGE[r.status] || 'badge-unknown'}">${r.status}</span></td>
   </tr>`).join('');
 }
@@ -569,16 +677,16 @@ function renderBudgetTable() {
 
   const body = document.getElementById('budgetDetailBody');
   if (rows.length === 0) {
-    body.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;color:var(--text2);">暂无数据</td></tr>';
+    body.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:40px;color:var(--text3);">暂无数据</td></tr>';
     return;
   }
 
   body.innerHTML = rows.map(r => `<tr>
-    <td style="color:var(--text2)">${r.budgetMonth ? r.budgetMonth + '月' : '-'}</td>
+    <td style="color:var(--text3)">${r.budgetMonth ? r.budgetMonth + '月' : '-'}</td>
     <td>${r.department}</td>
     <td>${r.category}</td>
     <td>${r.description || '-'}</td>
-    <td style="font-weight:600;font-variant-numeric:tabular-nums">${fmtMoney(r.amount)}</td>
+    <td style="font-weight:700;font-variant-numeric:tabular-nums">${fmtMoney(r.amount)}</td>
   </tr>`).join('');
 }
 
