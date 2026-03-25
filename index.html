@@ -9,39 +9,39 @@
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
   :root {
-    --bg: #0d0d0d;
-    --bg2: #161618;
-    --card: #1a1a1f;
-    --card-hover: #222228;
-    --card-border: rgba(255,255,255,0.06);
-    --text: #f0f0f5;
-    --text2: #7a7a85;
-    --text3: #55555f;
-    --accent: #a78bfa;
-    --accent2: #c4f042;
-    --green: #4ade80;
-    --green-dim: rgba(74,222,128,0.12);
-    --red: #f87171;
-    --red-dim: rgba(248,113,113,0.12);
-    --orange: #fb923c;
-    --orange-dim: rgba(251,146,60,0.12);
-    --purple: #a78bfa;
-    --purple-dim: rgba(167,139,250,0.12);
-    --blue: #60a5fa;
-    --blue-dim: rgba(96,165,250,0.12);
-    --teal: #2dd4bf;
-    --yellow: #facc15;
-    --pink: #f472b6;
-    --radius: 20px;
-    --radius-sm: 12px;
-    --shadow: 0 4px 24px rgba(0,0,0,0.3);
+    --bg: #0e1117;
+    --bg2: #131920;
+    --card: #161b22;
+    --card-hover: #1c232d;
+    --card-border: rgba(88,166,255,0.08);
+    --text: #f0f6fc;
+    --text2: #8b949e;
+    --text3: #6e7681;
+    --accent: #58a6ff;
+    --accent2: #3fb950;
+    --green: #3fb950;
+    --green-dim: rgba(63,185,80,0.12);
+    --red: #f85149;
+    --red-dim: rgba(248,81,73,0.10);
+    --orange: #d29922;
+    --orange-dim: rgba(210,153,34,0.10);
+    --purple: #bc8cff;
+    --purple-dim: rgba(188,140,255,0.12);
+    --blue: #58a6ff;
+    --blue-dim: rgba(88,166,255,0.10);
+    --teal: #39d2c0;
+    --yellow: #e3b341;
+    --pink: #f778ba;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.4);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", sans-serif;
-    background: var(--bg); color: var(--text); line-height: 1.5;
+    background: var(--bg); background-image: radial-gradient(ellipse at 20% 0%, rgba(88,166,255,0.04) 0%, transparent 60%), radial-gradient(ellipse at 80% 100%, rgba(57,210,192,0.03) 0%, transparent 60%); color: var(--text); line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
   }
@@ -84,7 +84,7 @@
   }
   .stat-card::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    background: linear-gradient(90deg, transparent, var(--accent), var(--teal), transparent);
     opacity: 0; transition: opacity 0.3s;
   }
   .stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
@@ -141,9 +141,9 @@
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
   }
-  .total-bar-fill.ok { background: linear-gradient(90deg, #4ade80, #2dd4bf); }
-  .total-bar-fill.warn { background: linear-gradient(90deg, #fb923c, #facc15); }
-  .total-bar-fill.over { background: linear-gradient(90deg, #f87171, #fb923c); }
+  .total-bar-fill.ok { background: linear-gradient(90deg, #58a6ff, #39d2c0); }
+  .total-bar-fill.warn { background: linear-gradient(90deg, #d29922, #e3b341); }
+  .total-bar-fill.over { background: linear-gradient(90deg, #f85149, #d29922); }
   .total-bar-text {
     display: flex; justify-content: space-between; margin-top: 12px;
     font-size: 13px; color: var(--text2); font-weight: 500;
@@ -162,9 +162,9 @@
     font-size: 12px; font-weight: 800; margin-right: 14px; flex-shrink: 0;
     background: rgba(255,255,255,0.04); color: var(--text3);
   }
-  .dept-rank-num.top1 { background: var(--accent2); color: #0d0d0d; }
-  .dept-rank-num.top2 { background: rgba(196,240,66,0.25); color: var(--accent2); }
-  .dept-rank-num.top3 { background: rgba(196,240,66,0.12); color: var(--accent2); }
+  .dept-rank-num.top1 { background: var(--accent); color: #0e1117; }
+  .dept-rank-num.top2 { background: rgba(88,166,255,0.25); color: var(--accent); }
+  .dept-rank-num.top3 { background: rgba(88,166,255,0.12); color: var(--accent); }
   .dept-rank-info { flex: 1; min-width: 0; }
   .dept-rank-name { font-size: 14px; font-weight: 600; }
   .dept-rank-detail { font-size: 11px; color: var(--text3); margin-top: 3px; font-weight: 500; }
@@ -172,7 +172,7 @@
   .dept-rank-bar-wrap { width: 100%; height: 3px; background: rgba(255,255,255,0.04); border-radius: 2px; margin-top: 8px; }
   .dept-rank-bar {
     height: 100%; border-radius: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--purple));
+    background: linear-gradient(90deg, var(--accent), var(--teal));
     transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -366,8 +366,8 @@
 </div>
 
 <script>
-const PIE_COLORS = ['#a78bfa','#4ade80','#fb923c','#f87171','#60a5fa','#2dd4bf','#f472b6','#facc15','#818cf8','#34d399'];
-const STATUS_COLORS = ['#60a5fa','#fb923c','#a78bfa','#f87171','#4ade80','#facc15','#2dd4bf'];
+const PIE_COLORS = ['#58a6ff','#39d2c0','#bc8cff','#d29922','#f778ba','#3fb950','#f85149','#e3b341','#79c0ff','#56d364'];
+const STATUS_COLORS = ['#58a6ff','#d29922','#bc8cff','#f85149','#3fb950','#e3b341','#39d2c0'];
 const STATUS_BADGE = { '已报销完':'badge-done', '已提交OA未走完流程':'badge-oa', '等待发票提交OA':'badge-invoice', '排队待报销':'badge-queue', '待走替票':'badge-replace' };
 let DATA = null;
 let statusPieChart = null;
@@ -481,13 +481,13 @@ function render() {
         backgroundColor: (ctx) => {
           const chart = ctx.chart;
           const {ctx: c, chartArea} = chart;
-          if (!chartArea) return 'rgba(167,139,250,0.5)';
+          if (!chartArea) return 'rgba(88,166,255,0.5)';
           const gradient = c.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
-          gradient.addColorStop(0, 'rgba(167,139,250,0.2)');
-          gradient.addColorStop(1, 'rgba(167,139,250,0.7)');
+          gradient.addColorStop(0, 'rgba(88,166,255,0.08)');
+          gradient.addColorStop(1, 'rgba(57,210,192,0.5)');
           return gradient;
         },
-        hoverBackgroundColor: 'rgba(167,139,250,0.9)',
+        hoverBackgroundColor: 'rgba(88,166,255,0.9)',
         borderRadius: 8,
         borderSkipped: false,
       }]
@@ -498,13 +498,13 @@ function render() {
       scales: {
         y: {
           beginAtZero: true,
-          grid: { color: 'rgba(255,255,255,0.03)', drawBorder: false },
-          ticks: { color: '#55555f', font: { size: 11 }, callback: v => '¥' + fmt(v) },
+          grid: { color: 'rgba(88,166,255,0.04)', drawBorder: false },
+          ticks: { color: '#6e7681', font: { size: 11 }, callback: v => '¥' + fmt(v) },
           border: { display: false }
         },
         x: {
           grid: { display: false },
-          ticks: { color: '#55555f', font: { size: 11 } },
+          ticks: { color: '#6e7681', font: { size: 11 } },
           border: { display: false }
         }
       }
@@ -520,13 +520,13 @@ function render() {
     type: 'doughnut',
     data: {
       labels: catLabels,
-      datasets: [{ data: catValues, backgroundColor: PIE_COLORS.slice(0, catLabels.length), borderWidth: 2, borderColor: '#1a1a1f', hoverOffset: 8 }]
+      datasets: [{ data: catValues, backgroundColor: PIE_COLORS.slice(0, catLabels.length), borderWidth: 2, borderColor: '#161b22', hoverOffset: 8 }]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
       cutout: '68%',
       plugins: {
-        legend: { position: 'bottom', labels: { color: '#7a7a85', font: { size: 12, weight: '500' }, padding: 20, usePointStyle: true, pointStyleWidth: 8 } },
+        legend: { position: 'bottom', labels: { color: '#8b949e', font: { size: 12, weight: '500' }, padding: 20, usePointStyle: true, pointStyleWidth: 8 } },
         tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${fmtMoney(ctx.parsed)} (${(ctx.parsed/catTotal*100).toFixed(1)}%)` } }
       }
     }
@@ -545,7 +545,7 @@ function render() {
       type: 'doughnut',
       data: {
         labels: statusLabels,
-        datasets: [{ data: statusValues, backgroundColor: STATUS_COLORS.slice(0, statusLabels.length), borderWidth: 2, borderColor: '#1a1a1f' }]
+        datasets: [{ data: statusValues, backgroundColor: STATUS_COLORS.slice(0, statusLabels.length), borderWidth: 2, borderColor: '#161b22' }]
       },
       options: {
         responsive: true, maintainAspectRatio: false,
