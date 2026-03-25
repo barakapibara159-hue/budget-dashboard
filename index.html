@@ -327,17 +327,18 @@ function render() {
     const pendingTotal = pendingStatuses.reduce((s, [, info]) => s + info.count, 0);
     let legendHTML = '';
     pendingStatuses.forEach(([name, info], idx) => {
-      legendHTML += `<div class="mini-pie-legend-item"><div class="mini-pie-legend-dot" style="background:${STATUS_COLORS[idx % STATUS_COLORS.length]}"></div>${name} ${info.count}笔</div>`;
+      legendHTML += `<div class="mini-pie-legend-item"><div class="mini-pie-legend-dot" style="background:${STATUS_COLORS[idx % STATUS_COLORS.length]}"></div>${name} ${fmtMoney(info.amount)}</div>`;
     });
-    miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="stat-card-pie"><canvas id="miniStatusPie" width="80" height="80"></canvas><div class="mini-pie-legend">${legendHTML}</div></div><div class="sub">全部月份累计 ${pendingTotal} 笔</div>`;
+    const pendingAmount = pendingStatuses.reduce((s, [, info]) => s + info.amount, 0);
+    miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="stat-card-pie"><canvas id="miniStatusPie" width="80" height="80"></canvas><div class="mini-pie-legend">${legendHTML}</div></div><div class="sub">全部月份累计 ${fmtMoney(pendingAmount)}</div>`;
     const miniCtx = document.getElementById('miniStatusPie').getContext('2d');
     new Chart(miniCtx, {
       type: 'doughnut',
       data: {
         labels: pendingStatuses.map(([name]) => name),
-        datasets: [{ data: pendingStatuses.map(([, info]) => info.count), backgroundColor: STATUS_COLORS.slice(0, pendingStatuses.length), borderWidth: 0 }]
+        datasets: [{ data: pendingStatuses.map(([, info]) => info.amount), backgroundColor: STATUS_COLORS.slice(0, pendingStatuses.length), borderWidth: 0 }]
       },
-      options: { responsive: false, cutout: '55%', plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed}笔` } } } }
+      options: { responsive: false, cutout: '55%', plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${fmtMoney(ctx.parsed)}` } } } }
     });
   } else {
     miniPieCard.innerHTML = `<div class="label">待报销状态</div><div class="value" style="font-size:16px;color:var(--text2)">暂无待报销</div><div class="sub">所有费用已处理</div>`;
