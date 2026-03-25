@@ -311,7 +311,11 @@ function render() {
   document.getElementById('cardBudget').innerHTML = `<div class="label">总预算</div><div class="value">${fmtMoney(o.totalBudget)}</div><div class="sub">${d.currentMonth} 月度</div>`;
 
   // 卡片2: 已花费
-  document.getElementById('cardSpent').innerHTML = `<div class="label">已花费</div><div class="value">${fmtMoney(o.totalSpent)}</div><div class="sub">${d.records.length} 笔费用</div>`;
+  // 卡片2: 最新预算月已花费
+  const spentLatestMonth = d.records.reduce((max, r) => (r.budgetMonth || 0) > max ? r.budgetMonth : max, 0);
+  const spentMonthRecords = d.records.filter(r => r.budgetMonth === spentLatestMonth);
+  const spentMonthAmount = spentMonthRecords.reduce((s, r) => s + r.amount, 0);
+  document.getElementById('cardSpent').innerHTML = `<div class="label">${spentLatestMonth}月已花费</div><div class="value">${fmtMoney(spentMonthAmount)}</div><div class="sub">${spentMonthRecords.length} 笔费用</div>`;
 
   // 卡片3: 最新预算月已报销完金额
   const latestMonth = d.records.reduce((max, r) => r.budgetMonth > max ? r.budgetMonth : max, 0);
