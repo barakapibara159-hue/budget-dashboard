@@ -275,7 +275,7 @@
 
 <div class="header">
   <div class="header-left">
-    <h1>Budget Dashboard</h1>
+    <h1>预算看板</h1>
     <div class="sub" id="updateTime">Loading...</div>
   </div>
 </div>
@@ -394,7 +394,7 @@ function render() {
   const d = DATA;
   const t = new Date(d.updatedAt);
   document.getElementById('updateTime').textContent =
-    `Updated ${t.getFullYear()}.${String(t.getMonth()+1).padStart(2,'0')}.${String(t.getDate()).padStart(2,'0')} ${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}`;
+    `更新于 ${t.getFullYear()}.${String(t.getMonth()+1).padStart(2,'0')}.${String(t.getDate()).padStart(2,'0')} ${String(t.getHours()).padStart(2,'0')}:${String(t.getMinutes()).padStart(2,'0')}`;
 
   const o = d.overview;
   const usageRate = parseFloat(o.usageRate);
