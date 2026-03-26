@@ -320,6 +320,8 @@
       <h2><span class="icon" style="background:var(--blue-dim)">📈</span>按周花费趋势</h2>
       <div class="chart-container"><canvas id="weeklyChart"></canvas></div>
       <div id="weeklyInsights" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;"></div>
+      <!-- 兼职花费汇总 -->
+      <div id="partTimeWrap" style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.04);"></div>
     </div>
   </div>
 
@@ -574,6 +576,56 @@ function render() {
         <div class="insight-sub">${fmtMoney(peakWeek.amount)}</div>
       </div>
     `;
+  }
+
+  // Part-time (兼职) Summary for latest budget month
+  const ptWrap = document.getElementById('partTimeWrap');
+  const ptRecords = d.records.filter(r => r.budgetMonth === latestMonth && r.category === '兼职类');
+  if (ptRecords.length > 0) {
+    const ptByDept = {};
+    ptRecords.forEach(r => {
+      if (!ptByDept[r.department]) ptByDept[r.department] = 0;
+      ptByDept[r.department] += r.amount;
+    });
+    const ptTotal = ptRecords.reduce((s, r) => s + r.amount, 0);
+    const ptEntries = Object.entries(ptByDept).sort((a, b) => b[1] - a[1]);
+    let ptHTML = `<div style="font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px;"><span class="icon" style="background:var(--orange-dim)">👷</span>${latestMonth}月兼职花费</div>`;
+    ptEntries.forEach(([name, amount]) => {
+      const pct = (amount / ptTotal * 100).toFixed(1);
+      ptHTML += `<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.03);">
+        <span style="color:var(--text2);font-weight:500;">${name}</span>
+        <span style="font-weight:700;font-variant-numeric:tabular-nums;">${fmtMoney(amount)}</span>
+      </div>`;
+    });
+    ptHTML += `<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0 0;font-size:14px;">
+      <span style="color:var(--accent);font-weight:600;">合计 ${ptRecords.length}笔</span>
+      <span style="font-weight:800;font-size:18px;">${fmtMoney(ptTotal)}</span>
+    </div>`;
+    ptWrap.innerHTML = ptHTML;
+  } else {
+    // No 兼职 data, try 兼职 keyword in description
+    const ptAlt = d.records.filter(r => r.budgetMonth === latestMonth && (r.description || '').includes('兼职'));
+    if (ptAlt.length > 0) {
+      const ptByDept = {};
+      ptAlt.forEach(r => {
+        if (!ptByDept[r.department]) ptByDept[r.department] = 0;
+        ptByDept[r.department] += r.amount;
+      });
+      const ptTotal = ptAlt.reduce((s, r) => s + r.amount, 0);
+      const ptEntries = Object.entries(ptByDept).sort((a, b) => b[1] - a[1]);
+      let ptHTML = `<div style="font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px;"><span class="icon" style="background:var(--orange-dim)">👷</span>${latestMonth}月兼职花费</div>`;
+      ptEntries.forEach(([name, amount]) => {
+        ptHTML += `<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.03);">
+          <span style="color:var(--text2);font-weight:500;">${name}</span>
+          <span style="font-weight:700;font-variant-numeric:tabular-nums;">${fmtMoney(amount)}</span>
+        </div>`;
+      });
+      ptHTML += `<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0 0;font-size:14px;">
+        <span style="color:var(--accent);font-weight:600;">合计 ${ptAlt.length}笔</span>
+        <span style="font-weight:800;font-size:18px;">${fmtMoney(ptTotal)}</span>
+      </div>`;
+      ptWrap.innerHTML = ptHTML;
+    }
   }
 
   // Category Pie
