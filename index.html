@@ -367,9 +367,7 @@
       <select id="budgetFilterMonth"><option value="">全部预算月份</option></select>
       <select id="budgetFilterDept"><option value="">全部部门</option></select>
       <input id="budgetFilterSearch" type="text" placeholder="搜索分类细项...">
-      <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:13px;color:var(--text2);white-space:nowrap">
-        <input type="checkbox" id="budgetGroupByDept" style="accent-color:var(--blue);width:16px;height:16px;cursor:pointer"> 按部门汇总
-      </label>
+      <button id="budgetGroupByDept" style="padding:6px 16px;border-radius:8px;border:none;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .2s;background:var(--card);color:var(--text2);border:1px solid var(--border)">按部门汇总</button>
     </div>
     <div class="table-wrap">
       <table>
@@ -740,7 +738,15 @@ function render() {
   budgetFilterMonth.addEventListener('change', renderBudgetTable);
   budgetFilterDept.addEventListener('change', renderBudgetTable);
   document.getElementById('budgetFilterSearch').addEventListener('input', renderBudgetTable);
-  document.getElementById('budgetGroupByDept').addEventListener('change', renderBudgetTable);
+  const groupBtn = document.getElementById('budgetGroupByDept');
+  groupBtn.addEventListener('click', function() {
+    this.dataset.active = this.dataset.active === '1' ? '0' : '1';
+    const on = this.dataset.active === '1';
+    this.style.background = on ? 'var(--blue)' : 'var(--card)';
+    this.style.color = on ? '#fff' : 'var(--text2)';
+    this.style.borderColor = on ? 'var(--blue)' : 'var(--border)';
+    renderBudgetTable();
+  });
 }
 
 function renderTable() {
@@ -781,7 +787,7 @@ function renderBudgetTable() {
   const month = document.getElementById('budgetFilterMonth').value;
   const dept = document.getElementById('budgetFilterDept').value;
   const search = document.getElementById('budgetFilterSearch').value.toLowerCase();
-  const groupByDept = document.getElementById('budgetGroupByDept').checked;
+  const groupByDept = document.getElementById('budgetGroupByDept').dataset.active === '1';
 
   let rows = (DATA.budgetDetails || []).filter(r => {
     if (month && r.budgetMonth !== parseInt(month)) return false;
