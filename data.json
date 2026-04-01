@@ -1,36 +1,36 @@
 {
-  "updatedAt": "2026-03-31T11:00:03.651Z",
-  "currentMonth": "2026-03",
+  "updatedAt": "2026-04-01T02:47:29.212Z",
+  "currentMonth": "2026-04",
   "overview": {
-    "totalBudget": 148488.15,
-    "totalSpent": 122381.89000000001,
-    "remaining": 26106.25999999998,
-    "usageRate": "82.4"
+    "totalBudget": 186496.99,
+    "totalSpent": 124779.66000000003,
+    "remaining": 61717.32999999996,
+    "usageRate": "66.9"
   },
   "byDepartment": {
     "内容创意一部": {
-      "budget": 7120,
-      "spent": 3626.360000000001,
+      "budget": 10030,
+      "spent": 3872.0600000000004,
       "count": 29
     },
     "内容创意二部": {
-      "budget": 40819,
-      "spent": 39443.83,
+      "budget": 38553.84,
+      "spent": 40275.33,
       "count": 30
     },
     "内容创意三部": {
-      "budget": 29959.15,
-      "spent": 16049.45,
+      "budget": 22439.15,
+      "spent": 16567.25,
       "count": 45
     },
     "内容创意四部": {
-      "budget": 6000,
-      "spent": 5740.39,
+      "budget": 8500,
+      "spent": 6408.26,
       "count": 32
     },
     "内容创意五部": {
-      "budget": 17120,
-      "spent": 9678.2,
+      "budget": 37291,
+      "spent": 9813.1,
       "count": 23
     },
     "商务签约部": {
@@ -39,22 +39,22 @@
       "count": 2
     },
     "新媒体产品部": {
-      "budget": 800,
+      "budget": 2786,
       "spent": 533.8,
       "count": 5
     },
     "业务创新部": {
-      "budget": 3900,
+      "budget": 4197,
       "spent": 566.17,
       "count": 5
     },
     "运营支持部（巴伊苏拉）": {
-      "budget": 29100,
+      "budget": 48560,
       "spent": 35973.69,
       "count": 28
     },
     "运营支持部（王晨）": {
-      "budget": 1670,
+      "budget": 2140,
       "spent": 590,
       "count": 2
     },
@@ -65,41 +65,41 @@
     }
   },
   "byCategory": {
-    "网络类": 21244.69,
-    "其他": 8931.49,
-    "会员类": 20310.71,
-    "账号类": 2495,
+    "网络类": 21741.86,
+    "其他": 9578.69,
+    "会员类": 20828.11,
+    "账号类": 3231,
     "兼职类": 69400
   },
   "byCategoryDept": {
     "内容创意一部": {
       "网络类": 2240,
-      "其他": 272.36,
-      "会员类": 1112,
-      "账号类": 2
+      "其他": 391.06,
+      "会员类": 1205,
+      "账号类": 36
     },
     "内容创意二部": {
-      "其他": 143,
+      "其他": 304,
       "网络类": 9170,
-      "会员类": 4030.8300000000004,
-      "账号类": 650,
+      "会员类": 4051.3300000000004,
+      "账号类": 1300,
       "兼职类": 25450
     },
     "内容创意三部": {
-      "会员类": 8122.42,
-      "其他": 877.0299999999999,
+      "会员类": 8391.42,
+      "其他": 1125.83,
       "网络类": 3000,
       "兼职类": 4050
     },
     "内容创意四部": {
-      "网络类": 2764.6900000000005,
-      "其他": 98,
+      "网络类": 3261.86,
+      "其他": 216.7,
       "会员类": 2217.7,
-      "账号类": 660
+      "账号类": 712
     },
     "内容创意五部": {
       "网络类": 900,
-      "会员类": 958.0999999999999,
+      "会员类": 1093,
       "账号类": 1000,
       "其他": 6820.1
     },
@@ -130,11 +130,11 @@
   "byStatus": {
     "已报销完": {
       "count": 82,
-      "amount": 20483.199999999997
+      "amount": 21523.37
     },
     "已提交OA未走完流程": {
       "count": 35,
-      "amount": 16522.049999999996
+      "amount": 16656.949999999997
     },
     "等待发票提交OA": {
       "count": 12,
@@ -146,7 +146,7 @@
     },
     "待走替票": {
       "count": 58,
-      "amount": 12777.9
+      "amount": 14000.599999999999
     },
     "无需付款": {
       "count": 15,
@@ -160,19 +160,19 @@
     },
     {
       "week": "2026-03-02",
-      "amount": 7873.41
+      "amount": 8584.58
     },
     {
       "week": "2026-03-09",
-      "amount": 5360.03
+      "amount": 6399.23
     },
     {
       "week": "2026-03-16",
-      "amount": 9682.1
+      "amount": 9735.099999999999
     },
     {
       "week": "2026-03-23",
-      "amount": 22307.849999999995
+      "amount": 22902.249999999996
     },
     {
       "week": "2026-03-30",
@@ -204,7 +204,7 @@
       "department": "内容创意一部",
       "category": "其他",
       "description": "猫砂",
-      "amount": 57.5,
+      "amount": 176.2,
       "status": "待走替票"
     },
     {
@@ -231,7 +231,7 @@
       "department": "内容创意一部",
       "category": "会员类",
       "description": "capcut会员",
-      "amount": 15.8,
+      "amount": 47.4,
       "status": "已报销完"
     },
     {
@@ -339,7 +339,7 @@
       "department": "内容创意三部",
       "category": "会员类",
       "description": "即梦会员",
-      "amount": 79,
+      "amount": 148,
       "status": "已报销完"
     },
     {
@@ -375,7 +375,7 @@
       "department": "内容创意三部",
       "category": "会员类",
       "description": "可灵会员",
-      "amount": 17.99,
+      "amount": 217.99,
       "status": "已报销完"
     },
     {
@@ -474,7 +474,7 @@
       "department": "内容创意四部",
       "category": "其他",
       "description": "猫砂",
-      "amount": 64,
+      "amount": 182.7,
       "status": "待走替票"
     },
     {
@@ -510,7 +510,7 @@
       "department": "内容创意四部",
       "category": "网络类",
       "description": "快连vpn续费",
-      "amount": 46.39,
+      "amount": 185.56,
       "status": "已报销完"
     },
     {
@@ -564,7 +564,7 @@
       "department": "内容创意四部",
       "category": "账号类",
       "description": "英区满年白号",
-      "amount": 2,
+      "amount": 36,
       "status": "已报销完"
     },
     {
@@ -798,7 +798,7 @@
       "department": "内容创意一部",
       "category": "会员类",
       "description": "咚咚剪辑会员",
-      "amount": 2,
+      "amount": 16,
       "status": "待走替票"
     },
     {
@@ -816,7 +816,7 @@
       "department": "内容创意一部",
       "category": "账号类",
       "description": "满年白号",
-      "amount": 2,
+      "amount": 36,
       "status": "待走替票"
     },
     {
@@ -870,7 +870,7 @@
       "department": "内容创意二部",
       "category": "账号类",
       "description": "美区橱窗号5000粉",
-      "amount": 650,
+      "amount": 1300,
       "status": "待走替票"
     },
     {
@@ -897,7 +897,7 @@
       "department": "内容创意二部",
       "category": "其他",
       "description": "谷歌邮箱",
-      "amount": 10,
+      "amount": 90,
       "status": "已报销完"
     },
     {
@@ -924,7 +924,7 @@
       "department": "内容创意三部",
       "category": "其他",
       "description": "outlook邮箱",
-      "amount": 0.8,
+      "amount": 4,
       "status": "待走替票"
     },
     {
@@ -978,7 +978,7 @@
       "department": "内容创意三部",
       "category": "其他",
       "description": "英国手机卡",
-      "amount": 120,
+      "amount": 360,
       "status": "待走替票"
     },
     {
@@ -996,7 +996,7 @@
       "department": "内容创意四部",
       "category": "账号类",
       "description": "英区tiktok白号",
-      "amount": 18,
+      "amount": 36,
       "status": "待走替票"
     },
     {
@@ -1104,7 +1104,7 @@
       "department": "内容创意一部",
       "category": "会员类",
       "description": "capcut会员",
-      "amount": 15.8,
+      "amount": 63.2,
       "status": "已报销完"
     },
     {
@@ -1239,7 +1239,7 @@
       "department": "内容创意三部",
       "category": "其他",
       "description": "outlook邮箱",
-      "amount": 0.8,
+      "amount": 6.4,
       "status": "待走替票"
     },
     {
@@ -1500,7 +1500,7 @@
       "department": "内容创意二部",
       "category": "会员类",
       "description": "fastmoss会员",
-      "amount": 20.5,
+      "amount": 41,
       "status": "待走替票"
     },
     {
@@ -1545,7 +1545,7 @@
       "department": "内容创意二部",
       "category": "其他",
       "description": "谷歌邮箱",
-      "amount": 9,
+      "amount": 90,
       "status": "已报销完"
     },
     {
@@ -1635,7 +1635,7 @@
       "department": "内容创意四部",
       "category": "网络类",
       "description": "英国节点",
-      "amount": 2,
+      "amount": 360,
       "status": "已报销完"
     },
     {
@@ -1761,7 +1761,7 @@
       "department": "内容创意五部",
       "category": "会员类",
       "description": "tago会员",
-      "amount": 142,
+      "amount": 276.9,
       "status": "已提交OA未走完流程"
     },
     {
@@ -2894,14 +2894,14 @@
       "department": "新媒体产品部",
       "category": "minimax 团队成员小龙虾费用",
       "description": "",
-      "amount": 199
+      "amount": 796
     },
     {
       "budgetMonth": 4,
       "department": "新媒体产品部",
       "category": "claude code pro",
       "description": "",
-      "amount": 120
+      "amount": 360
     },
     {
       "budgetMonth": 4,
@@ -2915,7 +2915,7 @@
       "department": "新媒体产品部",
       "category": "网络费用",
       "description": "",
-      "amount": 240
+      "amount": 480
     },
     {
       "budgetMonth": 4,
