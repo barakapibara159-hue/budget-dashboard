@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-04-01T02:47:29.212Z",
+  "updatedAt": "2026-04-08T02:18:27.904Z",
   "currentMonth": "2026-04",
   "overview": {
-    "totalBudget": 186496.99,
+    "totalBudget": 168134.34,
     "totalSpent": 124779.66000000003,
-    "remaining": 61717.32999999996,
-    "usageRate": "66.9"
+    "remaining": 43354.679999999964,
+    "usageRate": "74.2"
   },
   "byDepartment": {
     "内容创意一部": {
@@ -14,12 +14,12 @@
       "count": 29
     },
     "内容创意二部": {
-      "budget": 38553.84,
+      "budget": 36553.84,
       "spent": 40275.33,
       "count": 30
     },
     "内容创意三部": {
-      "budget": 22439.15,
+      "budget": 11882,
       "spent": 16567.25,
       "count": 45
     },
@@ -29,7 +29,7 @@
       "count": 32
     },
     "内容创意五部": {
-      "budget": 37291,
+      "budget": 31275,
       "spent": 9813.1,
       "count": 23
     },
@@ -44,17 +44,17 @@
       "count": 5
     },
     "业务创新部": {
-      "budget": 4197,
+      "budget": 3978,
       "spent": 566.17,
       "count": 5
     },
     "运营支持部（巴伊苏拉）": {
-      "budget": 48560,
+      "budget": 48567,
       "spent": 35973.69,
       "count": 28
     },
     "运营支持部（王晨）": {
-      "budget": 2140,
+      "budget": 2562.5,
       "spent": 590,
       "count": 2
     },
@@ -2544,7 +2544,7 @@
       "department": "内容创意二部",
       "category": "视界云",
       "description": "",
-      "amount": 10000
+      "amount": 9000
     },
     {
       "budgetMonth": 4,
@@ -2572,7 +2572,7 @@
       "department": "内容创意二部",
       "category": "topview1800积分",
       "description": "",
-      "amount": 1518.3
+      "amount": 518.3
     },
     {
       "budgetMonth": 4,
@@ -2613,15 +2613,15 @@
       "budgetMonth": 4,
       "department": "内容创意三部",
       "category": "可灵",
-      "description": "",
-      "amount": 6000
+      "description": "SUM(E89:E95)",
+      "amount": 2500
     },
     {
       "budgetMonth": 4,
       "department": "内容创意三部",
       "category": "即梦",
-      "description": "",
-      "amount": 3900
+      "description": "F89-6500",
+      "amount": 1900
     },
     {
       "budgetMonth": 4,
@@ -2642,21 +2642,7 @@
       "department": "内容创意三部",
       "category": "chat-GPT",
       "description": "",
-      "amount": 450
-    },
-    {
-      "budgetMonth": 4,
-      "department": "内容创意三部",
-      "category": "nanobanana",
-      "description": "",
-      "amount": 757.15
-    },
-    {
-      "budgetMonth": 4,
-      "department": "内容创意三部",
-      "category": "minimax",
-      "description": "",
-      "amount": 150
+      "amount": 300
     },
     {
       "budgetMonth": 4,
@@ -2684,14 +2670,7 @@
       "department": "内容创意三部",
       "category": "外出拍摄费用",
       "description": "",
-      "amount": 3000
-    },
-    {
-      "budgetMonth": 4,
-      "department": "内容创意三部",
-      "category": "样品采购费用",
-      "description": "",
-      "amount": 2000
+      "amount": 1000
     },
     {
       "budgetMonth": 4,
@@ -2703,7 +2682,7 @@
     {
       "budgetMonth": 4,
       "department": "内容创意三部",
-      "category": "英国节点续费",
+      "category": "英国机场节点续费",
       "description": "",
       "amount": 430
     },
@@ -2780,16 +2759,16 @@
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "新店（基础销量+好评30-50个）",
-      "description": "",
+      "category": "30单的刷单货品成本（需要30个好评）",
+      "description": "客单价5英镑以内，运费4英镑，预估成本10英镑",
       "amount": 3000
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "新店（自购/达人寄样 样品费用）",
+      "category": "达人寄样30个：样品成本9英镑-12英镑",
       "description": "",
-      "amount": 6000
+      "amount": 3000
     },
     {
       "budgetMonth": 4,
@@ -2801,84 +2780,105 @@
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "新店（投流费用）",
+      "category": "战斧浏览器（ip隔离）",
+      "description": "",
+      "amount": 69
+    },
+    {
+      "budgetMonth": 4,
+      "department": "内容创意五部",
+      "category": "广告投流费用（预充值）roi：1:1",
       "description": "",
       "amount": 5000
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "拍摄道具+样品+临时采购",
+      "category": "采购拍摄道具+宠物样品",
       "description": "",
-      "amount": 500
+      "amount": 350
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "紫鸟浏览器/ERP/订单管理系统/本土店节点",
+      "category": "紫鸟浏览器（ip隔离）",
       "description": "",
-      "amount": 500
+      "amount": 38
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "节点费用",
+      "category": "11个节点",
       "description": "",
       "amount": 1100
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "Tago-AI会员",
+      "category": "Tago-AI会员\n1个月会员19美金+（额外积分购买19美金）\n1个月会员19美金+（额外积分购买49美金）",
       "description": "",
       "amount": 800
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "即梦会员",
+      "category": "即梦高级会员包月499",
       "description": "",
-      "amount": 519
+      "amount": 499
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "4月兼职费用",
+      "category": "一条15*一周63条*4周",
       "description": "",
-      "amount": 5040
+      "amount": 3780
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "Capcut",
+      "category": "Capcut pro月会员19.99美金",
       "description": "",
       "amount": 140
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "剪映",
+      "category": "剪映svip月会员",
       "description": "",
       "amount": 59
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "fastmoss、kaladate、卖家精灵等",
+      "category": "fastmoss月卡咸鱼20.5*2",
       "description": "",
-      "amount": 263
+      "amount": 41
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "橱窗号+白号购买",
+      "category": "kaladate专业版月卡99",
       "description": "",
-      "amount": 1650
+      "amount": 99
     },
     {
       "budgetMonth": 4,
       "department": "内容创意五部",
-      "category": "电脑租赁",
+      "category": "卖家精灵全功能版本月卡130",
+      "description": "",
+      "amount": 130
+    },
+    {
+      "budgetMonth": 4,
+      "department": "内容创意五部",
+      "category": "橱窗号+白号购买：15个白号*30",
+      "description": "",
+      "amount": 450
+    },
+    {
+      "budgetMonth": 4,
+      "department": "内容创意五部",
+      "category": "电脑租赁1个月",
       "description": "",
       "amount": 800
     },
@@ -2927,50 +2927,43 @@
     {
       "budgetMonth": 4,
       "department": "业务创新部",
-      "category": "招聘费用",
-      "description": "",
-      "amount": 698
+      "category": "Cluade Code月会员：用于开发运营工具",
+      "description": "cluade max会员",
+      "amount": 599
     },
     {
       "budgetMonth": 4,
       "department": "业务创新部",
-      "category": "Cluade Code会员",
-      "description": "",
-      "amount": 120
-    },
-    {
-      "budgetMonth": 4,
-      "department": "业务创新部",
-      "category": "AI大模型token费用",
-      "description": "",
+      "category": "AI大模型token费用：目前主要使用gemini，应用场景主要用于运营工具的日常使用、内容抓取、内容批量生产等（一天5美元左右，按现在的消耗量预估，差不多一天可以调三千次左右）",
+      "description": "[object Object],[object Object],[object Object]",
       "amount": 1500
     },
     {
       "budgetMonth": 4,
       "department": "业务创新部",
-      "category": "腾讯云服务器",
-      "description": "",
+      "category": "腾讯云轻量服务器：目前工具和定时任务都上线至当前服务器",
+      "description": "当前购买的为低配版服务器，若后期配置不够，则需要进行升级，何时需要升级暂无法预估",
       "amount": 199
     },
     {
       "budgetMonth": 4,
       "department": "业务创新部",
-      "category": "网络费用",
-      "description": "",
+      "category": "迪拜+英国ip节点",
+      "description": "迪拜/英国节点：针对迪拜和英国地区的业务，在应用\nWhatsApp、Facebook、tk等社媒渠道时，使用对应国家节点更稳定防止被封",
       "amount": 480
     },
     {
       "budgetMonth": 4,
       "department": "业务创新部",
-      "category": "渠道拓展",
-      "description": "",
+      "category": "渠道发帖（小红书发帖等）+ 渠道拓展（如迪拜社群）",
+      "description": "小红书发帖/评论：3.5元/帖，已发45帖，花费157.5，计划每月发布100-200帖，预算350-700元，如渠道转化效果好，追加投入，转化效果差则提前停止，按周复盘渠道效果。（目前已发帖子，购房线索转化高于租房，计划修改内容和形式后再测一次）\n其他发帖渠道，如Facebook待启动，价格按照小红书进行初步预估。\n渠道拓展：购买迪拜社群，已花费100元30群，计划继续拓展社群至100个，预算300元。",
       "amount": 1000
     },
     {
       "budgetMonth": 4,
       "department": "业务创新部",
-      "category": "社媒账号",
-      "description": "",
+      "category": "fb账号、tk账号等",
+      "description": "社媒账号预估10-20元/个，计划启动10-20个自有社媒账号，费用约200元。",
       "amount": 200
     },
     {
@@ -2997,9 +2990,9 @@
     {
       "budgetMonth": 4,
       "department": "运营支持部（王晨）",
-      "category": "API主动发起",
+      "category": "张鹤二手车：500 条",
       "description": "",
-      "amount": 500
+      "amount": 225
     },
     {
       "budgetMonth": 4,
@@ -3018,9 +3011,23 @@
     {
       "budgetMonth": 4,
       "department": "运营支持部（巴伊苏拉）",
-      "category": "ai会员费",
+      "category": "claude",
       "description": "",
-      "amount": 2000
+      "amount": 1208
+    },
+    {
+      "budgetMonth": 4,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "nanobanana",
+      "description": "",
+      "amount": 500
+    },
+    {
+      "budgetMonth": 4,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "即梦",
+      "description": "",
+      "amount": 299
     },
     {
       "budgetMonth": 4,
@@ -3042,6 +3049,34 @@
       "category": "4月兼职费用",
       "description": "",
       "amount": 40000
+    },
+    {
+      "budgetMonth": 4,
+      "department": "运营支持部（王晨）",
+      "category": "徐星（新房+租房）：1000 条",
+      "description": "",
+      "amount": 450
+    },
+    {
+      "budgetMonth": 4,
+      "department": "运营支持部（王晨）",
+      "category": "赫阳新房ads：250 条",
+      "description": "",
+      "amount": 112.5
+    },
+    {
+      "budgetMonth": 4,
+      "department": "运营支持部（王晨）",
+      "category": "王晨运营支持-社媒账号：100 条，预计产出 10 条线索",
+      "description": "",
+      "amount": 45
+    },
+    {
+      "budgetMonth": 4,
+      "department": "运营支持部（王晨）",
+      "category": "王晨运营支持-洗线索：200 条，预计产出 10 条线索",
+      "description": "",
+      "amount": 90
     }
   ]
 }
