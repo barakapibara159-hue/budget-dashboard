@@ -349,6 +349,7 @@
       <select id="filterCat"><option value="">全部分类</option></select>
       <select id="filterStatus"><option value="">全部状态</option></select>
       <input id="filterSearch" type="text" placeholder="搜索费用说明...">
+      <button id="expenseGroupByDept" style="padding:6px 16px;border-radius:8px;border:none;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .2s;background:var(--card);color:var(--text2);border:1px solid var(--border)">按部门汇总</button>
     </div>
     <div class="table-wrap">
       <table>
@@ -718,6 +719,15 @@ function render() {
   filterCat.addEventListener('change', renderTable);
   filterStatus.addEventListener('change', renderTable);
   document.getElementById('filterSearch').addEventListener('input', renderTable);
+  const expenseGroupBtn = document.getElementById('expenseGroupByDept');
+  expenseGroupBtn.addEventListener('click', function() {
+    this.dataset.active = this.dataset.active === '1' ? '0' : '1';
+    const on = this.dataset.active === '1';
+    this.style.background = on ? 'var(--purple)' : 'var(--card)';
+    this.style.color = on ? '#fff' : 'var(--text2)';
+    this.style.borderColor = on ? 'var(--purple)' : 'var(--border)';
+    renderTable();
+  });
 
   // Budget Detail Filters
   const budgetFilterMonth = document.getElementById('budgetFilterMonth');
@@ -755,6 +765,7 @@ function renderTable() {
   const cat = document.getElementById('filterCat').value;
   const status = document.getElementById('filterStatus').value;
   const search = document.getElementById('filterSearch').value.toLowerCase();
+  const groupByDept = document.getElementById('expenseGroupByDept').dataset.active === '1';
 
   let rows = DATA.records.filter(r => {
     if (month && r.budgetMonth !== parseInt(month)) return false;
@@ -765,22 +776,57 @@ function renderTable() {
     return true;
   });
 
-  rows.sort((a, b) => b.date.localeCompare(a.date));
-
   const body = document.getElementById('detailBody');
+  const thead = body.closest('table').querySelector('thead tr');
+
   if (rows.length === 0) {
+    thead.innerHTML = '<th>日期</th><th>部门</th><th>分类</th><th>费用说明</th><th>金额</th><th>状态</th>';
     body.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:40px;color:var(--text3);">暂无数据</td></tr>';
     return;
   }
 
-  body.innerHTML = rows.map(r => `<tr>
-    <td style="color:var(--text3)">${r.date}</td>
-    <td>${r.department}</td>
-    <td>${r.category}</td>
-    <td>${r.description}</td>
-    <td style="font-weight:700;font-variant-numeric:tabular-nums">${fmtMoney(r.amount)}</td>
-    <td><span class="badge ${STATUS_BADGE[r.status] || 'badge-unknown'}">${r.status}</span></td>
-  </tr>`).join('');
+  if (groupByDept) {
+    thead.innerHTML = '<th>预算月份</th><th>部门</th><th>笔数</th><th>已报销完</th><th>待报销</th><th>总花费</th>';
+    const grouped = {};
+    for (const r of rows) {
+      const key = (r.budgetMonth || 0) + '|' + r.department;
+      if (!grouped[key]) grouped[key] = { budgetMonth: r.budgetMonth, department: r.department, amount: 0, done: 0, pending: 0, count: 0 };
+      grouped[key].amount += r.amount;
+      grouped[key].count += 1;
+      if (r.status === '已报销完') grouped[key].done += r.amount;
+      else grouped[key].pending += r.amount;
+    }
+    const gRows = Object.values(grouped).sort((a, b) => (b.budgetMonth || 0) - (a.budgetMonth || 0) || b.amount - a.amount);
+    const grandTotal = gRows.reduce((s, r) => s + r.amount, 0);
+    const grandDone = gRows.reduce((s, r) => s + r.done, 0);
+    const grandPending = gRows.reduce((s, r) => s + r.pending, 0);
+    const grandCount = gRows.reduce((s, r) => s + r.count, 0);
+    body.innerHTML = gRows.map(r => `<tr>
+      <td style="color:var(--text3)">${r.budgetMonth ? r.budgetMonth + '月' : '-'}</td>
+      <td>${r.department}</td>
+      <td style="color:var(--text3)">${r.count} 笔</td>
+      <td style="font-variant-numeric:tabular-nums;color:var(--green)">${fmtMoney(r.done)}</td>
+      <td style="font-variant-numeric:tabular-nums;color:var(--orange)">${fmtMoney(r.pending)}</td>
+      <td style="font-weight:700;font-variant-numeric:tabular-nums">${fmtMoney(r.amount)}</td>
+    </tr>`).join('') + `<tr style="border-top:1px solid var(--border);font-weight:700">
+      <td></td><td style="color:var(--text2)">合计</td>
+      <td style="color:var(--text3)">${grandCount} 笔</td>
+      <td style="font-variant-numeric:tabular-nums;color:var(--green)">${fmtMoney(grandDone)}</td>
+      <td style="font-variant-numeric:tabular-nums;color:var(--orange)">${fmtMoney(grandPending)}</td>
+      <td style="font-variant-numeric:tabular-nums;color:var(--purple)">${fmtMoney(grandTotal)}</td>
+    </tr>`;
+  } else {
+    thead.innerHTML = '<th>日期</th><th>部门</th><th>分类</th><th>费用说明</th><th>金额</th><th>状态</th>';
+    rows.sort((a, b) => b.date.localeCompare(a.date));
+    body.innerHTML = rows.map(r => `<tr>
+      <td style="color:var(--text3)">${r.date}</td>
+      <td>${r.department}</td>
+      <td>${r.category}</td>
+      <td>${r.description}</td>
+      <td style="font-weight:700;font-variant-numeric:tabular-nums">${fmtMoney(r.amount)}</td>
+      <td><span class="badge ${STATUS_BADGE[r.status] || 'badge-unknown'}">${r.status}</span></td>
+    </tr>`).join('');
+  }
 }
 
 function renderBudgetTable() {

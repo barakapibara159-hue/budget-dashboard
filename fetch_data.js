@@ -2,6 +2,23 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 
+// 飞书富文本单元格解扁平 —— 可能是 string / number / Array<{text:...}> / {text:...}
+function cellToString(cell) {
+  if (cell === null || cell === undefined) return '';
+  if (typeof cell === 'string') return cell;
+  if (typeof cell === 'number' || typeof cell === 'boolean') return String(cell);
+  if (Array.isArray(cell)) {
+    return cell.map(cellToString).join('');
+  }
+  if (typeof cell === 'object') {
+    if (typeof cell.text === 'string') return cell.text;
+    if (typeof cell.name === 'string') return cell.name; // 人员字段
+    if (typeof cell.value === 'string') return cell.value;
+    return '';
+  }
+  return String(cell);
+}
+
 // 加载配置（支持环境变量覆盖，用于 GitHub Actions）
 function loadConfig() {
   const config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf-8'));
@@ -59,7 +76,7 @@ function parseBudgetRows(rows, targetMonth) {
 
   if (header && Array.isArray(header)) {
     for (let i = 0; i < header.length; i++) {
-      const h = String(header[i] || '').trim();
+      const h = cellToString(header[i]).trim();
       if (['月份', '月', 'month'].some(kw => h.includes(kw))) monthCol = i;
       else if (['部门', '团队'].some(kw => h.includes(kw))) deptCol = i;
       else if (['预估金额', '预算金额', '金额', '预算'].some(kw => h.includes(kw))) amountCol = i;
@@ -86,15 +103,15 @@ function parseBudgetRows(rows, targetMonth) {
     const row = rows[i];
     if (!row || !row[deptCol]) continue;
 
-    const dept = String(row[deptCol]).trim();
-    const amount = parseFloat(String(row[amountCol] || 0).replace(/[,，]/g, ''));
+    const dept = cellToString(row[deptCol]).trim();
+    const amount = parseFloat(cellToString(row[amountCol]).replace(/[,，]/g, '')) || 0;
     if (!dept || isNaN(amount)) continue;
 
     // 解析月份数字
     let budgetMonth = null;
     let isTargetMonth = false;
     if (monthCol !== -1 && row[monthCol]) {
-      let mStr = String(row[monthCol]).trim();
+      let mStr = cellToString(row[monthCol]).trim();
       if (/^\d{4,5}$/.test(mStr)) {
         const md = new Date((parseInt(mStr) - 25569) * 86400000);
         budgetMonth = md.getUTCMonth() + 1;
@@ -116,8 +133,8 @@ function parseBudgetRows(rows, targetMonth) {
     budgetDetails.push({
       budgetMonth,
       department: dept,
-      category: categoryCol !== -1 ? String(row[categoryCol] || '').trim() : '',
-      description: descCol !== -1 ? String(row[descCol] || '').trim() : '',
+      category: categoryCol !== -1 ? cellToString(row[categoryCol]).trim() : '',
+      description: descCol !== -1 ? cellToString(row[descCol]).trim() : '',
       amount,
     });
 
@@ -183,23 +200,23 @@ function parseRows(rows, config) {
   if (header && Array.isArray(header)) {
     for (const [key, keywords] of Object.entries(headerKeywords)) {
       const idx = header.findIndex(h =>
-        h && keywords.some(kw => String(h).includes(kw))
+        h && keywords.some(kw => cellToString(h).includes(kw))
       );
       if (idx !== -1) colMap[key] = idx;
     }
     // 检测预算月份列
-    const bmIdx = header.findIndex(h => h && ['预算月份'].some(kw => String(h).includes(kw)));
+    const bmIdx = header.findIndex(h => h && ['预算月份'].some(kw => cellToString(h).includes(kw)));
     if (bmIdx !== -1) budgetMonthCol = bmIdx;
   }
 
   const records = [];
   for (const row of dataRows) {
     if (!row || !row[colMap.amount]) continue;
-    const amount = parseFloat(String(row[colMap.amount]).replace(/[,，]/g, ''));
+    const amount = parseFloat(cellToString(row[colMap.amount]).replace(/[,，]/g, ''));
     if (isNaN(amount)) continue;
 
     // 解析日期
-    let dateStr = row[colMap.date] ? String(row[colMap.date]) : '';
+    let dateStr = cellToString(row[colMap.date]);
     // 飞书日期可能是数字（Excel序列号）或字符串
     if (/^\d{4,5}$/.test(dateStr)) {
       const d = new Date((parseInt(dateStr) - 25569) * 86400000);
@@ -214,19 +231,22 @@ function parseRows(rows, config) {
     // 解析预算月份（如 "3月" → 3）
     let budgetMonth = null;
     if (budgetMonthCol !== -1 && row[budgetMonthCol]) {
-      const bmStr = String(row[budgetMonthCol]).trim();
+      const bmStr = cellToString(row[budgetMonthCol]).trim();
       const match = bmStr.match(/(\d+)/);
       if (match) budgetMonth = parseInt(match[1]);
     }
 
+    const deptStr = cellToString(row[colMap.department]).trim();
+    const catStr = cellToString(row[colMap.category]).trim();
+    const statusStr = cellToString(row[colMap.status]).trim();
     records.push({
       date: dateStr,
       budgetMonth,
-      department: row[colMap.department] ? String(row[colMap.department]).trim() : '未知',
-      category: row[colMap.category] ? String(row[colMap.category]).trim() : '其他',
-      description: row[colMap.description] ? String(row[colMap.description]).trim() : '',
+      department: deptStr || '未知',
+      category: catStr || '其他',
+      description: cellToString(row[colMap.description]).trim(),
       amount,
-      status: row[colMap.status] ? String(row[colMap.status]).trim() : '未知',
+      status: statusStr || '未知',
     });
   }
   return records;
