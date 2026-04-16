@@ -336,7 +336,7 @@ function aggregate(records, config) {
     byCategoryDept,
     byStatus,
     weekly,
-    records: data,
+    records,
     budgetDetails: config._budgetDetails || [],
   };
 }
