@@ -3,7 +3,11 @@ const fs = require('fs');
 const path = require('path');
 
 function loadConfig() {
-  const config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf-8'));
+  // 本地优先读 config.json，GitHub Actions 上 config.json 不存在则回退 config.example.json
+  const localPath = path.join(__dirname, 'config.json');
+  const examplePath = path.join(__dirname, 'config.example.json');
+  const configPath = fs.existsSync(localPath) ? localPath : examplePath;
+  const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
   return {
     webhook_url: process.env.FEISHU_WEBHOOK_URL || config.notify.webhook_url,
     dashboard_url: process.env.DASHBOARD_URL || config.dashboard_url,

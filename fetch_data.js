@@ -20,8 +20,12 @@ function cellToString(cell) {
 }
 
 // 加载配置（支持环境变量覆盖，用于 GitHub Actions）
+// 本地优先读 config.json（含密钥），找不到则读 config.example.json（仅静态配置，密钥从环境变量取）
 function loadConfig() {
-  const config = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json'), 'utf-8'));
+  const localPath = path.join(__dirname, 'config.json');
+  const examplePath = path.join(__dirname, 'config.example.json');
+  const configPath = fs.existsSync(localPath) ? localPath : examplePath;
+  const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
   return {
     app_id: process.env.FEISHU_APP_ID || config.feishu.app_id,
     app_secret: process.env.FEISHU_APP_SECRET || config.feishu.app_secret,
