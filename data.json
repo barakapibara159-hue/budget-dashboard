@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-05-06T04:57:20.461Z",
+  "updatedAt": "2026-05-07T04:59:32.355Z",
   "currentMonth": "2026-05",
   "overview": {
     "totalBudget": 214182.9,
-    "totalSpent": 259417.54000000004,
-    "remaining": -45234.64000000004,
-    "usageRate": "121.1"
+    "totalSpent": 258967.54000000004,
+    "remaining": -44784.64000000004,
+    "usageRate": "120.9"
   },
   "byDepartment": {
     "内容创意一部": {
@@ -50,7 +50,7 @@
     },
     "运营支持部（巴伊苏拉）": {
       "budget": 48567,
-      "spent": 72626.79000000001,
+      "spent": 72176.79000000001,
       "count": 60
     },
     "运营支持部（王晨）": {
@@ -69,7 +69,7 @@
     "其他": 14369.610000000002,
     "会员类": 54005.22000000002,
     "账号类": 7624.22,
-    "兼职类": 130760
+    "兼职类": 130310
   },
   "byCategoryDept": {
     "内容创意一部": {
@@ -124,7 +124,7 @@
       "会员类": 6085.570000000001,
       "账号类": 192.22,
       "其他": 229,
-      "兼职类": 60000
+      "兼职类": 59550
     },
     "新媒体事业部": {
       "其他": 280,
@@ -157,7 +157,7 @@
     },
     "无需付款": {
       "count": 27,
-      "amount": 132300
+      "amount": 131850
     }
   },
   "weekly": [
@@ -191,7 +191,7 @@
     },
     {
       "week": "2026-04-27",
-      "amount": 76320.45999999999
+      "amount": 75870.45999999999
     }
   ],
   "records": [
@@ -3981,24 +3981,6 @@
       "department": "运营支持部（巴伊苏拉）",
       "category": "兼职类",
       "description": "余红 4月兼职费用",
-      "amount": 7050,
-      "status": "无需付款"
-    },
-    {
-      "date": "2026-04-30",
-      "budgetMonth": 4,
-      "department": "运营支持部（巴伊苏拉）",
-      "category": "兼职类",
-      "description": "樊如婷 4月兼职费用",
-      "amount": 6450,
-      "status": "无需付款"
-    },
-    {
-      "date": "2026-04-30",
-      "budgetMonth": 4,
-      "department": "运营支持部（巴伊苏拉）",
-      "category": "兼职类",
-      "description": "辛野铜 4月兼职费用",
       "amount": 6000,
       "status": "无需付款"
     },
@@ -4007,8 +3989,26 @@
       "budgetMonth": 4,
       "department": "运营支持部（巴伊苏拉）",
       "category": "兼职类",
+      "description": "樊如婷 4月兼职费用",
+      "amount": 6750,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 4,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "兼职类",
+      "description": "辛野铜 4月兼职费用",
+      "amount": 6450,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 4,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "兼职类",
       "description": "王甜甜 4月兼职费用",
-      "amount": 5100,
+      "amount": 5400,
       "status": "无需付款"
     },
     {
@@ -4017,7 +4017,7 @@
       "department": "运营支持部（巴伊苏拉）",
       "category": "兼职类",
       "description": "崔苏丽 4月兼职费用",
-      "amount": 5400,
+      "amount": 4950,
       "status": "无需付款"
     }
   ],
