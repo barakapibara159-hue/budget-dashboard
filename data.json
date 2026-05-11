@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-05-10T05:05:47.125Z",
+  "updatedAt": "2026-05-11T05:36:24.679Z",
   "currentMonth": "2026-05",
   "overview": {
-    "totalBudget": 209564.9,
+    "totalBudget": 191564.9,
     "totalSpent": 31847.529999999995,
-    "remaining": 177717.37,
-    "usageRate": "15.2"
+    "remaining": 159717.37,
+    "usageRate": "16.6"
   },
   "byDepartment": {
     "内容创意一部": {
@@ -54,7 +54,7 @@
       "count": 9
     },
     "运营支持部（王晨）": {
-      "budget": 22789.9,
+      "budget": 4789.9,
       "spent": 1423.68,
       "count": 4
     }
@@ -6165,7 +6165,7 @@
       "department": "运营支持部（王晨）",
       "category": "张鹤拉美，0.065usd/条",
       "description": "",
-      "amount": 20000
+      "amount": 2000
     },
     {
       "budgetMonth": 5,
