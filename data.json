@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-05-11T05:36:24.679Z",
+  "updatedAt": "2026-05-12T05:05:21.512Z",
   "currentMonth": "2026-05",
   "overview": {
-    "totalBudget": 191564.9,
-    "totalSpent": 31847.529999999995,
-    "remaining": 159717.37,
-    "usageRate": "16.6"
+    "totalBudget": 215464.9,
+    "totalSpent": 31853.329999999998,
+    "remaining": 183611.57,
+    "usageRate": "14.8"
   },
   "byDepartment": {
     "内容创意一部": {
       "budget": 14160,
-      "spent": 9237.38,
-      "count": 4
+      "spent": 9243.179999999998,
+      "count": 5
     },
     "内容创意二部": {
       "budget": 31530,
@@ -49,12 +49,12 @@
       "count": 1
     },
     "运营支持部（巴伊苏拉）": {
-      "budget": 46567,
+      "budget": 48067,
       "spent": 4739.46,
       "count": 9
     },
     "运营支持部（王晨）": {
-      "budget": 4789.9,
+      "budget": 27189.9,
       "spent": 1423.68,
       "count": 4
     }
@@ -62,13 +62,14 @@
   "byCategory": {
     "网络类": 17448,
     "会员类": 12708.219999999998,
-    "其他": 1331.3100000000002,
+    "其他": 1337.1100000000001,
     "账号类": 360
   },
   "byCategoryDept": {
     "内容创意一部": {
       "网络类": 9160,
-      "会员类": 77.38
+      "会员类": 77.38,
+      "其他": 5.8
     },
     "内容创意二部": {
       "网络类": 150,
@@ -126,15 +127,11 @@
       "amount": 8015.08
     },
     "待走替票": {
-      "count": 33,
-      "amount": 17596.77
+      "count": 34,
+      "amount": 17602.57
     }
   },
   "weekly": [
-    {
-      "week": "2026-03-16",
-      "amount": 9839.059999999998
-    },
     {
       "week": "2026-03-23",
       "amount": 24507.809999999998
@@ -157,11 +154,15 @@
     },
     {
       "week": "2026-04-27",
-      "amount": 96117.70999999999
+      "amount": 141269.71000000002
     },
     {
       "week": "2026-05-04",
       "amount": 10252.799999999997
+    },
+    {
+      "week": "2026-05-11",
+      "amount": 5.8
     }
   ],
   "records": [
@@ -3885,6 +3886,15 @@
     {
       "date": "2026-04-30",
       "budgetMonth": 4,
+      "department": "内容创意一部",
+      "category": "兼职类",
+      "description": "4月兼职费用",
+      "amount": 28180,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 4,
       "department": "内容创意二部",
       "category": "兼职类",
       "description": "张涛 4月兼职费用",
@@ -3943,6 +3953,24 @@
       "category": "兼职类",
       "description": "王发艳 4月兼职费用",
       "amount": 4500,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 4,
+      "department": "运营支持部（王晨）",
+      "category": "兼职类",
+      "description": "4月评论兼职费用",
+      "amount": 14692,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 4,
+      "department": "运营支持部（王晨）",
+      "category": "兼职类",
+      "description": "4月海外其他兼职费用",
+      "amount": 2280,
       "status": "无需付款"
     },
     {
@@ -4025,6 +4053,15 @@
       "description": "capcut会员",
       "amount": 15.8,
       "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-11",
+      "budgetMonth": 5,
+      "department": "内容创意一部",
+      "category": "其他",
+      "description": "谷歌邮箱",
+      "amount": 5.8,
+      "status": "待走替票"
     },
     {
       "date": "2026-04-30",
@@ -6183,6 +6220,20 @@
     },
     {
       "budgetMonth": 5,
+      "department": "运营支持部（王晨）",
+      "category": "5月评论兼职",
+      "description": "招兼职+小红书数据回收产品上线后会增加",
+      "amount": 20000
+    },
+    {
+      "budgetMonth": 5,
+      "department": "运营支持部（王晨）",
+      "category": "5月海外兼职",
+      "description": "",
+      "amount": 2400
+    },
+    {
+      "budgetMonth": 5,
       "department": "运营支持部（巴伊苏拉）",
       "category": "手机维修费用",
       "description": "",
@@ -6236,6 +6287,20 @@
       "category": "视频素材网盘会员（内容+OKM共用）",
       "description": "高速下载，网盘扩容，上传大文件",
       "amount": 28
+    },
+    {
+      "budgetMonth": 5,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "手机话费",
+      "description": "",
+      "amount": 500
+    },
+    {
+      "budgetMonth": 5,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "zpwz 会员",
+      "description": "",
+      "amount": 1000
     }
   ]
 }
