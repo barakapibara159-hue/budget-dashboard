@@ -1,37 +1,37 @@
 {
-  "updatedAt": "2026-05-12T05:05:21.512Z",
+  "updatedAt": "2026-05-13T05:12:48.406Z",
   "currentMonth": "2026-05",
   "overview": {
     "totalBudget": 215464.9,
-    "totalSpent": 31853.329999999998,
-    "remaining": 183611.57,
-    "usageRate": "14.8"
+    "totalSpent": 40684.62,
+    "remaining": 174780.28,
+    "usageRate": "18.9"
   },
   "byDepartment": {
     "内容创意一部": {
       "budget": 14160,
-      "spent": 9243.179999999998,
-      "count": 5
+      "spent": 9378.189999999999,
+      "count": 8
     },
     "内容创意二部": {
       "budget": 31530,
-      "spent": 1055,
-      "count": 3
+      "spent": 5360.08,
+      "count": 10
     },
     "内容创意三部": {
       "budget": 13900,
-      "spent": 2875.69,
-      "count": 11
+      "spent": 4752.160000000001,
+      "count": 15
     },
     "内容创意四部": {
       "budget": 13400,
-      "spent": 5095.45,
-      "count": 16
+      "spent": 6717.25,
+      "count": 25
     },
     "内容创意五部": {
       "budget": 45171,
-      "spent": 2800.87,
-      "count": 10
+      "spent": 3234.3,
+      "count": 14
     },
     "商务签约部": {
       "budget": 12000,
@@ -45,13 +45,13 @@
     },
     "业务创新部": {
       "budget": 5567,
-      "spent": 240,
-      "count": 1
+      "spent": 531.5,
+      "count": 3
     },
     "运营支持部（巴伊苏拉）": {
       "budget": 48067,
-      "spent": 4739.46,
-      "count": 9
+      "spent": 4907.46,
+      "count": 10
     },
     "运营支持部（王晨）": {
       "budget": 27189.9,
@@ -60,40 +60,42 @@
     }
   },
   "byCategory": {
-    "网络类": 17448,
-    "会员类": 12708.219999999998,
-    "其他": 1337.1100000000001,
-    "账号类": 360
+    "网络类": 20028,
+    "会员类": 18421.71,
+    "其他": 1764.91,
+    "账号类": 470
   },
   "byCategoryDept": {
     "内容创意一部": {
       "网络类": 9160,
-      "会员类": 77.38,
-      "其他": 5.8
+      "会员类": 177.39,
+      "其他": 5.8,
+      "账号类": 35
     },
     "内容创意二部": {
-      "网络类": 150,
-      "会员类": 905
+      "网络类": 2550,
+      "会员类": 2810.08
     },
     "内容创意三部": {
-      "其他": 147.7,
+      "其他": 341.16999999999996,
       "账号类": 156,
-      "会员类": 1173.99,
+      "会员类": 2856.99,
       "网络类": 1398
     },
     "内容创意四部": {
-      "网络类": 1260,
-      "会员类": 3398.9399999999996,
-      "账号类": 204,
-      "其他": 232.51
+      "网络类": 1440,
+      "会员类": 4689.94,
+      "账号类": 279,
+      "其他": 308.31
     },
     "内容创意五部": {
       "网络类": 1100,
-      "会员类": 1193.4499999999998,
-      "其他": 507.42
+      "会员类": 1468.35,
+      "其他": 665.95
     },
     "业务创新部": {
-      "网络类": 240
+      "网络类": 240,
+      "会员类": 291.5
     },
     "新媒体产品部": {
       "网络类": 480,
@@ -106,7 +108,7 @@
     },
     "运营支持部（巴伊苏拉）": {
       "网络类": 2820,
-      "会员类": 1919.46
+      "会员类": 2087.46
     }
   },
   "byStatus": {
@@ -119,22 +121,22 @@
       "amount": 0
     },
     "等待发票提交OA": {
-      "count": 17,
-      "amount": 6235.679999999999
+      "count": 32,
+      "amount": 12689.179999999998
     },
     "排队待报销": {
-      "count": 12,
-      "amount": 8015.08
+      "count": 16,
+      "amount": 9395.570000000002
     },
     "待走替票": {
-      "count": 34,
-      "amount": 17602.57
+      "count": 45,
+      "amount": 18599.87
     }
   },
   "weekly": [
     {
       "week": "2026-03-23",
-      "amount": 24507.809999999998
+      "amount": 24542.51
     },
     {
       "week": "2026-03-30",
@@ -154,15 +156,15 @@
     },
     {
       "week": "2026-04-27",
-      "amount": 141269.71000000002
+      "amount": 141552.51
     },
     {
       "week": "2026-05-04",
-      "amount": 10252.799999999997
+      "amount": 10595.289999999997
     },
     {
       "week": "2026-05-11",
-      "amount": 5.8
+      "amount": 8177.099999999999
     }
   ],
   "records": [
@@ -4584,6 +4586,276 @@
       "description": "2个chatgpt会员",
       "amount": 1500,
       "status": "排队待报销"
+    },
+    {
+      "date": "2026-05-09",
+      "budgetMonth": 5,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "tapnow会员",
+      "amount": 68.41,
+      "status": "排队待报销"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "capcut会员",
+      "amount": 31.6,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意一部",
+      "category": "账号类",
+      "description": "苹果ID",
+      "amount": 35,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "heygen会员",
+      "amount": 198.04,
+      "status": "排队待报销"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "heygen会员",
+      "amount": 198.04,
+      "status": "排队待报销"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 586,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "剪映会员",
+      "amount": 499,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意二部",
+      "category": "网络类",
+      "description": "10个阿联酋节点",
+      "amount": 2400,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 69,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "Tago会员",
+      "amount": 355,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-11",
+      "budgetMonth": 5,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 916,
+      "status": "排队待报销"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 499,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意三部",
+      "category": "其他",
+      "description": "采购费用",
+      "amount": 193.47,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "小云雀会员",
+      "amount": 268,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 234,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 499,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 499,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意四部",
+      "category": "账号类",
+      "description": "英国满月白号",
+      "amount": 75,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "剪映会员",
+      "amount": 59,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意四部",
+      "category": "其他",
+      "description": "道具费",
+      "amount": 23,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-04-29",
+      "budgetMonth": 5,
+      "department": "内容创意四部",
+      "category": "其他",
+      "description": "快递费",
+      "amount": 26,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-09",
+      "budgetMonth": 5,
+      "department": "内容创意四部",
+      "category": "其他",
+      "description": "样品采购费用",
+      "amount": 26.8,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "英区节点",
+      "amount": 180,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "tago会员",
+      "amount": 134.9,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-08",
+      "budgetMonth": 5,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "汽配摩货源订单费",
+      "amount": 79.28,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-11",
+      "budgetMonth": 5,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "汽配摩货源订单费",
+      "amount": 79.25,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "chatgpt会员",
+      "amount": 140,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-03-23",
+      "budgetMonth": 5,
+      "department": "业务创新部",
+      "category": "会员类",
+      "description": "Tera Box云盘premium月度会员",
+      "amount": 34.7,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-01",
+      "budgetMonth": 5,
+      "department": "业务创新部",
+      "category": "会员类",
+      "description": "token充值",
+      "amount": 256.8,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-08",
+      "budgetMonth": 5,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "grok会员",
+      "amount": 168,
+      "status": "待走替票"
     }
   ],
   "budgetDetails": [
