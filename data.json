@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-05-13T05:12:48.406Z",
+  "updatedAt": "2026-05-14T05:10:08.145Z",
   "currentMonth": "2026-05",
   "overview": {
     "totalBudget": 215464.9,
-    "totalSpent": 40684.62,
-    "remaining": 174780.28,
+    "totalSpent": 40689.62,
+    "remaining": 174775.28,
     "usageRate": "18.9"
   },
   "byDepartment": {
     "内容创意一部": {
       "budget": 14160,
-      "spent": 9378.189999999999,
-      "count": 8
+      "spent": 9383.189999999999,
+      "count": 9
     },
     "内容创意二部": {
       "budget": 31530,
@@ -62,14 +62,14 @@
   "byCategory": {
     "网络类": 20028,
     "会员类": 18421.71,
-    "其他": 1764.91,
+    "其他": 1769.91,
     "账号类": 470
   },
   "byCategoryDept": {
     "内容创意一部": {
       "网络类": 9160,
       "会员类": 177.39,
-      "其他": 5.8,
+      "其他": 10.8,
       "账号类": 35
     },
     "内容创意二部": {
@@ -117,20 +117,20 @@
       "amount": 0
     },
     "已提交OA未走完流程": {
-      "count": 0,
-      "amount": 0
+      "count": 8,
+      "amount": 3537.95
     },
     "等待发票提交OA": {
-      "count": 32,
-      "amount": 12689.179999999998
+      "count": 25,
+      "amount": 9196.18
     },
     "排队待报销": {
-      "count": 16,
-      "amount": 9395.570000000002
+      "count": 15,
+      "amount": 9350.62
     },
     "待走替票": {
-      "count": 45,
-      "amount": 18599.87
+      "count": 46,
+      "amount": 18604.87
     }
   },
   "weekly": [
@@ -164,7 +164,7 @@
     },
     {
       "week": "2026-05-11",
-      "amount": 8177.099999999999
+      "amount": 8182.099999999999
     }
   ],
   "records": [
@@ -2776,7 +2776,7 @@
       "category": "账号类",
       "description": "tk英区云手机账号",
       "amount": 200,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-08",
@@ -3460,7 +3460,7 @@
       "category": "会员类",
       "description": "creatok会员",
       "amount": 69,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-21",
@@ -3712,7 +3712,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 450,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-28",
@@ -3721,7 +3721,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 450,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-28",
@@ -4117,7 +4117,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4126,7 +4126,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4207,7 +4207,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4216,7 +4216,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-08",
@@ -4288,7 +4288,7 @@
       "category": "会员类",
       "description": "哼哼猫会员",
       "amount": 44.95,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4617,6 +4617,15 @@
     {
       "date": "2026-05-12",
       "budgetMonth": 5,
+      "department": "内容创意一部",
+      "category": "其他",
+      "description": "谷歌邮箱",
+      "amount": 5,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-12",
+      "budgetMonth": 5,
       "department": "内容创意二部",
       "category": "会员类",
       "description": "heygen会员",
@@ -4693,7 +4702,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -4729,7 +4738,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -4738,7 +4747,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
