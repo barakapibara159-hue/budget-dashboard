@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-14T05:10:08.145Z",
+  "updatedAt": "2026-05-15T05:31:36.709Z",
   "currentMonth": "2026-05",
   "overview": {
     "totalBudget": 215464.9,
@@ -117,16 +117,16 @@
       "amount": 0
     },
     "已提交OA未走完流程": {
-      "count": 8,
-      "amount": 3537.95
+      "count": 21,
+      "amount": 7481.69
     },
     "等待发票提交OA": {
-      "count": 25,
-      "amount": 9196.18
+      "count": 17,
+      "amount": 7442.98
     },
     "排队待报销": {
-      "count": 15,
-      "amount": 9350.62
+      "count": 10,
+      "amount": 7160.08
     },
     "待走替票": {
       "count": 46,
@@ -2794,7 +2794,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 140,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-08",
@@ -3289,7 +3289,7 @@
       "category": "会员类",
       "description": "capcut会员",
       "amount": 47.4,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-21",
@@ -3496,7 +3496,7 @@
       "category": "会员类",
       "description": "capcut会员",
       "amount": 15.8,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-21",
@@ -3505,7 +3505,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 142,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-15",
@@ -3595,7 +3595,7 @@
       "category": "会员类",
       "description": "capcut会员",
       "amount": 15.8,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-28",
@@ -3622,7 +3622,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 142,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-28",
@@ -3631,7 +3631,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 266,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-28",
@@ -3667,7 +3667,7 @@
       "category": "会员类",
       "description": "capcut会员",
       "amount": 15.8,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-28",
@@ -3748,7 +3748,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 135,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-21",
@@ -3811,7 +3811,7 @@
       "category": "会员类",
       "description": "新店-战斧浏览器",
       "amount": 38,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-22",
@@ -4045,7 +4045,7 @@
       "category": "会员类",
       "description": "Tapnow会员",
       "amount": 61.58,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4054,7 +4054,7 @@
       "category": "会员类",
       "description": "capcut会员",
       "amount": 15.8,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-11",
@@ -4081,7 +4081,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 355,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4180,7 +4180,7 @@
       "category": "会员类",
       "description": "ChatGPT会员",
       "amount": 140,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4369,7 +4369,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 134.9,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4387,7 +4387,7 @@
       "category": "会员类",
       "description": "Lovart会员",
       "amount": 540.55,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-28",
@@ -4414,7 +4414,7 @@
       "category": "会员类",
       "description": "紫鸟浏览器续费",
       "amount": 20,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-06",
@@ -4585,7 +4585,7 @@
       "category": "会员类",
       "description": "2个chatgpt会员",
       "amount": 1500,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-09",
@@ -4594,7 +4594,7 @@
       "category": "会员类",
       "description": "tapnow会员",
       "amount": 68.41,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -4603,7 +4603,7 @@
       "category": "会员类",
       "description": "capcut会员",
       "amount": 31.6,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -4648,7 +4648,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 586,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -4684,7 +4684,7 @@
       "category": "会员类",
       "description": "Tago会员",
       "amount": 355,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-11",
@@ -4810,7 +4810,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 134.9,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-08",
