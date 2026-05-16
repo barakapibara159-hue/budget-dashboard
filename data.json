@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-15T05:31:36.709Z",
+  "updatedAt": "2026-05-16T04:55:54.905Z",
   "currentMonth": "2026-05",
   "overview": {
     "totalBudget": 215464.9,
@@ -11,7 +11,7 @@
     "内容创意一部": {
       "budget": 14160,
       "spent": 9383.189999999999,
-      "count": 9
+      "count": 10
     },
     "内容创意二部": {
       "budget": 31530,
@@ -56,7 +56,7 @@
     "运营支持部（王晨）": {
       "budget": 27189.9,
       "spent": 1423.68,
-      "count": 4
+      "count": 5
     }
   },
   "byCategory": {
@@ -117,20 +117,20 @@
       "amount": 0
     },
     "已提交OA未走完流程": {
-      "count": 21,
-      "amount": 7481.69
+      "count": 26,
+      "amount": 11741.689999999999
     },
     "等待发票提交OA": {
       "count": 17,
       "amount": 7442.98
     },
     "排队待报销": {
-      "count": 10,
-      "amount": 7160.08
+      "count": 7,
+      "amount": 3620.08
     },
     "待走替票": {
       "count": 46,
-      "amount": 18604.87
+      "amount": 17884.87
     }
   },
   "weekly": [
@@ -2821,7 +2821,7 @@
       "category": "网络类",
       "description": "迪拜网络",
       "amount": 240,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-03-30",
@@ -2848,7 +2848,7 @@
       "category": "网络类",
       "description": "巴西网络",
       "amount": 480,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-09",
@@ -4035,8 +4035,17 @@
       "department": "内容创意一部",
       "category": "网络类",
       "description": "巴西、墨西哥等网络续约（月）",
-      "amount": 930,
+      "amount": 450,
       "status": "待走替票"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 5,
+      "department": "内容创意一部",
+      "category": "网络类",
+      "description": "英国、台湾网络续约（月）",
+      "amount": 480,
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4432,7 +4441,7 @@
       "category": "网络类",
       "description": "迪拜网络续约（月）",
       "amount": 240,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-30",
@@ -4441,7 +4450,7 @@
       "category": "网络类",
       "description": "美国网络续约（月）",
       "amount": 480,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-17",
@@ -4476,8 +4485,17 @@
       "department": "运营支持部（王晨）",
       "category": "网络类",
       "description": "阿联酋网络续约（月）",
-      "amount": 840,
+      "amount": 600,
       "status": "待走替票"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 5,
+      "department": "运营支持部（王晨）",
+      "category": "网络类",
+      "description": "美国网络续约（月）",
+      "amount": 240,
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-14",
@@ -4513,7 +4531,7 @@
       "category": "网络类",
       "description": "迪拜、美国等网络续约（月）",
       "amount": 2820,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
