@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-05-18T05:46:51.082Z",
+  "updatedAt": "2026-05-19T05:41:32.430Z",
   "currentMonth": "2026-05",
   "overview": {
-    "totalBudget": 215464.9,
+    "totalBudget": 233464.9,
     "totalSpent": 40689.62,
-    "remaining": 174775.28,
-    "usageRate": "18.9"
+    "remaining": 192775.28,
+    "usageRate": "17.4"
   },
   "byDepartment": {
     "内容创意一部": {
@@ -34,7 +34,7 @@
       "count": 14
     },
     "商务签约部": {
-      "budget": 12000,
+      "budget": 30000,
       "spent": 0,
       "count": 0
     },
@@ -117,16 +117,16 @@
       "amount": 0
     },
     "已提交OA未走完流程": {
-      "count": 26,
-      "amount": 11741.689999999999
+      "count": 32,
+      "amount": 16979.690000000002
     },
     "等待发票提交OA": {
-      "count": 17,
-      "amount": 7442.98
+      "count": 14,
+      "amount": 3962.98
     },
     "排队待报销": {
-      "count": 7,
-      "amount": 3620.08
+      "count": 4,
+      "amount": 1862.08
     },
     "待走替票": {
       "count": 46,
@@ -805,7 +805,7 @@
       "category": "账号类",
       "description": "满年白号",
       "amount": 36,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-10",
@@ -913,7 +913,7 @@
       "category": "其他",
       "description": "outlook邮箱",
       "amount": 4,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-10",
@@ -967,7 +967,7 @@
       "category": "其他",
       "description": "英国手机卡",
       "amount": 360,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-10",
@@ -985,7 +985,7 @@
       "category": "账号类",
       "description": "英区tiktok白号",
       "amount": 36,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-10",
@@ -994,7 +994,7 @@
       "category": "网络类",
       "description": "英国快连vpn",
       "amount": 46.3,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-10",
@@ -1201,7 +1201,7 @@
       "category": "会员类",
       "description": "veo3会员",
       "amount": 65,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-21",
@@ -1210,7 +1210,7 @@
       "category": "会员类",
       "description": "veo3会员",
       "amount": 65,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-17",
@@ -1228,7 +1228,7 @@
       "category": "其他",
       "description": "outlook邮箱",
       "amount": 6.4,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-17",
@@ -1237,7 +1237,7 @@
       "category": "会员类",
       "description": "Nano banana Pro月度会员",
       "amount": 48,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-17",
@@ -1273,7 +1273,7 @@
       "category": "账号类",
       "description": "英国橱窗号",
       "amount": 500,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-17",
@@ -1282,7 +1282,7 @@
       "category": "账号类",
       "description": "英区白号",
       "amount": 20,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-17",
@@ -1597,7 +1597,7 @@
       "category": "其他",
       "description": "英区手机号",
       "amount": 120,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-25",
@@ -1606,7 +1606,7 @@
       "category": "其他",
       "description": "手机维修费用",
       "amount": 129,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-24",
@@ -1633,7 +1633,7 @@
       "category": "网络类",
       "description": "英国节点",
       "amount": 540,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-26",
@@ -1642,7 +1642,7 @@
       "category": "账号类",
       "description": "英国满月白号",
       "amount": 120,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-24",
@@ -1651,7 +1651,7 @@
       "category": "会员类",
       "description": "fastmoss会员",
       "amount": 20.5,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-20",
@@ -1678,7 +1678,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 135,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-24",
@@ -2002,7 +2002,7 @@
       "category": "网络类",
       "description": "巴西、墨西哥网络续约（月）",
       "amount": 300,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2011,7 +2011,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 11.99,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-06",
@@ -2029,7 +2029,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 119,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2047,7 +2047,7 @@
       "category": "会员类",
       "description": "capcut会员",
       "amount": 15.8,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2056,7 +2056,7 @@
       "category": "网络类",
       "description": "阿联酋网络续约（月）",
       "amount": 150,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2074,7 +2074,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 466,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2083,7 +2083,7 @@
       "category": "会员类",
       "description": "topview会员",
       "amount": 550,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2092,7 +2092,7 @@
       "category": "会员类",
       "description": "topview会员",
       "amount": 550,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2101,7 +2101,7 @@
       "category": "会员类",
       "description": "topview会员",
       "amount": 550,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-01",
@@ -2128,7 +2128,7 @@
       "category": "会员类",
       "description": "Tapnow会员",
       "amount": 160.56,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-25",
@@ -2137,7 +2137,7 @@
       "category": "会员类",
       "description": "Tapnow会员",
       "amount": 160.09,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-24",
@@ -2146,7 +2146,7 @@
       "category": "会员类",
       "description": "Tapnow会员",
       "amount": 160,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-26",
@@ -2155,7 +2155,7 @@
       "category": "会员类",
       "description": "Tapnow会员",
       "amount": 267.3,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2182,7 +2182,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2191,7 +2191,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-24",
@@ -2209,7 +2209,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 355,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2218,7 +2218,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 586,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-26",
@@ -2227,7 +2227,7 @@
       "category": "会员类",
       "description": "英国手机卡话费充值",
       "amount": 111.68,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-27",
@@ -2245,7 +2245,7 @@
       "category": "账号类",
       "description": "Facebook账号",
       "amount": 90,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-03",
@@ -2254,7 +2254,7 @@
       "category": "会员类",
       "description": "英国手机卡话费充值",
       "amount": 220.32,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2263,7 +2263,7 @@
       "category": "其他",
       "description": "outlook邮箱",
       "amount": 4,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2272,7 +2272,7 @@
       "category": "网络类",
       "description": "英国网络续约（月）",
       "amount": 1500,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2281,7 +2281,7 @@
       "category": "网络类",
       "description": "英国网络续约（月）",
       "amount": 1080,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2290,7 +2290,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 280,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2299,7 +2299,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 270,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-01",
@@ -2308,7 +2308,7 @@
       "category": "网络类",
       "description": "vpn续费",
       "amount": 106.48,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-01",
@@ -2326,7 +2326,7 @@
       "category": "账号类",
       "description": "英区白号",
       "amount": 36,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2335,7 +2335,7 @@
       "category": "网络类",
       "description": "英国节点",
       "amount": 180,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2344,7 +2344,7 @@
       "category": "其他",
       "description": "gmail邮箱",
       "amount": 9,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-27",
@@ -2353,7 +2353,7 @@
       "category": "会员类",
       "description": "哼哼猫会员",
       "amount": 44.92,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2362,7 +2362,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2398,7 +2398,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 69,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-26",
@@ -2434,7 +2434,7 @@
       "category": "会员类",
       "description": "紫鸟浏览器会员",
       "amount": 20,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-30",
@@ -2443,7 +2443,7 @@
       "category": "会员类",
       "description": "腾讯云服务器续费",
       "amount": 42,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-01",
@@ -2461,7 +2461,7 @@
       "category": "会员类",
       "description": "claude会员",
       "amount": 450,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-01",
@@ -2470,7 +2470,7 @@
       "category": "会员类",
       "description": "minimax会员",
       "amount": 92.87,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-01",
@@ -2479,7 +2479,7 @@
       "category": "会员类",
       "description": "minimax会员",
       "amount": 199,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-01",
@@ -2488,7 +2488,7 @@
       "category": "会员类",
       "description": "minimax会员",
       "amount": 199,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-31",
@@ -2524,7 +2524,7 @@
       "category": "网络类",
       "description": "阿联酋网络续约（月）",
       "amount": 300,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-27",
@@ -2614,7 +2614,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 702.9,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2623,7 +2623,7 @@
       "category": "会员类",
       "description": "topview会员",
       "amount": 1100,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2632,7 +2632,7 @@
       "category": "会员类",
       "description": "topview会员",
       "amount": 1100,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2641,7 +2641,7 @@
       "category": "会员类",
       "description": "topview会员",
       "amount": 550,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2668,7 +2668,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2677,7 +2677,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 347.9,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2686,7 +2686,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 347.9,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2695,7 +2695,7 @@
       "category": "账号类",
       "description": "英区白号",
       "amount": 54,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2704,7 +2704,7 @@
       "category": "网络类",
       "description": "英区节点",
       "amount": 60,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2713,7 +2713,7 @@
       "category": "会员类",
       "description": "Midjourney会员",
       "amount": 265,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2722,7 +2722,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 140,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2731,7 +2731,7 @@
       "category": "会员类",
       "description": "minimax token会员",
       "amount": 49,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-07",
@@ -2740,7 +2740,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 586,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2749,7 +2749,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2758,7 +2758,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 498.8,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-07",
@@ -2767,7 +2767,7 @@
       "category": "网络类",
       "description": "VPN续费",
       "amount": 106.56,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2785,7 +2785,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 140,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2794,7 +2794,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 140,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -2857,7 +2857,7 @@
       "category": "网络类",
       "description": "巴西网络",
       "amount": 240,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-03",
@@ -3019,7 +3019,7 @@
       "category": "会员类",
       "description": "美图秀秀会员",
       "amount": 30,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-02",
@@ -3028,7 +3028,7 @@
       "category": "会员类",
       "description": "百度网盘会员",
       "amount": 48,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-13",
@@ -3046,7 +3046,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 498.98,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-14",
@@ -3055,7 +3055,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 498.92,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-14",
@@ -3064,7 +3064,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 498.98,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-14",
@@ -3073,7 +3073,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 498.98,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-14",
@@ -3100,7 +3100,7 @@
       "category": "网络类",
       "description": "英区网络续费",
       "amount": 3000,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-14",
@@ -3154,7 +3154,7 @@
       "category": "会员类",
       "description": "开拍会员",
       "amount": 30,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-14",
@@ -3163,7 +3163,7 @@
       "category": "会员类",
       "description": "灰豚数据企业版会员",
       "amount": 120,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-14",
@@ -3316,7 +3316,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-21",
@@ -3325,7 +3325,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 46,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-21",
@@ -3334,7 +3334,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 916,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-21",
@@ -3424,7 +3424,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-21",
@@ -3433,7 +3433,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-21",
@@ -3442,7 +3442,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-21",
@@ -3469,7 +3469,7 @@
       "category": "会员类",
       "description": "capcut会员",
       "amount": 15.8,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-24",
@@ -3478,7 +3478,7 @@
       "category": "网络类",
       "description": "英国网络",
       "amount": 1260,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-21",
@@ -3586,7 +3586,7 @@
       "category": "网络类",
       "description": "台湾网络",
       "amount": 240,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-28",
@@ -3640,7 +3640,7 @@
       "category": "网络类",
       "description": "美区网络",
       "amount": 1680,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-27",
@@ -3883,7 +3883,7 @@
       "category": "网络类",
       "description": "美国网络",
       "amount": 240,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-30",
@@ -4171,7 +4171,7 @@
       "category": "网络类",
       "description": "英区季度节点",
       "amount": 498,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-27",
@@ -4198,7 +4198,7 @@
       "category": "网络类",
       "description": "英区节点",
       "amount": 900,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-30",
@@ -4207,7 +4207,7 @@
       "category": "网络类",
       "description": "英国网络续约（月）",
       "amount": 720,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4306,7 +4306,7 @@
       "category": "网络类",
       "description": "英国网络",
       "amount": 540,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-30",
@@ -4684,7 +4684,7 @@
       "category": "网络类",
       "description": "10个阿联酋节点",
       "amount": 2400,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -4819,7 +4819,7 @@
       "category": "网络类",
       "description": "英区节点",
       "amount": 180,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -6073,7 +6073,7 @@
       "budgetMonth": 5,
       "department": "内容创意三部",
       "category": "chat-GPT",
-      "description": "不方便 共享 账号+调教 好的",
+      "description": "",
       "amount": 300
     },
     {
@@ -6376,13 +6376,6 @@
       "category": "卖家精灵全功能版本月卡130",
       "description": "",
       "amount": 130
-    },
-    {
-      "budgetMonth": 5,
-      "department": "商务签约部",
-      "category": "5月兼职费用",
-      "description": "",
-      "amount": 12000
     },
     {
       "budgetMonth": 5,
