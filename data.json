@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-21T05:48:00.036Z",
+  "updatedAt": "2026-05-22T05:41:33.302Z",
   "currentMonth": "2026-05",
   "overview": {
     "totalBudget": 233464.9,
@@ -119,16 +119,16 @@
       "amount": 0
     },
     "已提交OA未走完流程": {
-      "count": 32,
-      "amount": 16979.690000000002
+      "count": 47,
+      "amount": 19906.270000000004
     },
     "等待发票提交OA": {
-      "count": 18,
-      "amount": 4667.66
+      "count": 16,
+      "amount": 4148.66
     },
     "排队待报销": {
-      "count": 25,
-      "amount": 9105.58
+      "count": 12,
+      "amount": 6698
     },
     "待走替票": {
       "count": 62,
@@ -1765,7 +1765,7 @@
       "category": "网络类",
       "description": "英国网络",
       "amount": 100,
-      "status": "已提交OA未走完流程"
+      "status": "待走替票"
     },
     {
       "date": "2026-03-23",
@@ -1999,7 +1999,7 @@
       "category": "网络类",
       "description": "迪拜、秘鲁等网络续约（季度）",
       "amount": 4300,
-      "status": "已提交OA未走完流程"
+      "status": "待走替票"
     },
     {
       "date": "2026-03-31",
@@ -2114,9 +2114,9 @@
       "budgetMonth": 4,
       "department": "内容创意二部",
       "category": "会员类",
-      "description": "HeyGen 会员",
+      "description": "heygen会员",
       "amount": 200.21,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-08",
@@ -2179,7 +2179,7 @@
       "category": "网络类",
       "description": "英国网络续约（季度）",
       "amount": 430,
-      "status": "已提交OA未走完流程"
+      "status": "待走替票"
     },
     {
       "date": "2026-03-31",
@@ -2377,7 +2377,7 @@
       "category": "网络类",
       "description": "网络续约（月）",
       "amount": 900,
-      "status": "已提交OA未走完流程"
+      "status": "待走替票"
     },
     {
       "date": "2026-03-31",
@@ -2521,7 +2521,7 @@
       "category": "网络类",
       "description": "美国网络续约（季度）",
       "amount": 390,
-      "status": "已提交OA未走完流程"
+      "status": "待走替票"
     },
     {
       "date": "2026-03-31",
@@ -3601,7 +3601,7 @@
       "category": "会员类",
       "description": "topview会员",
       "amount": 550,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-29",
@@ -3817,7 +3817,7 @@
       "category": "会员类",
       "description": "即梦积分充值",
       "amount": 450,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-14",
@@ -4096,7 +4096,7 @@
       "category": "会员类",
       "description": "topview会员",
       "amount": 550,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4384,7 +4384,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 450,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4645,7 +4645,7 @@
       "category": "会员类",
       "description": "heygen会员",
       "amount": 198.04,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -4654,7 +4654,7 @@
       "category": "会员类",
       "description": "heygen会员",
       "amount": 198.04,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -4690,7 +4690,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 69,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -4915,7 +4915,7 @@
       "category": "会员类",
       "description": "capcut会员",
       "amount": 15.8,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-19",
@@ -4924,7 +4924,7 @@
       "category": "会员类",
       "description": "runway3天独享会员",
       "amount": 88,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-19",
@@ -4933,7 +4933,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 347.9,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-12",
@@ -4942,7 +4942,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 46,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-19",
@@ -4951,7 +4951,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 234,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-20",
@@ -4978,7 +4978,7 @@
       "category": "会员类",
       "description": "runway3天独享会员",
       "amount": 88,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-20",
@@ -5104,7 +5104,7 @@
       "category": "会员类",
       "description": "Capcut会员",
       "amount": 15.8,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-19",
@@ -5113,7 +5113,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-18",
@@ -5140,7 +5140,7 @@
       "category": "会员类",
       "description": "新店-战斧浏览器",
       "amount": 58,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-19",
@@ -5230,7 +5230,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 69,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-14",
