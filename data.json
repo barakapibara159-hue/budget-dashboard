@@ -1,173 +1,142 @@
 {
-  "updatedAt": "2026-06-02T06:15:02.555Z",
+  "updatedAt": "2026-06-03T06:28:45.190Z",
   "currentMonth": "2026-06",
   "overview": {
-    "totalBudget": 218970.5,
-    "totalSpent": 450384.97,
-    "remaining": -231414.46999999997,
-    "usageRate": "205.7"
+    "totalBudget": 243439.5,
+    "totalSpent": 41116.83,
+    "remaining": 202322.66999999998,
+    "usageRate": "16.9"
   },
   "byDepartment": {
     "内容创意一部": {
       "budget": 24680,
-      "spent": 49473.76000000001,
-      "count": 68
+      "spent": 3180.6200000000003,
+      "count": 9
     },
     "内容创意二部": {
-      "budget": 29190,
-      "spent": 118463.18999999997,
-      "count": 88
+      "budget": 29490,
+      "spent": 11824,
+      "count": 5
     },
     "内容创意三部": {
       "budget": 7669,
-      "spent": 39397.31,
-      "count": 113
+      "spent": 2599,
+      "count": 2
     },
     "内容创意四部": {
       "budget": 13730,
-      "spent": 28951.759999999995,
-      "count": 116
+      "spent": 6614.92,
+      "count": 11
     },
     "内容创意五部": {
       "budget": 48466.5,
-      "spent": 23666.85,
-      "count": 79
+      "spent": 4922.289999999999,
+      "count": 14
     },
     "商务签约部": {
-      "budget": 8000,
-      "spent": 26910,
-      "count": 6
+      "budget": 9000,
+      "spent": 0,
+      "count": 0
     },
     "新媒体产品部": {
       "budget": 5070,
-      "spent": 7678.610000000001,
-      "count": 18
+      "spent": 4620,
+      "count": 4
     },
     "业务创新部": {
-      "budget": 4018,
-      "spent": 3400.09,
-      "count": 17
+      "budget": 5287,
+      "spent": 1214,
+      "count": 4
     },
     "运营支持部（巴伊苏拉）": {
-      "budget": 48067,
-      "spent": 110908.22,
-      "count": 92
+      "budget": 69967,
+      "spent": 5252,
+      "count": 5
     },
     "运营支持部（王晨）": {
       "budget": 30080,
-      "spent": 40790.18,
-      "count": 20
-    },
-    "新媒体事业部": {
-      "budget": 0,
-      "spent": 745,
+      "spent": 890,
       "count": 2
     }
   },
   "byCategory": {
-    "网络类": 88490.60999999999,
-    "其他": 18293.63,
-    "会员类": 82656.71,
-    "账号类": 10410.02,
-    "兼职类": 250534
+    "网络类": 28600,
+    "会员类": 10860.43,
+    "账号类": 535,
+    "其他": 1121.4
   },
   "byCategoryDept": {
     "内容创意一部": {
-      "网络类": 16630,
-      "其他": 1063.3999999999999,
-      "会员类": 3529.3600000000006,
-      "账号类": 71,
-      "兼职类": 28180
+      "网络类": 2180,
+      "会员类": 1000.6200000000001
     },
     "内容创意二部": {
-      "其他": 754,
-      "网络类": 31470,
-      "会员类": 16309.19,
-      "账号类": 4680,
-      "兼职类": 65250
+      "网络类": 11120,
+      "账号类": 300,
+      "会员类": 404
     },
     "内容创意三部": {
-      "会员类": 20793.18,
-      "其他": 3066.1299999999997,
-      "网络类": 10888,
-      "兼职类": 4050,
-      "账号类": 600
+      "网络类": 2100,
+      "会员类": 499
     },
     "内容创意四部": {
-      "网络类": 12342.61,
-      "其他": 661.01,
-      "会员类": 14196.140000000001,
-      "账号类": 1752
+      "网络类": 4850,
+      "会员类": 1764.92
     },
     "内容创意五部": {
-      "网络类": 3200,
-      "会员类": 6512.630000000001,
-      "账号类": 2630,
-      "其他": 10064.220000000001,
-      "兼职类": 1260
-    },
-    "业务创新部": {
-      "会员类": 2072.59,
-      "其他": 457.5,
-      "网络类": 720,
-      "兼职类": 150
+      "网络类": 3000,
+      "会员类": 665.89,
+      "其他": 1121.4,
+      "账号类": 135
     },
     "新媒体产品部": {
-      "会员类": 6718.610000000001,
-      "网络类": 960
+      "网络类": 720,
+      "会员类": 3900
+    },
+    "业务创新部": {
+      "网络类": 240,
+      "会员类": 874,
+      "账号类": 100
     },
     "运营支持部（王晨）": {
-      "网络类": 2660,
-      "会员类": 1549.98,
-      "其他": 946.2,
-      "兼职类": 35634
+      "网络类": 890
     },
     "运营支持部（巴伊苏拉）": {
-      "网络类": 9620,
-      "会员类": 10510.029999999999,
-      "账号类": 677.02,
-      "其他": 1001.1700000000001,
-      "兼职类": 89100
-    },
-    "新媒体事业部": {
-      "其他": 280,
-      "会员类": 465
-    },
-    "商务签约部": {
-      "兼职类": 26910
+      "网络类": 3500,
+      "会员类": 1752
     }
   },
   "byStatus": {
     "已报销完": {
-      "count": 246,
-      "amount": 78586.18000000004
+      "count": 0,
+      "amount": 0
     },
     "已提交OA未走完流程": {
-      "count": 178,
-      "amount": 51721.13000000002
+      "count": 4,
+      "amount": 3989
     },
     "等待发票提交OA": {
-      "count": 32,
-      "amount": 13962.220000000001
+      "count": 19,
+      "amount": 19068.92
     },
     "排队待报销": {
-      "count": 11,
-      "amount": 11315
+      "count": 1,
+      "amount": 379.42
     },
     "待走替票": {
-      "count": 108,
-      "amount": 42726.44
+      "count": 25,
+      "amount": 7729.49
     },
     "无需付款": {
-      "count": 44,
-      "amount": 252074
+      "count": 4,
+      "amount": 9500
+    },
+    "待定": {
+      "count": 3,
+      "amount": 450
     }
   },
   "weekly": [
-    {
-      "week": "2026-04-06",
-      "amount": 13193.739999999998
-    },
     {
       "week": "2026-04-13",
       "amount": 12913.32
@@ -186,15 +155,19 @@
     },
     {
       "week": "2026-05-11",
-      "amount": 8521.779999999999
+      "amount": 8531.15
     },
     {
       "week": "2026-05-18",
-      "amount": 20698.24
+      "amount": 20692.14
     },
     {
       "week": "2026-05-25",
-      "amount": 84414.19
+      "amount": 134882.65
+    },
+    {
+      "week": "2026-06-01",
+      "amount": 33137.17999999999
     }
   ],
   "records": [
@@ -2140,7 +2113,7 @@
       "category": "会员类",
       "description": "heygen会员",
       "amount": 200.21,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-08",
@@ -3130,7 +3103,7 @@
       "category": "网络类",
       "description": "vpn续费",
       "amount": 52.71,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-14",
@@ -3166,7 +3139,7 @@
       "category": "网络类",
       "description": "机场VPN",
       "amount": 25,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-09",
@@ -3238,7 +3211,7 @@
       "category": "会员类",
       "description": "gemini模型token充值",
       "amount": 107.5,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-10",
@@ -3265,7 +3238,7 @@
       "category": "会员类",
       "description": "SiliconCloud",
       "amount": 10,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-12",
@@ -3274,7 +3247,7 @@
       "category": "会员类",
       "description": "马斯克会员",
       "amount": 88.88,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-13",
@@ -3283,7 +3256,7 @@
       "category": "会员类",
       "description": "Nano banana会员",
       "amount": 10,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-13",
@@ -3292,7 +3265,7 @@
       "category": "其他",
       "description": "谷歌邮箱",
       "amount": 18,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-15",
@@ -3301,7 +3274,7 @@
       "category": "账号类",
       "description": "facebook账号",
       "amount": 9.22,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-21",
@@ -3589,7 +3562,7 @@
       "category": "会员类",
       "description": "claude会员",
       "amount": 480,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-21",
@@ -3598,7 +3571,7 @@
       "category": "会员类",
       "description": "claude会员",
       "amount": 780,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-23",
@@ -3625,7 +3598,7 @@
       "category": "会员类",
       "description": "topview会员",
       "amount": 550,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-29",
@@ -3841,7 +3814,7 @@
       "category": "会员类",
       "description": "即梦积分充值",
       "amount": 450,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-14",
@@ -3859,7 +3832,7 @@
       "category": "会员类",
       "description": "clash verge高级套餐",
       "amount": 341.44,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-27",
@@ -3868,7 +3841,7 @@
       "category": "会员类",
       "description": "claude code max会员",
       "amount": 598.88,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-22",
@@ -3877,7 +3850,7 @@
       "category": "会员类",
       "description": "布丁API积分充值",
       "amount": 80,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-25",
@@ -4120,7 +4093,7 @@
       "category": "会员类",
       "description": "topview会员",
       "amount": 550,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-07",
@@ -4264,7 +4237,7 @@
       "category": "会员类",
       "description": "6个chatgpt会员",
       "amount": 840,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4408,7 +4381,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 450,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-07",
@@ -4480,7 +4453,7 @@
       "category": "会员类",
       "description": "claude max会员",
       "amount": 780,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-29",
@@ -4489,7 +4462,7 @@
       "category": "会员类",
       "description": "3个claude max会员",
       "amount": 2340,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-06",
@@ -4498,7 +4471,7 @@
       "category": "会员类",
       "description": "claude max会员",
       "amount": 780,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-30",
@@ -4534,7 +4507,7 @@
       "category": "会员类",
       "description": "Claude Pro会员",
       "amount": 140,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-29",
@@ -4561,7 +4534,7 @@
       "category": "会员类",
       "description": "谷歌api积分充值",
       "amount": 49.5,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-30",
@@ -4570,7 +4543,7 @@
       "category": "会员类",
       "description": "布丁API积分充值",
       "amount": 100,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-01",
@@ -4579,7 +4552,7 @@
       "category": "会员类",
       "description": "veo3会员",
       "amount": 38,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-03",
@@ -4588,7 +4561,7 @@
       "category": "会员类",
       "description": "veo3会员",
       "amount": 114,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-01",
@@ -4597,7 +4570,7 @@
       "category": "会员类",
       "description": "veo3会员",
       "amount": 38,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-06",
@@ -4606,7 +4579,7 @@
       "category": "会员类",
       "description": "veo3会员",
       "amount": 39.98,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-07",
@@ -4615,7 +4588,7 @@
       "category": "会员类",
       "description": "veo3会员",
       "amount": 39.98,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-01",
@@ -4669,7 +4642,7 @@
       "category": "会员类",
       "description": "heygen会员",
       "amount": 198.04,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-12",
@@ -4678,7 +4651,7 @@
       "category": "会员类",
       "description": "heygen会员",
       "amount": 198.04,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-12",
@@ -4714,7 +4687,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 69,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-12",
@@ -4876,7 +4849,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 140,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-03-23",
@@ -4885,7 +4858,7 @@
       "category": "会员类",
       "description": "Tera Box云盘premium月度会员",
       "amount": 34.7,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-01",
@@ -4894,7 +4867,7 @@
       "category": "会员类",
       "description": "token充值",
       "amount": 256.8,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-08",
@@ -4903,7 +4876,7 @@
       "category": "会员类",
       "description": "grok会员",
       "amount": 168,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-14",
@@ -4939,7 +4912,7 @@
       "category": "会员类",
       "description": "capcut会员",
       "amount": 3.8,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-19",
@@ -4948,7 +4921,7 @@
       "category": "会员类",
       "description": "runway3天独享会员",
       "amount": 88,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-19",
@@ -4957,7 +4930,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 347.9,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-12",
@@ -4966,7 +4939,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 46,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-19",
@@ -4975,7 +4948,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 234,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-20",
@@ -5002,7 +4975,7 @@
       "category": "会员类",
       "description": "runway3天独享会员",
       "amount": 88,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-20",
@@ -5038,7 +5011,7 @@
       "category": "其他",
       "description": "手机维修费用",
       "amount": 120,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-21",
@@ -5110,7 +5083,7 @@
       "category": "网络类",
       "description": "新增2个英国网络",
       "amount": 340,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-18",
@@ -5128,7 +5101,7 @@
       "category": "会员类",
       "description": "Capcut会员",
       "amount": 3.8,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-19",
@@ -5137,7 +5110,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-18",
@@ -5145,7 +5118,7 @@
       "department": "内容创意五部",
       "category": "其他",
       "description": "样品采购费用",
-      "amount": 55.2,
+      "amount": 49.1,
       "status": "待走替票"
     },
     {
@@ -5164,7 +5137,7 @@
       "category": "会员类",
       "description": "新店-战斧浏览器",
       "amount": 58,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-19",
@@ -5173,7 +5146,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 140,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-19",
@@ -5182,7 +5155,7 @@
       "category": "会员类",
       "description": "fastmoss会员",
       "amount": 20.5,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-20",
@@ -5191,7 +5164,7 @@
       "category": "会员类",
       "description": "veo3会员",
       "amount": 70,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-19",
@@ -5218,7 +5191,7 @@
       "category": "账号类",
       "description": "领英账号",
       "amount": 75,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-13",
@@ -5227,7 +5200,7 @@
       "category": "其他",
       "description": "谷歌邮箱",
       "amount": 80,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-24",
@@ -5245,7 +5218,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 69,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-14",
@@ -5254,7 +5227,7 @@
       "category": "会员类",
       "description": "Claude会员",
       "amount": 175,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-15",
@@ -5263,7 +5236,7 @@
       "category": "会员类",
       "description": "Claude会员",
       "amount": 140,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-19",
@@ -5272,7 +5245,7 @@
       "category": "账号类",
       "description": "facebook账号",
       "amount": 283.8,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-19",
@@ -5281,7 +5254,7 @@
       "category": "账号类",
       "description": "tiktok账号",
       "amount": 126,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-26",
@@ -5398,7 +5371,7 @@
       "category": "会员类",
       "description": "liblib会员",
       "amount": 599,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-19",
@@ -5461,7 +5434,7 @@
       "category": "网络类",
       "description": "新增5个英国网络",
       "amount": 750,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-22",
@@ -5569,7 +5542,7 @@
       "category": "会员类",
       "description": "Claude pro会员",
       "amount": 140,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-20",
@@ -5614,7 +5587,7 @@
       "category": "会员类",
       "description": "grok会员",
       "amount": 176,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-25",
@@ -5642,6 +5615,15 @@
       "description": "悠米视频会员",
       "amount": 7,
       "status": "待走替票"
+    },
+    {
+      "date": "2026-05-31",
+      "budgetMonth": 5,
+      "department": "内容创意一部",
+      "category": "兼职类",
+      "description": "5月兼职费用",
+      "amount": 24612.18,
+      "status": "无需付款"
     },
     {
       "date": "2026-05-31",
@@ -5730,7 +5712,7 @@
       "department": "运营支持部（巴伊苏拉）",
       "category": "兼职类",
       "description": "余红 5月兼职费用",
-      "amount": 6000,
+      "amount": 5700,
       "status": "无需付款"
     },
     {
@@ -5739,7 +5721,7 @@
       "department": "运营支持部（巴伊苏拉）",
       "category": "兼职类",
       "description": "樊如婷 5月兼职费用",
-      "amount": 6750,
+      "amount": 6000,
       "status": "无需付款"
     },
     {
@@ -5757,7 +5739,7 @@
       "department": "运营支持部（巴伊苏拉）",
       "category": "兼职类",
       "description": "王甜甜 5月兼职费用",
-      "amount": 5400,
+      "amount": 6750,
       "status": "无需付款"
     },
     {
@@ -5766,8 +5748,521 @@
       "department": "运营支持部（巴伊苏拉）",
       "category": "兼职类",
       "description": "崔苏丽 5月兼职费用",
-      "amount": 4950,
+      "amount": 3870,
       "status": "无需付款"
+    },
+    {
+      "date": "2026-05-31",
+      "budgetMonth": 5,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "兼职类",
+      "description": "5月海外兼职费用",
+      "amount": 19116,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意一部",
+      "category": "网络类",
+      "description": "1个秘鲁网络续约（季度）",
+      "amount": 1250,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意一部",
+      "category": "网络类",
+      "description": "2个巴西，1个墨西哥续约（月）",
+      "amount": 450,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意一部",
+      "category": "网络类",
+      "description": "1个英国、1个台湾续约（月）",
+      "amount": 480,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-31",
+      "budgetMonth": 6,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "runway月度会员",
+      "amount": 379.42,
+      "status": "排队待报销"
+    },
+    {
+      "date": "2026-05-26",
+      "budgetMonth": 6,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "capcut周会员",
+      "amount": 8.8,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-27",
+      "budgetMonth": 6,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "capcut周会员",
+      "amount": 8.8,
+      "status": "待走替票"
+    },
+    {
+      "date": "",
+      "budgetMonth": 6,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "google云盘月度会员",
+      "amount": 10,
+      "status": "待定"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "capcut月度会员",
+      "amount": 43.6,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意一部",
+      "category": "会员类",
+      "description": "topview会员",
+      "amount": 550,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意二部",
+      "category": "网络类",
+      "description": "2个巴西、10个迪拜、7个美国、2个墨西哥续约（月）",
+      "amount": 5040,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意二部",
+      "category": "网络类",
+      "description": "视界云续约",
+      "amount": 6080,
+      "status": "无需付款"
+    },
+    {
+      "date": "",
+      "budgetMonth": 6,
+      "department": "内容创意二部",
+      "category": "账号类",
+      "description": "小红书账号",
+      "amount": 300,
+      "status": "待定"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "runway3日会员",
+      "amount": 264,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意二部",
+      "category": "会员类",
+      "description": "chatgpt会员",
+      "amount": 140,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意三部",
+      "category": "网络类",
+      "description": "7个英国网络续约（月）",
+      "amount": 2100,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意三部",
+      "category": "会员类",
+      "description": "即梦会员",
+      "amount": 499,
+      "status": "已提交OA未走完流程"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "5个英国网络续约（月）",
+      "amount": 750,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "9个英国网络续约（月）",
+      "amount": 1620,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "视界云续约",
+      "amount": 1880,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "剪映会员",
+      "amount": 59,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "剪映会员",
+      "amount": 29,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "剪映会员",
+      "amount": 59,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-28",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 234,
+      "status": "已提交OA未走完流程"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "可灵会员",
+      "amount": 916,
+      "status": "已提交OA未走完流程"
+    },
+    {
+      "date": "2026-05-27",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "哼哼猫会员续费",
+      "amount": 187.92,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "会员类",
+      "description": "chatgpt会员续费",
+      "amount": 280,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-27",
+      "budgetMonth": 6,
+      "department": "内容创意四部",
+      "category": "网络类",
+      "description": "英国5M专线带宽费",
+      "amount": 600,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "网络类",
+      "description": "6个英国网络续约（月）",
+      "amount": 1800,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "网络类",
+      "description": "12个英国网络续约（月）",
+      "amount": 1200,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "小云雀会员",
+      "amount": 600,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "minimax会员",
+      "amount": 33.89,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-25",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "店铺采购拍摄布景品",
+      "amount": 55.16,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-15",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "Shopify费用",
+      "amount": 9.37,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-27",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "拍摄/直播支架",
+      "amount": 11.5,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-29",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "店铺样品",
+      "amount": 89.68,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "店铺订单货款",
+      "amount": 581.87,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "账号类",
+      "description": "美区满月账号",
+      "amount": 60,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "拍摄道具（火柴+测温枪）",
+      "amount": 34.82,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-27",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "拍摄/直播麦克风（一拖二）",
+      "amount": 339,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "账号类",
+      "description": "英区满月白号",
+      "amount": 75,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "会员类",
+      "description": "fastmoss月卡会员",
+      "amount": 32,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "新媒体产品部",
+      "category": "网络类",
+      "description": "2个美国、1个迪拜续约（月）",
+      "amount": 720,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-27",
+      "budgetMonth": 6,
+      "department": "新媒体产品部",
+      "category": "会员类",
+      "description": "3个claude max会员",
+      "amount": 2340,
+      "status": "已提交OA未走完流程"
+    },
+    {
+      "date": "2026-05-25",
+      "budgetMonth": 6,
+      "department": "新媒体产品部",
+      "category": "会员类",
+      "description": "1个claude max会员",
+      "amount": 780,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-02",
+      "budgetMonth": 6,
+      "department": "新媒体产品部",
+      "category": "会员类",
+      "description": "1个claude max会员",
+      "amount": 780,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "业务创新部",
+      "category": "网络类",
+      "description": "1个迪拜网络续约（月）",
+      "amount": 240,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-27",
+      "budgetMonth": 6,
+      "department": "业务创新部",
+      "category": "会员类",
+      "description": "claude max会员续费",
+      "amount": 734,
+      "status": "待走替票"
+    },
+    {
+      "date": "",
+      "budgetMonth": 6,
+      "department": "业务创新部",
+      "category": "会员类",
+      "description": "token充值",
+      "amount": 140,
+      "status": "待定"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "业务创新部",
+      "category": "账号类",
+      "description": "tk账号*1，fb账号*1，ins账号*1",
+      "amount": 100,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "运营支持部（王晨）",
+      "category": "网络类",
+      "description": "1个香港网络续约（季度）",
+      "amount": 290,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "运营支持部（王晨）",
+      "category": "网络类",
+      "description": "4个阿联酋网络续约（月）",
+      "amount": 600,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-06-01",
+      "budgetMonth": 6,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "网络类",
+      "description": "3个巴西、2个迪拜、7个美国、1个新加坡、2个英国续约（月）",
+      "amount": 3500,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-27",
+      "budgetMonth": 6,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "1个grok会员",
+      "amount": 176,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-28",
+      "budgetMonth": 6,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "1个grok会员",
+      "amount": 176,
+      "status": "待走替票"
+    },
+    {
+      "date": "2026-05-28",
+      "budgetMonth": 6,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "chatgpt会员",
+      "amount": 700,
+      "status": "等待发票提交OA"
+    },
+    {
+      "date": "2026-05-29",
+      "budgetMonth": 6,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "会员类",
+      "description": "chatgpt会员",
+      "amount": 700,
+      "status": "等待发票提交OA"
     }
   ],
   "budgetDetails": [
@@ -7554,7 +8049,7 @@
       "department": "内容创意二部",
       "category": "视界云",
       "description": "",
-      "amount": 6080
+      "amount": 6380
     },
     {
       "budgetMonth": 6,
@@ -7901,6 +8396,13 @@
     },
     {
       "budgetMonth": 6,
+      "department": "商务签约部",
+      "category": "视界云阿联酋网络",
+      "description": "",
+      "amount": 1000
+    },
+    {
+      "budgetMonth": 6,
       "department": "新媒体产品部",
       "category": "claude code max 800*5",
       "description": "",
@@ -7961,6 +8463,13 @@
       "category": "视频素材网盘会员（内容+OKM共用）",
       "description": "高速下载，网盘扩容，上传大文件",
       "amount": 28
+    },
+    {
+      "budgetMonth": 6,
+      "department": "业务创新部",
+      "category": "zoom会员",
+      "description": "",
+      "amount": 1269
     },
     {
       "budgetMonth": 6,
@@ -8100,7 +8609,7 @@
       "department": "运营支持部（巴伊苏拉）",
       "category": "网络费用",
       "description": "",
-      "amount": 3860
+      "amount": 4760
     },
     {
       "budgetMonth": 6,
@@ -8108,6 +8617,13 @@
       "category": "6月兼职费用",
       "description": "",
       "amount": 40000
+    },
+    {
+      "budgetMonth": 6,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "6月海外兼职费用",
+      "description": "",
+      "amount": 20000
     },
     {
       "budgetMonth": 6,
@@ -8120,6 +8636,13 @@
       "budgetMonth": 6,
       "department": "运营支持部（巴伊苏拉）",
       "category": "zpwz 会员",
+      "description": "",
+      "amount": 1000
+    },
+    {
+      "budgetMonth": 6,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "苹果开发者协议",
       "description": "",
       "amount": 1000
     }
