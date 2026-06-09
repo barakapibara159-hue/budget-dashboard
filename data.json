@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-08T06:19:22.373Z",
+  "updatedAt": "2026-06-09T05:46:30.280Z",
   "currentMonth": "2026-06",
   "overview": {
     "totalBudget": 241815.5,
@@ -121,12 +121,12 @@
       "amount": 0
     },
     "已提交OA未走完流程": {
-      "count": 20,
-      "amount": 19770.42
+      "count": 23,
+      "amount": 25290.42
     },
     "等待发票提交OA": {
-      "count": 7,
-      "amount": 5854.92
+      "count": 4,
+      "amount": 334.91999999999996
     },
     "排队待报销": {
       "count": 0,
@@ -1461,7 +1461,7 @@
       "category": "网络类",
       "description": "视界云续约",
       "amount": 8780,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-03-24",
@@ -3108,7 +3108,7 @@
       "category": "网络类",
       "description": "vpn续费",
       "amount": 52.71,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-14",
@@ -3144,7 +3144,7 @@
       "category": "网络类",
       "description": "机场VPN",
       "amount": 25,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-09",
@@ -5106,7 +5106,7 @@
       "category": "网络类",
       "description": "新增2个英国网络",
       "amount": 340,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-18",
@@ -5457,7 +5457,7 @@
       "category": "网络类",
       "description": "新增5个英国网络",
       "amount": 750,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-22",
@@ -5934,7 +5934,7 @@
       "category": "网络类",
       "description": "7个英国网络续约（月）",
       "amount": 2100,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-02",
@@ -5961,7 +5961,7 @@
       "category": "网络类",
       "description": "9个英国网络续约（月）",
       "amount": 1620,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-01",
@@ -6051,7 +6051,7 @@
       "category": "网络类",
       "description": "6个英国网络续约（月）",
       "amount": 1800,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-01",
