@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-09T05:46:30.280Z",
+  "updatedAt": "2026-06-10T06:00:18.803Z",
   "currentMonth": "2026-06",
   "overview": {
     "totalBudget": 241815.5,
@@ -3648,7 +3648,7 @@
       "category": "网络类",
       "description": "视界云续约",
       "amount": 8960,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-28",
@@ -5376,7 +5376,7 @@
       "category": "网络类",
       "description": "视界云续约",
       "amount": 6080,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-26",
@@ -5466,7 +5466,7 @@
       "category": "网络类",
       "description": "视界云续约",
       "amount": 1880,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-05-26",
