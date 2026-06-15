@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-06-14T06:16:28.723Z",
+  "updatedAt": "2026-06-15T06:57:08.478Z",
   "currentMonth": "2026-06",
   "overview": {
     "totalBudget": 241815.5,
-    "totalSpent": 54605.06,
-    "remaining": 187210.44,
-    "usageRate": "22.6"
+    "totalSpent": 55605.06,
+    "remaining": 186210.44,
+    "usageRate": "23.0"
   },
   "byDepartment": {
     "内容创意一部": {
@@ -30,8 +30,8 @@
     },
     "内容创意五部": {
       "budget": 48466.5,
-      "spent": 7567.69,
-      "count": 24
+      "spent": 8567.689999999999,
+      "count": 25
     },
     "商务签约部": {
       "budget": 9000,
@@ -67,7 +67,7 @@
   "byCategory": {
     "网络类": 29460.9,
     "会员类": 21234.370000000003,
-    "其他": 3234.79,
+    "其他": 4234.79,
     "账号类": 675
   },
   "byCategoryDept": {
@@ -96,7 +96,7 @@
     "内容创意五部": {
       "网络类": 3000,
       "会员类": 1882.96,
-      "其他": 2549.73,
+      "其他": 3549.73,
       "账号类": 135
     },
     "新媒体产品部": {
@@ -152,8 +152,8 @@
       "amount": 59
     },
     "未知": {
-      "count": 2,
-      "amount": 1099
+      "count": 3,
+      "amount": 2099
     }
   },
   "weekly": [
@@ -163,7 +163,7 @@
     },
     {
       "week": "2026-04-27",
-      "amount": 147278.93000000002
+      "amount": 166394.93
     },
     {
       "week": "2026-05-04",
@@ -187,7 +187,7 @@
     },
     {
       "week": "2026-06-08",
-      "amount": 8251.59
+      "amount": 9251.59
     }
   ],
   "records": [
@@ -2007,6 +2007,24 @@
       "category": "兼职类",
       "description": "崔苏丽 3月兼职费用",
       "amount": 5734.8,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-03-31",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "兼职类",
+      "description": "马健鸿 海外兼职费用",
+      "amount": 4779,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-03-31",
+      "budgetMonth": 3,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "兼职类",
+      "description": "陈涛 海外兼职费用",
+      "amount": 5416.2,
       "status": "无需付款"
     },
     {
@@ -4032,6 +4050,42 @@
       "category": "兼职类",
       "description": "崔苏丽 4月兼职费用",
       "amount": 5256.9,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 4,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "兼职类",
+      "description": "马健鸿 海外兼职费用",
+      "amount": 4460.4,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 4,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "兼职类",
+      "description": "陈涛 海外兼职费用",
+      "amount": 5097.6,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 4,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "兼职类",
+      "description": "高佳仪 海外兼职费用",
+      "amount": 5097.6,
+      "status": "无需付款"
+    },
+    {
+      "date": "2026-04-30",
+      "budgetMonth": 4,
+      "department": "运营支持部（巴伊苏拉）",
+      "category": "兼职类",
+      "description": "杨盈 海外兼职费用",
+      "amount": 4460.4,
       "status": "无需付款"
     },
     {
@@ -6634,6 +6688,15 @@
       "description": "汽配店铺出单+补单货款采购费用",
       "amount": 526.41,
       "status": "待走替票"
+    },
+    {
+      "date": "2026-06-11",
+      "budgetMonth": 6,
+      "department": "内容创意五部",
+      "category": "其他",
+      "description": "汽配货款成本预算申请",
+      "amount": 1000,
+      "status": "未知"
     },
     {
       "date": "2026-06-04",
