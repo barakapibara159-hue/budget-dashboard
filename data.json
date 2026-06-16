@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-06-15T06:57:08.478Z",
+  "updatedAt": "2026-06-16T07:01:45.122Z",
   "currentMonth": "2026-06",
   "overview": {
     "totalBudget": 241815.5,
-    "totalSpent": 55605.06,
-    "remaining": 186210.44,
+    "totalSpent": 55618.619999999995,
+    "remaining": 186196.88,
     "usageRate": "23.0"
   },
   "byDepartment": {
@@ -45,8 +45,8 @@
     },
     "业务创新部": {
       "budget": 3663,
-      "spent": 1210.26,
-      "count": 4
+      "spent": 1223.82,
+      "count": 5
     },
     "运营支持部（巴伊苏拉）": {
       "budget": 68967,
@@ -66,7 +66,7 @@
   },
   "byCategory": {
     "网络类": 29460.9,
-    "会员类": 21234.370000000003,
+    "会员类": 21247.930000000004,
     "其他": 4234.79,
     "账号类": 675
   },
@@ -105,7 +105,7 @@
     },
     "业务创新部": {
       "网络类": 240,
-      "会员类": 870.26,
+      "会员类": 883.8199999999999,
       "账号类": 100
     },
     "新媒体事业部": {
@@ -128,28 +128,24 @@
       "amount": 3989
     },
     "已提交OA未走完流程": {
-      "count": 45,
-      "amount": 29649.41
+      "count": 57,
+      "amount": 32827.56999999999
     },
     "等待发票提交OA": {
-      "count": 6,
-      "amount": 1642.1599999999999
+      "count": 5,
+      "amount": 1102.1599999999999
     },
     "排队待报销": {
-      "count": 17,
-      "amount": 4245.5199999999995
+      "count": 7,
+      "amount": 1743.6200000000001
     },
     "待走替票": {
-      "count": 21,
-      "amount": 4420.969999999999
+      "count": 22,
+      "amount": 4357.2699999999995
     },
     "无需付款": {
       "count": 4,
       "amount": 9500
-    },
-    "待定": {
-      "count": 1,
-      "amount": 59
     },
     "未知": {
       "count": 3,
@@ -157,10 +153,6 @@
     }
   },
   "weekly": [
-    {
-      "week": "2026-04-20",
-      "amount": 10366.34
-    },
     {
       "week": "2026-04-27",
       "amount": 166394.93
@@ -188,6 +180,10 @@
     {
       "week": "2026-06-08",
       "amount": 9251.59
+    },
+    {
+      "week": "2026-06-15",
+      "amount": 13.56
     }
   ],
   "records": [
@@ -3564,7 +3560,7 @@
       "category": "会员类",
       "description": "阿联酋手机卡续费",
       "amount": 465,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-14",
@@ -3573,7 +3569,7 @@
       "category": "其他",
       "description": "阿联酋手机卡续费",
       "amount": 502.52,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-21",
@@ -4590,7 +4586,7 @@
       "category": "其他",
       "description": "阿联酋手机卡续费",
       "amount": 427.48,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-25",
@@ -5301,7 +5297,7 @@
       "category": "其他",
       "description": "巴西虚拟手机号",
       "amount": 7.08,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-04-23",
@@ -6300,7 +6296,7 @@
       "category": "会员类",
       "description": "token充值",
       "amount": 136.26,
-      "status": "待走替票"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-01",
@@ -6399,7 +6395,7 @@
       "category": "会员类",
       "description": "可灵7天会员",
       "amount": 11.84,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-10",
@@ -6426,7 +6422,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 69,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-09",
@@ -6435,7 +6431,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 355,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-09",
@@ -6453,7 +6449,7 @@
       "category": "会员类",
       "description": "runway会员",
       "amount": 238.6,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-09",
@@ -6462,7 +6458,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 450,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-12",
@@ -6471,7 +6467,7 @@
       "category": "会员类",
       "description": "heygen会员",
       "amount": 197.2,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-12",
@@ -6480,7 +6476,7 @@
       "category": "会员类",
       "description": "heygen会员",
       "amount": 197.19,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-09",
@@ -6561,7 +6557,7 @@
       "category": "会员类",
       "description": "Claude Pro会员",
       "amount": 59,
-      "status": "待定"
+      "status": "待走替票"
     },
     {
       "date": "2026-06-09",
@@ -6622,9 +6618,9 @@
       "budgetMonth": 6,
       "department": "内容创意五部",
       "category": "会员类",
-      "description": "chatgpt会员",
+      "description": "chatgpt礼品卡充值",
       "amount": 136.17,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-09",
@@ -6633,7 +6629,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 347.9,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-09",
@@ -6642,7 +6638,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "排队待报销"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-09",
@@ -6708,13 +6704,22 @@
       "status": "已提交OA未走完流程"
     },
     {
+      "date": "2026-06-15",
+      "budgetMonth": 6,
+      "department": "业务创新部",
+      "category": "会员类",
+      "description": "terabox会员续费",
+      "amount": 13.56,
+      "status": "待走替票"
+    },
+    {
       "date": "2026-06-09",
       "budgetMonth": 6,
       "department": "运营支持部（王晨）",
       "category": "会员类",
       "description": "YCloud api充值费用",
       "amount": 540,
-      "status": "等待发票提交OA"
+      "status": "已提交OA未走完流程"
     },
     {
       "date": "2026-06-01",
