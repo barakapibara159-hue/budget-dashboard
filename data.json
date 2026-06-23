@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T06:59:33.631Z",
+  "updatedAt": "2026-06-23T05:43:55.588Z",
   "currentMonth": "2026-06",
   "overview": {
     "totalBudget": 241815.5,
@@ -126,12 +126,12 @@
   },
   "byStatus": {
     "已报销完": {
-      "count": 42,
-      "amount": 29171.789999999997
+      "count": 70,
+      "amount": 40043.68000000001
     },
     "已提交OA未走完流程": {
-      "count": 28,
-      "amount": 10871.89
+      "count": 0,
+      "amount": 0
     },
     "等待发票提交OA": {
       "count": 7,
@@ -3683,7 +3683,7 @@
       "category": "网络类",
       "description": "视界云续约",
       "amount": 8960,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-04-28",
@@ -4403,7 +4403,7 @@
       "category": "会员类",
       "description": "flomo Max会员",
       "amount": 299,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-03",
@@ -5690,7 +5690,7 @@
       "category": "其他",
       "description": "域名续约",
       "amount": 685.09,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-27",
@@ -5879,7 +5879,7 @@
       "category": "网络类",
       "description": "2个巴西，1个墨西哥续约（月）",
       "amount": 450,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-01",
@@ -6086,7 +6086,7 @@
       "category": "会员类",
       "description": "哼哼猫会员续费",
       "amount": 187.92,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-02",
@@ -6104,7 +6104,7 @@
       "category": "网络类",
       "description": "英国5M专线带宽费",
       "amount": 600,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-02",
@@ -6122,7 +6122,7 @@
       "category": "网络类",
       "description": "12个英国网络续约（月）",
       "amount": 1200,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-02",
@@ -6302,7 +6302,7 @@
       "category": "会员类",
       "description": "token充值",
       "amount": 136.26,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-01",
@@ -6338,7 +6338,7 @@
       "category": "网络类",
       "description": "4个阿联酋网络续约（月）",
       "amount": 600,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-01",
@@ -6401,7 +6401,7 @@
       "category": "会员类",
       "description": "可灵7天会员",
       "amount": 11.84,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-10",
@@ -6428,7 +6428,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 69,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6437,7 +6437,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 355,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6455,7 +6455,7 @@
       "category": "会员类",
       "description": "runway会员",
       "amount": 238.6,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6464,7 +6464,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 450,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-12",
@@ -6473,7 +6473,7 @@
       "category": "会员类",
       "description": "heygen会员",
       "amount": 197.2,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-12",
@@ -6482,7 +6482,7 @@
       "category": "会员类",
       "description": "heygen会员",
       "amount": 197.19,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6509,7 +6509,7 @@
       "category": "会员类",
       "description": "可灵会员",
       "amount": 916,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6545,7 +6545,7 @@
       "category": "会员类",
       "description": "Chatgpt会员",
       "amount": 700,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6572,7 +6572,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6581,7 +6581,7 @@
       "category": "会员类",
       "description": "小云雀会员",
       "amount": 500,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6617,7 +6617,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 150,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-27",
@@ -6626,7 +6626,7 @@
       "category": "会员类",
       "description": "chatgpt礼品卡充值",
       "amount": 136.17,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6635,7 +6635,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 347.9,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6644,7 +6644,7 @@
       "category": "会员类",
       "description": "即梦会员",
       "amount": 499,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6725,7 +6725,7 @@
       "category": "会员类",
       "description": "YCloud api充值费用",
       "amount": 540,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-01",
@@ -6797,7 +6797,7 @@
       "category": "会员类",
       "description": "chatgpt会员",
       "amount": 160,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-16",
@@ -6806,7 +6806,7 @@
       "category": "会员类",
       "description": "tago会员",
       "amount": 347.9,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-16",
@@ -6887,7 +6887,7 @@
       "category": "会员类",
       "description": "小云雀会员",
       "amount": 500,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-09",
@@ -6896,7 +6896,7 @@
       "category": "会员类",
       "description": "小云雀会员",
       "amount": 600,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-16",
@@ -6932,7 +6932,7 @@
       "category": "其他",
       "description": "bytevirt服务器续费",
       "amount": 122.91,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-05-20",
@@ -6950,7 +6950,7 @@
       "category": "会员类",
       "description": "chatgpt plus会员",
       "amount": 160,
-      "status": "已提交OA未走完流程"
+      "status": "已报销完"
     },
     {
       "date": "2026-06-16",
@@ -9369,6 +9369,62 @@
       "category": "zpwz 会员",
       "description": "",
       "amount": 1000
+    },
+    {
+      "budgetMonth": 7,
+      "department": "商务签约部",
+      "category": "7月兼职费用",
+      "description": "",
+      "amount": 10000
+    },
+    {
+      "budgetMonth": 7,
+      "department": "业务创新部",
+      "category": "Claude Code月会员：用于开发运营工具",
+      "description": "claude max会员*2，734/月（699会员+35认证），开发较为复杂的需求，如购房通主站和CRM\nclaude pro会员*1，149/月，运营支持，开发相对简单的运营工具等，如房产百科内容和资讯抓取、私域工具等。",
+      "amount": 1608
+    },
+    {
+      "budgetMonth": 7,
+      "department": "业务创新部",
+      "category": "chatgpt plus会员：用于codex开发",
+      "description": "chatgpt plus会员*2，150/月/个，用于使用codex开发",
+      "amount": 300
+    },
+    {
+      "budgetMonth": 7,
+      "department": "业务创新部",
+      "category": "Zoom Meeting会员：用于不限时长的客户会议",
+      "description": "用于设定线索会议，需要会员以设置不限时长的会议；费用为闲鱼商家报价",
+      "amount": 580
+    },
+    {
+      "budgetMonth": 7,
+      "department": "业务创新部",
+      "category": "AI大模型token费用：目前主要使用gemini，应用场景主要用于运营工具的日常使用、内容抓取、内容批量生产等（一天5美元左右，按现在的消耗量预估，差不多一天可以调三千次左右）",
+      "description": "本月token使用需求场景计划：\n1、购房通详情页信息输出AI卖点、AI评分，房源信息语言支持，AI翻译；\n2、多媒体平台线索抓取、线索识别、话术生成、以及多平台自动私信\n3、运营whatsapp辅助沟通工具：调用AI在whatsapp直接翻译、转译能力、调用AI在whatsapp界面推荐房源、调用AI在在whatsapp界面进行话术建议；\n4、不同C端小工具的开发与使用；\n5、运营房源内容清洗bot：新B端房源通过AI机器人内容清洗入库；\n6、内容抓取与内容清洗：抓取facebook等社媒平台的房源和用户需求后需通过AI进行内容识别与清洗；\n7、内容批量生成：根据抓取房源和用户需求，通过AI生成内容文案并批量发布至社媒平台；\n8、经纪人培训工具\n9、房产百科内容生成、房产资讯抓取以及翻译。",
+      "amount": 1000
+    },
+    {
+      "budgetMonth": 7,
+      "department": "业务创新部",
+      "category": "迪拜ip节点",
+      "description": "迪拜节点：针对迪拜地区的业务，在应用WhatsApp、Facebook、tk等社媒渠道时，使用对应国家节点更稳定防止被封",
+      "amount": 240
+    },
+    {
+      "budgetMonth": 7,
+      "department": "业务创新部",
+      "category": "fb账号、tk账号等",
+      "description": "社媒账号预估10-20元/个，计划启动10-20个自有社媒账号，费用约400元。\n（6月已购买几个账号，但ins封号很快，需要继续购买测试）",
+      "amount": 200
+    },
+    {
+      "budgetMonth": 7,
+      "department": "业务创新部",
+      "category": "视频素材网盘会员（内容+OKM共用）",
+      "description": "高速下载，网盘扩容，上传大文件",
+      "amount": 28
     }
   ]
 }
